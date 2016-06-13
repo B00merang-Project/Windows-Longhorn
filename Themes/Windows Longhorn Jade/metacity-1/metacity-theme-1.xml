@@ -44,13 +44,11 @@
 </frame_geometry>
 
 <draw_ops name="title-text-focused">
-<title color="#060606" x="6" y="(height - title_height) / 2 + 1"/>
-<title color="#ffffff" x="5" y="(height - title_height) / 2"/>
+<title color="#00025C" x="5" y="(height - title_height) / 2"/>
 </draw_ops>
 
 <draw_ops name="title-text-unfocused">
-<title color="#cecece" x="5" y="(height - title_height) / 2 + 1"/>
-<title color="#ffffff" x="6" y="(height - title_height) / 2"/>
+<title color="#6e6e6e" x="6" y="(height - title_height) / 2"/>
 </draw_ops>
 
 <draw_ops name="blank">

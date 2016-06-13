@@ -58,19 +58,19 @@
 
 <draw_ops name="title">
   <image filename="titlebar-focused-left.png" x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-focused-middle.png" x="5" y="0" width="width - 5" height="height"/>
+  <image filename="titlebar-focused-middle.png" x="5" y="0" width="width - 9" height="height"/>
   <image filename="titlebar-focused-right.png" x="width - object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="title-shaded">
   <image filename="titlebar-focused-left.png" x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-focused-middle.png" x="5" y="0" width="width - 5" height="height"/>
+  <image filename="titlebar-focused-middle.png" x="5" y="0" width="width - 9" height="height"/>
   <image filename="titlebar-focused-right.png" x="width - object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="title-unfocused">
   <image filename="titlebar-blurred-left.png" x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-blurred-middle.png" x="5" y="0" width="width - 5" height="height"/>
+  <image filename="titlebar-blurred-middle.png" x="5" y="0" width="width - 9" height="height"/>
   <image filename="titlebar-blurred-right.png" x="width - object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 

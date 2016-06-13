@@ -73,11 +73,11 @@
 </draw_ops>
 
 <draw_ops name="title-max">
-  <image filename="titlebar-focused-middle.png" x="0" y="0" width="width" height="height"/>
+  <image filename="titlebar-focused-middle-max.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
 <draw_ops name="title-max-unfocused">
-  <image filename="titlebar-blurred-middle.png" x="0" y="0" width="width" height="height"/>
+  <image filename="titlebar-blurred-middle-max.png" x="0" y="0" width="width" height="height"/>
 </draw_ops>
 
 <draw_ops name="frame-left-focused">

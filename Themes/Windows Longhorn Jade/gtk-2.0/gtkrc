@@ -5,6 +5,7 @@
 ################Comment out if you don't need################################################
 include "menubar-blue.rc"
 include "panel.rc"
+include "chrome.rc"
 #gtk-menu-drop-shadow = 1
 #gtk-menu-shadow-delay = 0
 gtk-icon-sizes = "panel-menu=24,24:panel=24,24:gtk-button=16,16:gtk-large-toolbar=24,24"
@@ -36,7 +37,7 @@ style "default"
 	GtkScrollbar::has-secondary-backward-stepper = 0
 	GtkScrollbar::has-secondary-forward-stepper = 0
 	GtkScrollbar::min-slider-length = 80
-	GtkScrollbar::slider-width = 17
+	GtkScrollbar::slider-width = 15
 	GtkScrollbar::trough-border = 2
 
   GtkCheckButton::indicator_size		= 12
@@ -1271,7 +1272,7 @@ style "toolbar" {
 		{
 			function	= BOX
 			file		= "Toolbar/toolbar.png"
-			border	= { 4, 4, 4, 4}
+			border	= { 0, 0, 0, 0}
 			stretch	= TRUE
     	}
  	}
@@ -1889,7 +1890,6 @@ class "GtkRange"         			style "range"
 class "GtkMenu"       			style "menu"
 
 class "GtkMenuBar*" 		        style "menubar"
-
 
 widget_class "*MenuBar.*" style "menubar"
 

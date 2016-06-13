@@ -1992,7 +1992,6 @@ GtkWindow > GtkVBox > .dock > GtkHBox > GtkToolbar  {
     background-color: transparent;
     background-image: none;
     border-color: transparent;
-	color: white;
 }
 
 .primary-toolbar GtkComboBox:hover,

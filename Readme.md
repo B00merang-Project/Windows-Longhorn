@@ -18,3 +18,7 @@ Longhorn 4074 Jade (by feren)
 -
 
 Currently Supported DEs/Engines: Cinnamon, GTK (by Elbullazul), Metacity, Icons
+
+-
+<h2>Credits from Other Projects</h2>
+Start Menu in Jade and Aero (coming soon): Dejco, http://dejco.deviantart.com/art/Hillel-Start-Background-527435193

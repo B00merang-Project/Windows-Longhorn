@@ -2007,13 +2007,13 @@ background: #111;
     text-align: center;     
 }
 
-/* Start Here!*
+/* Start Here!**/
 #panelLeft .applet-box:first-child {
 	border-image: url('start-here.png') 6 11 6 6;
     font-family: tahoma;
 	padding: 0px;
-	padding-right: 30px;
-	padding-left: 30px;
+	padding-right: 40px;
+	padding-left: 40px;
 	font-size: 0px;
 	text-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }
@@ -2024,4 +2024,4 @@ background: #111;
 
 #panelLeft .applet-box:first-child:active {
 	border-image: url('start-here.png') 6 11 6 6;
-} */
+}

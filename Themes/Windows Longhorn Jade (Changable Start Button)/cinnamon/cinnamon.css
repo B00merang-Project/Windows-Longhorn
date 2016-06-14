@@ -169,7 +169,7 @@ StScrollBar StButton#hhandle {
  * ===================================================================*/
 .popup-menu-boxpointer {
         -boxpointer-gap: 0px;
-	-arrow-border-radius: 0px;
+	-arrow-border-radius: 20px;
 	-arrow-background-color: rgba(32,32,32,0.0);
 	-arrow-border-width: 0px;
 	-arrow-border-color: rgba(255,255,255,0.0);

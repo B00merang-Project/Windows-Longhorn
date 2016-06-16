@@ -792,7 +792,7 @@ GtkMenuToolButton.menu,
                                      to (@transparent));
     background-color: #f0f0f0;
     border-color: #888888;
-    padding: 2px 3px;
+    padding: 0;
     border-width: 1px;
     border-style: solid;
 
@@ -817,7 +817,7 @@ GtkComboBox .menu {
     border-right-color: shade (@bg_color, 0.7);
     border-top-color: shade (@bg_color, 0.8);
     border-style: solid;
-    padding: 2px 3px;
+    padding: ;
 
     color: @fg_color;
 
@@ -2289,5 +2289,40 @@ GtkViewport.frame {
     color: @selected_fg_color;
 }
 
+/* Nemo / Nautilus floating bar */
+
+.floating-bar {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    border-radius: 0px;
+    background-color: @theme_bg_color;
+    background-image: linear-gradient(to top, white);
+    color: @theme_fg_color;
+}
+
+.floating-bar.top {
+    border-top-width: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.floating-bar.right {
+    border-right-width: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.floating-bar.bottom {
+    border-bottom-width: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.floating-bar.left {
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
 
 

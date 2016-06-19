@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=WindowsLonghornBasic
+Type=X-GNOME-Metatheme
+Comment=
+Name[en_GB]=Windows Longhorn Aero (Changable Start Button)
+
+[X-GNOME-Metatheme]
+GtkTheme=Windows7-Aero
+MetacityTheme=WindowsLHBasic
+IconTheme=WindowsLH
+CursorTheme=aero-drop
+CursorSize=18
+ButtonLayout=menu:minimize,maximize,close
+
+#Fonts
+ApplicationFont=Segoe UI 10
+DocumentFont=Segoe UI 10
+DesktopFont=Segoe UI 10
+WindowTitleFont=Segoe UI 10
+FixedWidthFont=Monospace 10

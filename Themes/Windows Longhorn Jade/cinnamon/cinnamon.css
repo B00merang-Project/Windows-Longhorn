@@ -367,17 +367,19 @@ StTooltip StLabel {
     padding: 0px;
 }
 
+#panelRight {
+	border-image: url('panel-right.png') 3 0 1 1;
+}
 
 #panelLeft, #panelCenter, #panelRight {
 	spacing: 0px;
 }
 
 #panelLeft .applet-box:first-child {
-	font-weight: normal;
-/*	font-style: italic;*/
+	font-weight: bold;
+	font-style: italic;
 	font-size: 10pt;
 	padding-right: 14px;
-    text-shadow: 0 0 0 1px #000;
 }
 
 #panelLeft:ltr {
@@ -529,7 +531,7 @@ background: #111;
 
 .window-close-area {
     border-image: url("background-assets/workspace-close-area-bg.svg") 7;
-    background-image: url("expo-scale-assets    rash.svg");
+    background-image: url("expo-scale-assets/trash.svg");
     background-size: 24px 30px;
     height: 100px;
     width: 350px;
@@ -1484,7 +1486,7 @@ background: #111;
 .menu-applications-inner-box {
     padding-top: 10px;
     padding-left: 10px;
-    padding-right: 0px;
+    padding-right: 10px;
     padding-bottom: 0px;
 	background: white;
 	border-radius: 4px;
@@ -1493,7 +1495,7 @@ background: #111;
 .menu-applications-outer-box {
     padding-top: 10px;
     padding-left: 20px;
-    padding-right: 0px;
+    padding-right: 10px;
     padding-bottom: 0px;
 }
 
@@ -1543,7 +1545,7 @@ background: #111;
     padding-left: 7px;
     padding-right: 7px;
     padding-bottom: 7px; 
-    color: rgba(180, 180, 180, .5);
+    color: rgba(100, 100, 100, .5);
     font-style: normal;
 }
 
@@ -1615,8 +1617,8 @@ background: #111;
 .window-list-item-box {
     font-weight: normal;
     border-image: url("panel-assets/item-normal.png") 4;
-    text-shadow: 1px 1px #000;
 }
+
 
 .window-list-item-box:hover  {     
     /*box-shadow: inset 0px 0px 0px 1px rgba(120,120,120,0.5);  */
@@ -1625,13 +1627,17 @@ background: #111;
 }
 
 .window-list-item-demands-attention {
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-attention.png") 4;
 }
 
 .window-list-item-box:active:hover {
     font-weight: normal;
     border-image: url("panel-assets/item-active-hover.png") 4;
+}
+
+.window-list-item-box:active {
+    font-weight: normal;
 }
 
 /* 
@@ -1843,16 +1849,16 @@ background: #111;
 /*---top panel---*/
 
 .panel-top .workspace-button:outlined {
-    border-image: url("panel-assets    op-item-active.svg") 4;
+    border-image: url("panel-assets/top-item-active.svg") 4;
     color: #fff;
 }
 
 .panel-top .workspace-button:hover {
-    border-image: url("panel-assets    op-item-hover.svg") 4;
+    border-image: url("panel-assets/top-item-hover.svg") 4;
 }
 
 .panel-top .workspace-button:outlined:hover {
-    border-image: url("panel-assets    op-item-active-hover.svg") 4;
+    border-image: url("panel-assets/top-item-active-hover.svg") 4;
     color: #fff;
 }
 
@@ -1887,7 +1893,7 @@ background: #111;
 }
 
 .panel-top .panel-launcher:hover {
-    border-image: url("panel-assets    op-item-hover.svg") 4;
+    border-image: url("panel-assets/top-item-hover.svg") 4;
 }
 
 .panel-bottom .panel-launcher:hover {
@@ -1945,7 +1951,7 @@ background: #111;
 .panel-top .applet-box:hover {
     font-weight: bold;
     color: #fff; 
-    border-image: url("panel-assets    op-item-hover.svg") 4;
+    border-image: url("panel-assets/top-item-hover.svg") 4;
 }
 
 .panel-bottom .applet-box:hover {
@@ -1953,13 +1959,12 @@ background: #111;
 }
 
 .applet-label {
-    font-weight: normal;
+    font-weight: bold;
     color: #fff;
-	text-shadow: 0 0 0 1px #000;
 }
 
 .applet-label:hover {
-    font-weight: normal;
+    font-weight: bold;
 }
 
 .applet-icon {
@@ -1997,7 +2002,7 @@ background: #111;
     margin: 0;
 }
 /* ===================================================================
- * Snap    ile OSD Popup
+ * Snap/Tile OSD Popup
  * ===================================================================*/
 
 .snap-osd {
@@ -2014,16 +2019,16 @@ background: #111;
 	border-image: url('start-here.png') 6 11 6 6;
     font-family: tahoma;
 	padding: 0px;
-	padding-right: 40px;
-	padding-left: 40px;
+	padding-right: 60px;
+	padding-left: 0px;
 	font-size: 0px;
 	text-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }
 
-#panelLeft .applet-box:first-child:hover {
+panelLeft .applet-box:first-child:hover {
 	border-image: url('start-here.png') 6 11 6 6;
 }
 
-#panelLeft .applet-box:first-child:active {
+panelLeft .applet-box:first-child:active {
 	border-image: url('start-here.png') 6 11 6 6;
 }

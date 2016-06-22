@@ -22,3 +22,7 @@ Currently Supported DEs/Engines: Cinnamon, GTK (by Elbullazul), Metacity, Icons
 -
 <h2>Credits from Other Projects</h2>
 Start Menu in Jade and Aero (coming soon): Dejco, http://dejco.deviantart.com/art/Hillel-Start-Background-527435193
+
+
+<h2>Using our themes?</h2>
+Check out this guide to make Cinnamon more like the theme you've chosen: https://github.com/Elbullazul/Longhorn-Collaboration/blob/master/Tips%20for%20themes.md

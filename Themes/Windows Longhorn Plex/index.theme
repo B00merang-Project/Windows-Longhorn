@@ -1,12 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Windows Longhorn Plex
-Comment=Windows Longhorn Plex UI for Linux OSes
-Comment=Author : Christian Medel (Elbullazul)
-Version=v1.0 (beta)
+Name=CinnXP-Royale
+Comment=
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Windows Longhorn Plex
-MetacityTheme=Windows Longhorn Plex
-ButtonLayout=:minimize,maximize,close
+GtkTheme=CinnXP-Royale
+MetacityTheme=CinnXP-Royale
+IconTheme=CinnXP-Royale
+CursorTheme=default

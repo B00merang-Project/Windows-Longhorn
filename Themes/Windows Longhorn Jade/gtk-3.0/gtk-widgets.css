@@ -1889,9 +1889,11 @@ GtkTextView {
  * that prefer showing traditional title bars. The rules for those are further
  * down grouped with normal toolbars.
  */
+
 .titlebar.header-bar {
     padding: 2px;
     background-image: url('assets/toolbar.png');
+    background-size: cover;
     border-color: shade (@dark_bg_color, 1.5);
     border-style: solid;
     border-width: 1px 0 0 0;
@@ -1904,6 +1906,7 @@ GtkTextView {
 }
 
 .titlebar.header-bar:backdrop {
+    background-size: cover;
     background-image: url('assets/toolbar-inactive.png');
 }
 
@@ -1920,15 +1923,124 @@ GtkTextView {
     background-color: transparent;
     border-image-width: 0;
     box-shadow: none;
+    padding: 0;
 }
 
-.titlebar.header-bar .button.titlebutton:hover {
-    border-image-width: 12px;
+.header-bar .button:checked {
+     background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade (#e5f4fc, 1.05)),
+                                     color-stop (0.50, shade (#c4e5f6, 1.00)),
+                                     color-stop (0.51, shade (#96dbff, 1.00)),
+                                     to (shade (#6db6dd, 1.05)));
 }
+
+/* Window buttons (min, max, close) */
+
+.titlebar .titlebutton.minimize {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/min-focused-normal.png"));
+}
+
+.titlebar .titlebutton.minimize:backdrop {
+    background-image: -gtk-scaled(url("buttons/min-blurred-normal.png"));
+    color: transparent;
+}
+
+.titlebar .titlebutton.minimize:hover {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/min-focused-hover.png"));
+}
+
+.titlebar .titlebutton.minimize:active,
+.titlebar .titlebutton.minimize:checked {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/min-pressed.png"));
+}
+
+.titlebar .titlebutton.maximize {
+   color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/max-focused-normal.png"));
+}
+
+.titlebar .titlebutton.maximize:backdrop {
+    background-image: -gtk-scaled(url("buttons/max-blurred-normal.png"));
+    color: transparent;
+}
+
+
+.titlebar .titlebutton.maximize:hover, {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/max-focused-hover.png"));
+}
+
+.titlebar .titlebutton.maximize:active,
+.titlebar .titlebutton.maximize:checked  {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/maxpressed.png"));
+}
+
+.titlebar .titlebutton.close {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/close-focused-normal.png"));
+}
+
+.titlebar .titlebutton.close:backdrop {
+    background-image: -gtk-scaled(url("buttons/close-blurred-normal.png"));
+    color: transparent;
+}
+
+.titlebar .titlebutton.close:hover {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/close-focused-hover.png"));
+}
+
+.titlebar .titlebutton.close:active,
+.titlebar .titlebutton.close:checked  {
+    color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/close-pressed.png"));
+}
+
 
 .window-frame {
     border-style: none;
-    border-radius: 0;
+    border-radius: 4px;
     box-shadow: 0 3px 7px 1px alpha(black, 0.7),
                 0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
 
@@ -2335,5 +2447,3 @@ GtkViewport.frame {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
 }
-
-

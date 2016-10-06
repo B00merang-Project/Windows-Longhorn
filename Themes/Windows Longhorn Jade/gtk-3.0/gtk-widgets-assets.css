@@ -317,6 +317,8 @@
 .scale.slider,
 .scale.slider.horizontal {
     background-image: url("assets/slider-horizontal.png");
+    -GtkRange-slider-width: 19;
+    -GtkScale-slider-length: 11;
 }
 
 

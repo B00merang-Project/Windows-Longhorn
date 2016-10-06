@@ -1,6 +1,3 @@
-/*Windows 10 Default Assets */
-/*Artwork by Maxime Doyen */
-
 /*******************
  * check and radio *
  *******************/
@@ -126,65 +123,213 @@
     background-image: url("assets/menuitem-radio-checked-insensitive.png");
 }
 
-/******************
- * window actions *
- ******************/
+/*********************************
+ * check and radio (gnome 3.18+) *
+ *********************************/
+.check,
+.check row:selected,
+.check row:selected:focus {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
+}
 
-/* unavailable for now */
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.png");
+}
 
-/* .titlebar .titlebutton.minimize {
+.check:active, .check:checked,
+.check row:selected:active, .check row:selected:checked,
+.check row:selected:focus:active, .check row:selected:focus:checked {
+    -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png"));
+}
+
+.check:active:insensitive, .check:checked:insensitive,
+.check row:selected:active:insensitive, .check row:selected:checked:insensitive,
+.check row:selected:focus:active:insensitive, .check row:selected:focus:checked:insensitive {
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive.png");
+}
+
+
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focus:inconsistent {
+    -gtk-icon-source: url("assets/checkbox-mixed.png");
+}
+
+.check:inconsistent:insensitive,
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focus:inconsistent:insensitive {
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive.png");
+}
+
+.radio,
+.radio row:selected,
+.radio row:selected:focus {
+    -gtk-icon-source: url("assets/radio-unselected.png");
+}
+
+.radio:insensitive,
+.radio row:selected:insensitive,
+.radio row:selected:focus:insensitive {
+    -gtk-icon-source: url("assets/radio-unselected-insensitive.png");
+}
+
+.radio:active, .radio:checked,
+.radio row:selected:active, .radio row:selected:checked,
+.radio row:selected:focus:active, .radio row:selected:focus:checked {
+    -gtk-icon-source: url("assets/radio-selected.png");
+}
+
+.radio:active:insensitive, .radio:checked:insensitive,
+.radio row:selected:active:insensitive, .radio row:selected:checked:insensitive,
+.radio row:selected:focus:active:insensitive, .radio row:selected:focus:checked:insensitive {
+    -gtk-icon-source: url("assets/radio-selected-insensitive.png");
+}
+
+.radio:inconsistent,
+.radio row:selected:inconsistent,
+.radio row:selected:focus:inconsistent {
+    -gtk-icon-source: url("assets/radio-mixed.png");
+}
+
+.radio:inconsistent:insensitive,
+.radio row:selected:inconsistent:insensitive,
+.radio row:selected:focus:inconsistent:insensitive {
+    -gtk-icon-source: url("assets/radio-mixed-insensitive.png");
+}
+
+/**************************
+ * menuitem check & radio *
+ **************************/
+
+.menuitem.check {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"));
+	color: @theme_fg_color;
+	icon-shadow: none; 
+}
+.menuitem.check:active, .menuitem.check:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"));
+}
+.menuitem.check:inconsistent {
+	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"));
+}
+
+.menuitem.check:active:hover {
+	color: @theme_selected_fg_color;
+}
+.menuitem.check:insensitive {
+	color: @insensitive_fg_color; 
+}
+
+.menuitem.radio {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-unselected.png"));
+	color: @theme_fg_color;
+	icon-shadow: none; 
+}
+.menuitem.radio:active, .menuitem.radio:checked {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-selected.png"));
+}
+.menuitem.radio:inconsistent {
+	-gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"));
+}
+.menuitem.radio:hover {
+	color: @theme_selected_fg_color;
+}
+.menuitem.radio:insensitive {
+	color: @insensitive_fg_color; 
+}
+
+/*************************
+ * Window action buttons *
+ *************************/
+
+.titlebar .titlebutton.minimize {
     color: transparent;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/minimize-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/min-focused-normal.png"));
 }
 
 .titlebar .titlebutton.minimize:backdrop {
-    background-image: -gtk-scaled(url("buttons/minimize-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/min-blurred-normal.png"));
     color: transparent;
 }
 
-.titlebar .titlebutton.minimize:hover,
+.titlebar .titlebutton.minimize:backdrop:hover {
+    background-image: -gtk-scaled(url("buttons/min-blurred-hover.png"));
+    color: transparent;
+}
+
+.titlebar .titlebutton.minimize:hover {
+    color: transparent;
+    background-color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/min-focused-hover.png"));
+}
+
 .titlebar .titlebutton.minimize:active,
 .titlebar .titlebutton.minimize:checked {
     color: transparent;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/minimize-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/min-pressed.png"));
 }
 
 .titlebar .titlebutton.maximize {
-   color: transparent;
+    color: transparent;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/maximize-focused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/max-focused-normal.png"));
 }
 
 .titlebar .titlebutton.maximize:backdrop {
-    background-image: -gtk-scaled(url("buttons/maximize-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/max-blurred-normal.png"));
+    color: transparent;
+}
+
+.titlebar .titlebutton.maximize:backdrop:hover {
+    background-image: -gtk-scaled(url("buttons/max-blurred-hover.png"));
     color: transparent;
 }
 
 
-.titlebar .titlebutton.maximize:hover, 
-.titlebar .titlebutton.maximize:active,
-.titlebar .titlebutton.maximize:checked  {
+.titlebar .titlebutton.maximize:hover, {
     color: transparent;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/maximize-focused-active.png"));
+    background-image: -gtk-scaled(url("buttons/max-focused-hover.png"));
+}
+
+.titlebar .titlebutton.maximize:active,
+.titlebar .titlebutton.maximize:checked  {
+    color: transparent;
+    background-color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/maxpressed.png"));
 }
 
 .titlebar .titlebutton.close {
-   color: transparent;
+    color: transparent;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
@@ -193,18 +338,106 @@
 }
 
 .titlebar .titlebutton.close:backdrop {
-    background-image: -gtk-scaled(url("buttons/close-unfocused-normal.png"));
+    background-image: -gtk-scaled(url("buttons/close-blurred-normal.png"));
     color: transparent;
 }
 
+.titlebar .titlebutton.close:backdrop:hover {
+    background-image: -gtk-scaled(url("buttons/close-blurred-hover.png"));
+    color: transparent;
+}
 
-.titlebar .titlebutton.close:hover,
-.titlebar .titlebutton.close:active,
-.titlebar .titlebutton.close:checked  {
-   color: transparent;
+.titlebar .titlebutton.close:hover {
+    color: transparent;
+    background-color: transparent;
     border-image: none;
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: -gtk-scaled(url("buttons/close-focused-active.png"));
-} */
+    background-image: -gtk-scaled(url("buttons/close-focused-hover.png"));
+}
+
+.titlebar .titlebutton.close:active,
+.titlebar .titlebutton.close:checked  {
+    color: transparent;
+    background-color: transparent;
+    border-image: none;
+    box-shadow: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: -gtk-scaled(url("buttons/close-pressed.png"));
+}
+
+/* Scale slider */
+.scale {
+    -GtkRange-slider-width: 19;
+    -GtkRange-trough-border: 0;
+    -GtkScale-slider-length: 11;
+
+    padding: 0;
+    border-width: 1px;
+    border-radius: 0px;
+}
+
+.scale.slider {
+    border-radius: 0px;
+    background-image: url('assets/slider-horiz.png');
+}
+
+.scale.slider:hover {
+    background-image: url('assets/slider-horiz-hover.png');
+}
+
+.scale.slider:active,
+.scale.slider:checked {
+    background-image: url('assets/slider-horiz-pressed.png');
+}
+
+.scale.slider:insensitive {
+    background-image: url('assets/slider-horiz-insensitive.png');
+}
+
+/* vertical sliders */
+.scale.slider.vertical {
+    border-radius: 0px;
+    background-image: url('assets/slider-vert.png');
+}
+
+.scale.slider.vertical:hover {
+    background-image: url('assets/slider-vert-hover.png');
+}
+
+.scale.slider.vertical:active,
+.scale.slider.vertical:checked {
+    background-image: url('assets/slider-vert-pressed.png');
+}
+
+.scale.slider.vertical:insensitive {
+    background-image: url('assets/slider-vert-insensitive.png');
+}
+.scale.slider.fine-tune:active,
+.scale.slider.fine-tune:active:hover,
+.scale.slider.fine-tune.horizontal:active,
+.scale.slider.fine-tune.horizontal:active:hover {
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.scale.mark {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+.scale.trough {
+    margin: 8px 0;
+    border-color: shade(@theme_bg_color, 0.8);
+    border-radius: 0px;
+    background-color: shade(@theme_bg_color, 1.08);
+    background-image: none;
+    border-image: none;
+}
+
+.scale.trough.vertical {
+    margin: 0 8px;
+}
+

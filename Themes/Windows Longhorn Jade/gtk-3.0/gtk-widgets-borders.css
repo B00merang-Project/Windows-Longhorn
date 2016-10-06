@@ -18,7 +18,7 @@ GtkSwitch.trough:active {
 /**********
  * button *
  **********/
-.button {
+/*.button {
     border-radius: 4px;
     border-width: 1px;
     border-style: solid;
@@ -76,7 +76,7 @@ GtkSwitch.trough:active {
 
 
 
-/* focused button borders */
+####### focused button borders ##########
 
 .button.default {
     border-image: url("assets/button-default.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
@@ -115,6 +115,8 @@ GtkSwitch.trough:active {
 .menubar.toolbar .button:active:focused {
     border-image: url("assets/button-toolbar-active-focused.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
 }
+
+*/
 
 .menubar.menuitem:hover,
 .menubar .menuitem:hover {
@@ -331,23 +333,16 @@ GtkSwitch.slider:active:insensitive {
 .progressbar row:hover,
 .progressbar row:selected,
 .progressbar row:selected:focused {
-    border-image: url("progressbar/progressbar-horiz.png") 5 20 5 20 / 5px 20px 5px 20px stretch;
-    background-image: -gtk-gradient (linear, left top, left bottom,  
-                   from (#D8F4A5),  
-                    color-stop (0.3,#56e271), 
-                    color-stop (0.68,#00cf20), 
-                    color-stop (0.72,#00ce1f),  
-                               to (#5B9200)); 
+    border-image: url("progressbar/progressbar-horiz.png") 3 / 3px stretch;
+    background-image: url('progressbar/progress-horiz.png');
+	background-size: contain;
+	background-position: center center;
 }
 
 .progressbar.vertical {
-    border-image: url("progressbar/progressbar-vert.png") 20 5 20 5 / 20px 5px 20px 5px stretch;
-    background-image: -gtk-gradient (linear, left top, right top,  
-                   from (#D8F4A5),  
-                    color-stop (0.3,#56e271), 
-                    color-stop (0.68,#00cf20), 
-                    color-stop (0.72,#00ce1f),  
-                               to (#5B9200)); 
+    border-image: url("progressbar/progressbar-vert.png") 3 / 3px stretch;
+    background-image: url('progressbar/progress-vert.png');
+    background-size: contain;
 }
 
 

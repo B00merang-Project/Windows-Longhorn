@@ -1449,6 +1449,8 @@ background: #111;
 
 /* Starkmenu custom look */
 .starkmenu-background {
+    background-color: transparent;
+    background-gradient: none;
     border-image: url('menu-bg.png') 5 5 5 5;
 }
 

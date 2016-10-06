@@ -168,7 +168,7 @@ StScrollBar StButton#hhandle {
  * PopupMenu (popupMenu.js) 
  * ===================================================================*/
 .popup-menu-boxpointer {
-        -boxpointer-gap: 0px;
+    -boxpointer-gap: 0px;
     -arrow-border-radius: 20px;
     -arrow-background-color: rgba(32,32,32,0.0);
     -arrow-border-width: 0px;
@@ -357,11 +357,11 @@ StTooltip StLabel {
  * Panel (panel.js)
  * ===================================================================*/
 #panel {
-        background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.25);
     box-shadow: none;
-        border-image: url('panel.png') 80 0 0 0;
-        outline: 1px rgba(100,100,100,0.5);
-    color: #000000;
+    border-image: url('panel.png') 80 0 0 0;
+    outline: 1px rgba(100,100,100,0.5);
+    color: #fff;
     font-size: 9pt;
     height: 30px;
     padding: 0px;
@@ -412,7 +412,7 @@ transition-duration: 150;
 .panel-status-button:hover,
 .panel-button:hover {
     background-color: #083854;
-        border-radius: 0px;
+    border-radius: 0px;
     color:  #083854;
     box-shadow: inset 0px -1px 0px 0px rgba(37,154,202,1);
     transition-duration: 100;
@@ -1505,7 +1505,7 @@ background: #111;
     padding-right: 7px;
     padding-bottom: 7px; 
     max-width: 10px;   
-    color: black;
+    color: #000;
 }
 
 .menu-application-button-selected {
@@ -1622,7 +1622,7 @@ background: #111;
 
 .window-list-item-box:hover  {     
     /*box-shadow: inset 0px 0px 0px 1px rgba(120,120,120,0.5);  */
-        border-image:url("panel-assets/item-active.png") 4;
+    border-image:url("panel-assets/item-active.png") 4;
 
 }
 

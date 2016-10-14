@@ -1,4 +1,5 @@
 Longhorn Repo - Collaborators : feren, Elbullazul, Cinnamoner (Coming soon & WIP)
+**All resources belong to Microsoft Corporation. All rights are reserved to Microsoft. Windows is a trademark of Microsoft. Windows Vista is a trademark of Microsoft.**
 
 <h1>A collab to make ports of most of the Longhorn builds' themes work in Linux</h1>
 This repo will contain theme sets for most Longhorn builds to emulate the look of them as much as possible in Cinnamon, that includes:

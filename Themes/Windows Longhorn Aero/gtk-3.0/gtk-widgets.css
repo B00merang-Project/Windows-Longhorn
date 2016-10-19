@@ -1086,8 +1086,6 @@ GtkComboBox .menu .menuitem *:insensitive {
     box-shadow: none;
 }
 
-
-
 .notebook.header {
     border-width: 1px; /* set below depending on position of tab bar */
     border-color: #ffffff;
@@ -1104,17 +1102,14 @@ GtkComboBox .menu .menuitem *:insensitive {
 /* ... unless the content is in a frame (thus having a border itself */
 .notebook.header.frame.top { border: none; }
 .notebook.header.frame.right { border: none; }
-.notebook.header.frame.right { border: none; }
+.notebook.header.frame.left { border: none; }
 .notebook.header.frame.bottom { border: none; }
-
 
 .notebook tab.top {
     border-color: #858585;
     border-width: 1px 1px 0px 1px;
     border-radius: 0px;
 }
-
-
 
 .notebook tab.right {
     border-color: #858585;

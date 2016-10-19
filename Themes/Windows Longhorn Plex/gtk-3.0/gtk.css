@@ -89,7 +89,6 @@
 @define-color terminal_text_color @bg_color;
 
 @import url("gtk-widgets.css");
-@import url("gtk-3.18.css");
 @import url("gtk-widgets-assets.css");
 @import url("apps/gnome-applications.css");
 @import url("apps/granite-widgets.css");

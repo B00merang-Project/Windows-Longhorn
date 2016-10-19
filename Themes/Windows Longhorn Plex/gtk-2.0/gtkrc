@@ -290,8 +290,8 @@ style "murrine-spinbutton" = "murrine-button" {
 style "murrine-radiocheck" = "murrine-default" {
 	bg[SELECTED] = @base_color
 
-	text[NORMAL] = @text_color
-	text[PRELIGHT] = shade (0.8, @selected_bg_color)
+	text[NORMAL] = "#30830b"
+	text[PRELIGHT] = shade (1.1, "#30830b")
 }
 
 style "murrine-entry" = "murrine-wider" {

@@ -27,8 +27,9 @@
     -GtkProgressBar-min-horizontal-bar-height: 20px;
     -GtkProgressBar-min-vertical-bar-width: 20px;
     -GtkRange-trough-border: 0;
-    -GtkRange-slider-width: 15;
-    -GtkRange-stepper-size: 16;
+    -GtkRange-slider-width: 1;
+    -GtkRange-slider-width: 14;
+    -GtkRange-stepper-size: 13;
     -GtkRange-trough-under-steppers: 1;
     -GtkRange-stepper-spacing: 0;
     -GtkScale-trough-border: 0;

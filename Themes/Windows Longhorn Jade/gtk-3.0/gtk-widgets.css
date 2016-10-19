@@ -27,8 +27,8 @@
     -GtkProgressBar-min-horizontal-bar-height: 20px;
     -GtkProgressBar-min-vertical-bar-width: 20px;
     -GtkRange-trough-border: 0;
-    -GtkRange-slider-width: 19;
-    -GtkRange-slider-length: 11;
+    -GtkRange-slider-width: 14;
+    -GtkRange-stepper-size: 13;
     -GtkRange-stepper-size: 16;
     -GtkRange-trough-under-steppers: 1;
     -GtkRange-stepper-spacing: 0;
@@ -148,36 +148,49 @@ GtkSwitch.slider,
                                to (#D0D1D2)); 
     color: @fg_color;
     border: 1px solid #989898;
+    box-shadow: inset 0 0 5px 3px alpha(black, 0.1);
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 }
 
 .button { border-radius: 2px; }
 
 .button:hover {
-   background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (shade (#eaf6fd, 1.05)),
-                                     color-stop (0.50, shade (#d9f0fc, 1.00)),
-                                     color-stop (0.51, shade (#bee6fd, 1.00)),
-                                     to (shade (#a7d9f5, 1.05))); 
+ background-image: -gtk-gradient (linear, left top, left bottom, 
+                   from (#FFFFFF), 
+                    color-stop (0.111,#FFFFFF),
+                    color-stop (0.222,#FCFFFF),
+                    color-stop (0.333,#E3F3FB),
+                    color-stop (0.444,#D7ECF7),
+                    color-stop (0.556,#D1E9F5),
+                    color-stop (0.667,#A8D3EB),
+                    color-stop (0.778,#9FD2ED),
+                    color-stop (0.889,#ACDAF3),
+                               to (#D1EEFA));  
+    border: 1px solid #12558a;
+    box-shadow: inset 0 -15px 9px 6px #E5F1FD;
 }
 
 
 
 .button:insensitive {
-
     background-color: mix (#ebebeb, @bg_color, 0.5);
-
-   
+    box-shadow: inset 0 0 5px 3px alpha(black, 0.5);
 }
 
-.button:active {
-    background-image: -gtk-gradient (linear,
-                                     left top, left bottom,
-                                     from (shade (#f2f2f2, 1.05)),
-                                     color-stop (0.50, shade (#ebebeb, 1.00)),
-                                     color-stop (0.51, shade (#dddddd, 1.00)),
-                                     to (shade (#cfcfcf, 1.05))); 
+.button:active,
+.button:checked {
+ background-image: -gtk-gradient (linear, left top, left bottom, 
+                   from (#fdfefe), 
+                    color-stop (0.111,#edf9fe),
+                    color-stop (0.222,#e0f1fa),
+                    color-stop (0.333,#e1f2fb),
+                    color-stop (0.444,#d9eef8),
+                    color-stop (0.556,#d0e8f4),
+                    color-stop (0.667,#c4e3f3),
+                    color-stop (0.778,#afdcf4),
+                    color-stop (0.889,#aedbf3),
+                               to (#d2f1fe));
+    border: 1px solid #12558a;  
 }
 
 .button:active:hover {
@@ -195,37 +208,20 @@ GtkSwitch.slider,
                                      to (#f3f3f3));
 }
 
-
-
-/* default button */
-
-/*
-.button.default {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (mix (shade (@selected_bg_color, 1.16), @bg_color, 0.3)),
-                                     to (mix (shade (@selected_bg_color, 0.84), @bg_color, 0.3)));
-
-    text-shadow: 0 1px alpha (shade (@selected_bg_color, 1.26), 0.4);
+.button:focus {
+ background-image: -gtk-gradient (linear, left top, left bottom, 
+                   from (#ffffff), 
+                    color-stop (0.111,#fbfbfd),
+                    color-stop (0.222,#efeff5),
+                    color-stop (0.333,#eeeef4),
+                    color-stop (0.444,#e4e4ed),
+                    color-stop (0.556,#deddea),
+                    color-stop (0.667,#dcdce8),
+                    color-stop (0.778,#bebfd6),
+                    color-stop (0.889,#bebfd6),
+                               to (#dbdbe8));
+ border-color: #070961;
 }
-
-.button.default:hover {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (mix (shade (@selected_bg_color, 1.21), @bg_color, 0.3)),
-                                     to (mix (shade (@selected_bg_color, 0.89), @bg_color, 0.3)));
-}
-
-.button.default:active {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (mix (shade (@selected_bg_color, 0.95), @bg_color, 0.3)),
-                                     to (mix (shade (@selected_bg_color, 1.05), @bg_color, 0.3)));
-}
-
-.button.default:active:hover {
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (mix (shade (@selected_bg_color, 1.0), @bg_color, 0.3)),
-                                     to (mix (shade (@selected_bg_color, 1.1), @bg_color, 0.3)));
-}
-*/
 
 /* Set up shadows and hilights for button visual separation */
 .linked .button,
@@ -241,7 +237,7 @@ GtkSwitch.slider,
 .toolbar .raised.linked .button:first-child,
 .inline-toolbar.toolbar .button:first-child,
 .inline-toolbar.toolbar GtkToolButton:first-child .button {
-*/    box-shadow: inset -1px 0 shade (@bg_color, 0.84);*/
+/*    box-shadow: inset -1px 0 shade (@bg_color, 0.84);*/
 }
 
 .linked .button:last-child,
@@ -1399,8 +1395,8 @@ GtkScale.mark {
 	-GtkRange-arrow-scaling: 0.0;
 	-GtkRange-trough-border: 0;
 	-GtkRange-stepper-size: 16;
-	-GtkRange-slider-width: 19; 
-	-GtkScrollbar-slider-width: 17; 
+	-GtkRange-slider-width: 15; 
+	-GtkScrollbar-slider-width: 15; 
 	color: @transparent;
 }
 
@@ -1408,6 +1404,8 @@ GtkScale.mark {
 .scrollbar.button:insensitive {
 	-unico-outer-stroke-width: 0;
 	border-radius: 0;
+        background-image: none;
+        box-shadow: none;
 	border-width: 0px;
 	border-style: none;
         color: @transparent;

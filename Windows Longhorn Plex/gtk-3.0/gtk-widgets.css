@@ -2074,13 +2074,13 @@ GtkColorButton.button {
     border-style: solid;
     border-color: shade(@titlebar_bg_color, 0.8);
     background-color: transparent;
-    background-size: cover;
-    background-image: url('titlebar/focused.png');
+    background-size: 100% 100%;
+    background-image: linear-gradient(to right, #4f88d6 2%, #70b0f3 20%, #70b0f3 80%, #4f88d6 98%);
     color: @titlebar_fg_color;
 }
 
 .header-bar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+    background-image: linear-gradient(to top, #4f88d6);
 }
 
 .header-bar .button.text-button {
@@ -2204,8 +2204,8 @@ GtkColorButton.button {
     border-style: solid;
     border-color: shade(@toolbar_bg_color, 0.8);
     background-color: transparent;
-    background-image: url('titlebar/focused.png');
-    background-size: cover;
+    background-size: 100% 100%;
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 14%, #70b0f3 27%, #70b0f3 7%, #64a1e8 86%, #4f88d6 98%);
     color: @toolbar_fg_color;
 }
 

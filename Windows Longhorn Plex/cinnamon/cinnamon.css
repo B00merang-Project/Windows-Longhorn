@@ -1599,7 +1599,8 @@ StScrollView .notification-icon-button:active {
     padding: 8px;
 }
 .starkmenu-background {
-    padding: 54px 1px 29px 1px;
+    padding: 54px 1px 0px 1px;
+    border-image: url("menu-bg.png") 8 8 63 1;
 }
 .starkmenu-selected-app-box {
     color: white; /* Information, which is shown, if you select apps*/

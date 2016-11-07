@@ -91,20 +91,20 @@ StScrollBar StButton#hhandle {
 
 .toggle-switch-us {
     background-image: url("control-assets/off.svg");
-    background-size: auto;
+    background-size: contain;
 }
 .toggle-switch-us:checked {
     background-image: url("control-assets/on.svg");
-    background-size: auto;
+    background-size: contain;
 }
 
 .toggle-switch-intl {
     background-image: url("control-assets/off.svg");
-    background-size: auto;
+    background-size: contain;
 }
 .toggle-switch-intl:checked {
     background-image: url("control-assets/on.svg");
-    background-size: auto;
+    background-size: contain;
 }
 
 /*---checkboxes---*/
@@ -1450,6 +1450,7 @@ background: #111;
 /* Starkmenu custom look */
 .starkmenu-background {
     background-color: transparent;
+    background-gradient-direction: none;
     border-image: url('menu-bg.png') 5 5 5 5;
 }
 
@@ -1641,6 +1642,7 @@ background: #111;
 
 .window-list-item-box {
     font-weight: normal;
+    text-shadow: 0 0 3px black;
     border-image: url("panel-assets/item-normal.png") 4;
 }
 
@@ -1652,12 +1654,12 @@ background: #111;
 }
 
 .window-list-item-demands-attention {
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-attention.png") 4;
 }
 
 .window-list-item-box:active:hover {
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-active-hover.png") 4;
 }
 
@@ -1693,14 +1695,14 @@ background: #111;
 /*-----top panel-----*/
 
 .panel-top .window-list-item-box:hover  {   
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-hover.png") 4;
 }
 
 .panel-top .window-list-item-box:active,
 .panel-top .window-list-item-box:checked,
 .panel-top .window-list-item-box:focus  {
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-active.png") 4;
     color: #fff;
 }
@@ -1708,7 +1710,7 @@ background: #111;
 .panel-top .window-list-item-box:checked:hover,
 .panel-top .window-list-item-box:focus:hover,
 .panel-top .window-list-item-box:active:hover  {     
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-active-hover.png") 4;
     color: #fff;
 }
@@ -1724,14 +1726,14 @@ background: #111;
 /*-----bottom panel-----*/
 
 .panel-bottom .window-list-item-box:hover {
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-hover.png") 4;
 }
 
 .panel-bottom .window-list-item-box:active,
 .panel-bottom .window-list-item-box:checked,
 .panel-bottom .window-list-item-box:focus  {
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-active.png") 4;
     color: #fff;
 }
@@ -1739,7 +1741,7 @@ background: #111;
 .panel-bottom .window-list-item-box:checked:hover,
 .panel-bottom .window-list-item-box:focus:hover,
 .panel-bottom .window-list-item-box:active:hover  {     
-    font-weight: bold;
+    font-weight: normal;
     border-image: url("panel-assets/item-active-hover.png") 4;
     color: #fff;
 }

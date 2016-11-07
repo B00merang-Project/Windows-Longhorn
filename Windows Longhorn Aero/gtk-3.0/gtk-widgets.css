@@ -92,7 +92,7 @@ GtkPaned {
 }
 
 GtkEventBox {
-    background-color: @bg_color;
+    background-color: transparent;
 }
 
 /*********
@@ -794,16 +794,12 @@ GtkMenuToolButton.menu,
     background-color: #f0f0f0;
     border-color: #888888;
     padding: 2px 3px;
-    border-width: 1px;
+    border-width: 0;
     border-style: solid;
 
     color: @dark_fg_color;
 
-    box-shadow: inset 0 1px shade (@dark_bg_color, 1.18),
-                inset 0 -1px shade (@dark_bg_color, 1.18),
-                inset -1px 0 shade (@dark_bg_color, 1.16),
-                inset 1px 0 shade (@dark_bg_color, 1.18);
-
+    box-shadow: none;
     margin: 1px;
 }
 
@@ -866,19 +862,17 @@ GtkComboBox .menu {
  ***********/
 .menubar {
     -GtkWidget-window-dragging: true;
-    background-color: @bg_color;
-	background-image: url('assets/toolbar.png');
-	background-size: cover;
+    background-image: url('assets/toolbar.png');
+    background-size: 100% 100%;
     border-width: 0px;
     border-color: #b6bccc;
     border-style: solid;
-
     color: @dark_fg_color;
     text-shadow: @none;
 }
 
 .menubar:backdrop {
-	background-image: url('assets/toolbar-inactive.png');
+    background-image: url('assets/toolbar-inactive.png');
 }
 
 /***************
@@ -1886,12 +1880,11 @@ GtkTextView {
  * down grouped with normal toolbars.
  */
 .titlebar.header-bar {
-    padding: 2px;
-    background-image: -gtk-gradient (linear, left top, left bottom,
-                                     from (shade (@dark_bg_color, 1.5)),
-                                     to (@dark_bg_color));
+    padding: 2px 5px;
+    background-image: url('assets/toolbar.png');
     border-color: shade (@dark_bg_color, 1.5);
     border-style: solid;
+    background-size: 100% 100%;
     border-width: 1px 0 0 0;
     border-radius: 7px 7px 0 0;
 
@@ -1901,11 +1894,14 @@ GtkTextView {
     box-shadow: inset 0 1px shade (@dark_bg_color, 1.65);
 }
 
+.titlebar.header-bar:backdrop {
+    background-image: url('assets/toolbar-inactive.png');
+    background-size: 100% 100%;
+}
+
 .titlebar.header-bar .title {
     font: bold;
 }
-
-
 
 .maximized .titlebar.header-bar {
     border-radius: 0;
@@ -1919,7 +1915,57 @@ GtkTextView {
 }
 
 .titlebar.header-bar .button.titlebutton:hover {
-    border-image-width: 12px;
+    border-image-width: 0;
+}
+
+.titlebar.header-bar .button.titlebutton {
+    padding: 0px;
+    border-radius: 0;
+    padding-right: 5px;
+    padding-left: 5px;
+    border: 1px solid #8c8c8c;
+    color: white;
+    icon-shadow: 0 0 2px black;
+    box-shadow: inset 0 0 0px 1px rgba(255,255,255,0.5);
+    background-image: linear-gradient(to bottom, alpha(#d4d4d6, 0.25) ,alpha(#bababf, 0.25) 49%, alpha(#66666d, 0.25) 50%, alpha(#66666d, 0.25));
+}
+
+.titlebar.header-bar .button.titlebutton.close {
+    background-clip: padding-box;
+    border-radius: 0 0 5px 0;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.titlebar.header-bar .button.titlebutton.minimize {
+    border-radius: 0 0 0 5px;
+}
+
+.titlebar.header-bar .button.titlebutton.close:hover {
+    background-image: linear-gradient(to bottom, #fcc8bf, #faa99b 50%, #d22302 51%, #e6934e);
+}
+
+.titlebar.header-bar .button.titlebutton.close:active {
+    background-image: linear-gradient(to top, #ec6e44, #e76b41);
+}
+
+.titlebar.header-bar .button.titlebutton:hover {
+    background-image: linear-gradient(to bottom, alpha(#a9d4f4, 0.65), alpha(#7cbfea, 0.65) 50%, alpha(#2e71a5, 0.65) 51%, alpha(#23c8e8, 0.65));
+}
+
+.titlebar.header-bar .button.titlebutton:active {
+    icon-shadow: none;
+    background-image: linear-gradient(to bottom, #89acd0 50%, #4973a1 51%);
+}
+
+.window-frame {
+    border-style: none;
+    border-radius: 7px;
+    box-shadow: 0 3px 7px 1px alpha(black, 0.7),
+                0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
+
+    /* this is used for the resize cursor area */
+    margin: 10px;
 }
 
 /***********

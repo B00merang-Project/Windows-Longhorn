@@ -91,20 +91,20 @@ StScrollBar StButton#hhandle {
 
 .toggle-switch-us {
     background-image: url("control-assets/off.svg");
-    background-size: auto;
+    background-size: contain;
 }
 .toggle-switch-us:checked {
     background-image: url("control-assets/on.svg");
-    background-size: auto;
+    background-size: contain;
 }
 
 .toggle-switch-intl {
     background-image: url("control-assets/off.svg");
-    background-size: auto;
+    background-size: contain;
 }
 .toggle-switch-intl:checked {
     background-image: url("control-assets/on.svg");
-    background-size: auto;
+    background-size: contain;
 }
 
 /*---checkboxes---*/
@@ -1450,7 +1450,7 @@ background: #111;
 /* Starkmenu custom look */
 .starkmenu-background {
     background-color: transparent;
-    background-gradient: none;
+    background-gradient-direction: none;
     border-image: url('menu-bg.png') 5 5 5 5;
 }
 

@@ -56,19 +56,19 @@
 
 <draw_ops name="title">
   <image filename="titlebar-focused-left.png" x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-focused-middle.png" x="5" y="0" width="width - 6" height="height"/>
+  <image filename="titlebar-focused-middle.png" x="6" y="0" width="width - 6" height="height"/>
   <image filename="titlebar-focused-right.png" x="width - object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="title-shaded">
   <image filename="titlebar-focused-left.png" x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-focused-middle.png" x="5" y="0" width="width - 6" height="height"/>
+  <image filename="titlebar-focused-middle.png" x="6" y="0" width="width - 6" height="height"/>
   <image filename="titlebar-focused-right.png" x="width - object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
 <draw_ops name="title-unfocused">
   <image filename="titlebar-blurred-left.png" x="0" y="0" width="object_width" height="height"/>
-  <image filename="titlebar-blurred-middle.png" x="5" y="0" width="width - 6" height="height"/>
+  <image filename="titlebar-blurred-middle.png" x="6" y="0" width="width - 6" height="height"/>
   <image filename="titlebar-blurred-right.png" x="width - object_width" y="0" width="object_width" height="height"/>
 </draw_ops>
 
@@ -109,23 +109,23 @@
 </draw_ops>
 
 <draw_ops name="button-close-focused">
-  <image filename="close-focused-hover.png" x="0" y="0" width="width" height="14"/>
+  <image filename="close-focused-hover.png" x="0" y="0" width="42" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-close-unfocused">
-  <image filename="close-focused-normal.png" x="0" y="0" width="width" height="14"/>
+  <image filename="close-focused-normal.png" x="0" y="0" width="42" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-close-blurred">
-  <image filename="close-blurred-normal.png" x="0" y="0" width="width" height="14"/>
+  <image filename="close-blurred-normal.png" x="0" y="0" width="42" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-close-blurred-hover">
-  <image filename="close-blurred-hover.png" x="0" y="0" width="width" height="14"/>
+  <image filename="close-blurred-hover.png" x="0" y="0" width="42" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-close-pressed">
-  <image filename="close-pressed.png" x="0" y="0" width="width" height="14"/>
+  <image filename="close-pressed.png" x="0" y="0" width="42" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-maximize-focused">

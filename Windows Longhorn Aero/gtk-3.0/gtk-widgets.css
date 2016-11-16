@@ -1920,7 +1920,7 @@ GtkTextView {
 
 .titlebar.header-bar .button.titlebutton {
     padding: 0px;
-    border-radius: 0;
+    border-radius: 3px;
     padding-right: 5px;
     padding-left: 5px;
     border: 1px solid #8c8c8c;
@@ -1932,13 +1932,8 @@ GtkTextView {
 
 .titlebar.header-bar .button.titlebutton.close {
     background-clip: padding-box;
-    border-radius: 0 0 5px 0;
     padding-right: 15px;
     padding-left: 15px;
-}
-
-.titlebar.header-bar .button.titlebutton.minimize {
-    border-radius: 0 0 0 5px;
 }
 
 .titlebar.header-bar .button.titlebutton.close:hover {

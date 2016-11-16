@@ -981,12 +981,12 @@ GtkComboBox .menu {
     border-style: none;
     background-color: transparent;
     background-size: cover;
-    background-image: url('titlebar/focused.png');
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
     color: @menubar_fg_color;
 }
 
 .menubar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+    background-image: linear-gradient(to top, #4f88d6);
 }
 
 /***************
@@ -2094,11 +2094,15 @@ GtkColorButton.button {
 .header-bar .title {
     font: bold;
     padding: 0 12px;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .header-bar .subtitle {
     font: smaller;
     padding: 0 12px;
+    color: white;
+    text-shadow: 1px 1px black;
 }
 
 .header-bar GtkComboBox,
@@ -2205,14 +2209,14 @@ GtkColorButton.button {
     border-color: shade(@toolbar_bg_color, 0.8);
     background-color: transparent;
     background-size: 100% 100%;
-    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 14%, #70b0f3 27%, #70b0f3 7%, #64a1e8 86%, #4f88d6 98%);
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
     color: @toolbar_fg_color;
 }
 
 .primary-toolbar:backdrop,
 .primary-toolbar .toolbar:backdrop,
 .primary-toolbar.toolbar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+    background-image: linear-gradient(to top, #4f88d6);
 }
 
 .primary-toolbar GtkComboBox,
@@ -3353,15 +3357,14 @@ GtkBubbleWindow .toolbar {
  *******/
 .titlebar {
     border-radius: 8px 8px 0 0;
-    background-image: url('titlebar/focused.png');
-    background-size: cover;
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
     background-color: transparent;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }
 
 .titlebar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+    background-image: linear-gradient(to top, #4f88d6);
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
     text-shadow: none;
 }

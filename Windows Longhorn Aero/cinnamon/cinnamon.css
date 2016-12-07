@@ -2032,3 +2032,16 @@ panelLeft .applet-box:first-child:hover {
 panelLeft .applet-box:first-child:active {
 	border-image: url('start-here.png') 6 11 6 6;
 }
+
+/* ===================================================================
+ * CinnXPStarkMenu 
+ * (if CinnXPStarkMenu is used, change some stuff, else use default)
+ * ===================================================================*/
+.starkmenu-applications-box StScrollView {
+    color: white;
+}
+
+.hover-user-icon {
+  border-radius: 4px;
+  border: 2px solid #f1f1f1;
+}

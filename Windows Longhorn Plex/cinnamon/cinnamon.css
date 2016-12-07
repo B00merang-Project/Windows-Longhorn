@@ -1022,7 +1022,7 @@ StScrollView .notification-icon-button:active {
 .menu-background {
     border-image: url("menu-bg.png") 8 8 63 41;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-    padding: 55px 1px 10px 1px;
+    padding: 55px 1px 4px 1px;
 }
 
 .menu-favorites-button {
@@ -1599,8 +1599,7 @@ StScrollView .notification-icon-button:active {
     padding: 8px;
 }
 .starkmenu-background {
-    padding: 54px 1px 0px 1px;
-    border-image: url("menu-bg.png") 8 8 63 1;
+    padding: 54px 1px 29px 1px;
 }
 .starkmenu-selected-app-box {
     color: white; /* Information, which is shown, if you select apps*/

@@ -358,7 +358,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .expo-background {
-    border-image: url('big-blue-bg.png') 250 250 290 100;
+    background-image: url('expo.png');
 }
 
 .expo-workspace-thumbnail-frame {

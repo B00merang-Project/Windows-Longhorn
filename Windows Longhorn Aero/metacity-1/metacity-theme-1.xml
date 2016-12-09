@@ -17,9 +17,9 @@
   <distance name="left_titlebar_edge" value="1"/>
   <distance name="right_titlebar_edge" value="5"/>
   <distance name="button_width" value="25"/>
-  <distance name="button_height" value="14"/>
+  <distance name="button_height" value="24"/>
   <distance name="title_vertical_pad" value="12"/>
-  <border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  <border name="title_border" left="0" right="0" top="2" bottom="0"/>
   <border name="button_border" left="0" right="0" top="0" bottom="0"/>
 </frame_geometry>
 
@@ -30,7 +30,7 @@
   <distance name="left_titlebar_edge" value="0"/>
   <distance name="right_titlebar_edge" value="0"/>
   <distance name="button_width" value="25"/>
-  <distance name="button_height" value="14"/>
+  <distance name="button_height" value="20"/>
   <distance name="title_vertical_pad" value="12"/>
   <border name="title_border" left="0" right="0" top="0" bottom="0"/>
   <border name="button_border" left="0" right="0" top="0" bottom="0"/>
@@ -129,43 +129,43 @@
 </draw_ops>
 
 <draw_ops name="button-maximize-focused">
-  <image filename="max-focused-hover.png" x="0" y="0" width="width" height="height"/>
+  <image filename="max-focused-hover.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-maximize-unfocused">
-  <image filename="max-focused-normal.png" x="0" y="0" width="width" height="height"/>
+  <image filename="max-focused-normal.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-maximize-blurred">
-  <image filename="max-blurred-normal.png" x="0" y="0" width="width" height="height"/>
+  <image filename="max-blurred-normal.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-maximize-blurred-hover">
-  <image filename="max-blurred-hover.png" x="0" y="0" width="width" height="height"/>
+  <image filename="max-blurred-hover.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-maximize-pressed">
-  <image filename="max-pressed.png" x="0"  y="0" width="width" height="height"/>
+  <image filename="max-pressed.png" x="0"  y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-restore-focused">
-  <image filename="restore-focused-hover.png" x="0" y="0" width="width" height="height"/>
+  <image filename="restore-focused-hover.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-restore-unfocused">
-  <image filename="restore-focused-normal.png" x="0" y="0" width="width" height="height"/>
+  <image filename="restore-focused-normal.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-restore-blurred">
-  <image filename="restore-blurred-normal.png" x="0" y="0" width="width" height="height"/>
+  <image filename="restore-blurred-normal.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-restore-blurred-hover">
-  <image filename="restore-blurred-hover.png" x="0" y="0" width="width" height="height"/>
+  <image filename="restore-blurred-hover.png" x="0" y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-restore-pressed">
-  <image filename="restore-pressed.png" x="0"  y="0" width="width" height="height"/>
+  <image filename="restore-pressed.png" x="0"  y="0" width="width" height="14"/>
 </draw_ops>
 
 <draw_ops name="button-minimize-focused">
@@ -193,7 +193,7 @@
          y="0"
          width="width" height="height"/>-->
   <icon  x="(width-mini_icon_width)/2"
-         y="(height-mini_icon_height)/2"
+         y="(height-mini_icon_height)/2 + 2"
          width="mini_icon_width" height="mini_icon_height"/>
 </draw_ops>
 
@@ -203,7 +203,7 @@
          width="width" height="height" alpha="0.5"/>-->
 
   <icon  x="(width-mini_icon_width)/2"
-         y="(height-mini_icon_height)/2"
+         y="(height-mini_icon_height)/2 + 2"
          width="mini_icon_width" height="mini_icon_height"/>
 </draw_ops>
 

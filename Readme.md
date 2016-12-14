@@ -6,12 +6,13 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 ### Note: This project is still a work in progress ###
 
 **Included themes**
-- Vista Beta 2 Windows Basic (also known as "Old Windows Basic") [Elbullazul]
-- Longhorn 4074 Aero (with Aero Express from Beta 2's titlebar BG and borders) [feren]
+- Windows Basic (Vista Beta 2/Old Windows Basic) [Elbullazul]
+- Longhorn 4074 Aero [feren/Elbullazul]
 - Longhorn 405X+ Slate [Elbullazul]
-- Longhorn Plex V.2.0 (Last version of Plex) [Elbullazul/feren]
+- Longhorn Plex (Last version of Plex) [Elbullazul/feren]
 - Longhorn 4074 Icon Set [feren]
 - Longhorn 4074 Jade [feren/Elbullazul]
+- Longhorn 5048 Aero [Elbullazul]
 
 `Currently Supported DEs: Cinnamon, GTK 3, Metacity`
 

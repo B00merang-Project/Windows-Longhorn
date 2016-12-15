@@ -916,7 +916,7 @@ GtkComboBox .menu {
 .header-bar .menu,
 .header-bar .primary-toolbar .menu,
 .menu {
-    padding: 0;
+    padding: 4px;
     border-radius: 0;
     border: 3px solid transparent;
     background-color: @menu_bg_color;
@@ -1009,7 +1009,7 @@ GtkTreeMenu .menuitem {
     border-style: solid;
     border-color: transparent;
     border-radius: 0;
-    background-color: transparent;
+    background-color: @menu_bg_color;
     background-image: none;
     color: @menu_fg_color;
 }
@@ -2332,7 +2332,7 @@ GtkColorButton.button {
     border-style: solid;
     border-color: shade(@titlebar_bg_color, 0.8);
     background-color: transparent;
-    background-size: cover;
+    background-size: 100% 100%;
     background-image: url('titlebar/focused.png');
     color: @titlebar_fg_color;
 }

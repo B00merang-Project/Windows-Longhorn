@@ -13,6 +13,8 @@
 @define-color tooltip_bg_color #ffffb7;
 @define-color tooltip_fg_color #4c4c4c;
 @define-color progressbar_color #06B025;
+@define-color sidebar_bg_color #fff;
+@define-color sidebar_fg_color #000;
 
 /* dark color scheme */
 @define-color dark_bg_color #fff;

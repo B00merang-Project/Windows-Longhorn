@@ -2310,6 +2310,15 @@ GtkColorButton.button {
     border-color: shade(@toolbar_bg_color, 0.7);
 }
 
+.primary-toolbar .button:active,
+.primary-toolbar .button:checked {
+    background-image: linear-gradient(to bottom,
+                                      shade(@theme_bg_color, 0.6),
+                                      shade(@theme_bg_color, 0.7),
+                                      shade(@theme_bg_color, 0.75)
+                                      );
+}
+
 .primary-toolbar .raised .button,
 .primary-toolbar .raised .button,
 .toolbar .button {

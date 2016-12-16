@@ -8,8 +8,8 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 **Included themes**
 - Windows Basic (Vista Beta 2/Old Windows Basic) [Elbullazul]
 - Longhorn 4074 Aero [feren/Elbullazul]
-- Longhorn 405X+ Slate [Elbullazul]
-- Longhorn Plex (Last version of Plex) [Elbullazul/feren]
+- Longhorn 405x Slate [Elbullazul]
+- Longhorn 4039 Plex III [Elbullazul/feren]
 - Longhorn 4074 Icon Set [feren]
 - Longhorn 4074 Jade [feren/Elbullazul]
 - Longhorn 5048 Aero [Elbullazul]

@@ -82,7 +82,9 @@ StScrollBar StButton#vhandle:hover {
     -arrow-base: 20px; /* for some reason this makes the menu go closer to the edge */
 }
 
-.popup-menu {
+/* Cinnamon 3.2 fix */
+.popup-menu,
+.menu {
     color: black;
     min-width: 100px;
     padding-left: 5px;
@@ -120,13 +122,9 @@ StScrollBar StButton#vhandle:hover {
 .popup-submenu-menu-item:open {
     background-color: rgba(70,70,70,0);
 }
-
 .popup-sub-menu {
-    border-image: url('inset-shadow.png') 3;
-    background-color: #ebe9ed;
-    padding: 0.2em 0.2em;
+    background-color: transparent;
 }
-
 .popup-sub-menu .popup-menu-item:ltr {
     padding-right: 0em;
 }
@@ -1075,17 +1073,18 @@ StScrollView .notification-icon-button:active {
     background: none;
     border-width: 0px;
     box-shadow: none;
-    border-image: url('trough-scrollbar-vert.png') 1;
+    background-gradient-start: #cad6e9;
+    background-gradient-end: #fafbfb;
+    background-gradient-direction: horizontal;
 }
 
 .menu-applications-box StButton#vhandle {
-    border-image: url('slider-vert.png') 3;
-    background: url('handle-vert.png') no-repeat center center;
+    border-image: url('slider-vert.png') 5;
 }
 
 .menu-applications-box StButton#vhandle:hover {
-    border-image: url('slider-vert-hover.png') 3;
-    background: url('handle-vert.png') no-repeat center center;
+    border-image: url('slider-vert-hover.png') 5;
+/*    background: url('handle-vert.png') no-repeat center center; */
 }
 
 .menu-application-button {

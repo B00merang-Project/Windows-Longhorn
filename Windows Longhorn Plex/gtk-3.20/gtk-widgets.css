@@ -12,8 +12,8 @@
     -GtkButton-interior-focus: true;
     -GtkButtonBox-child-min-height: 24;
     -GtkButtonBox-child-internal-pad-y: 1;
-    -GtkCheckButton-indicator-size: 14;
-    -GtkCheckMenuItem-indicator-size: 14;
+    -GtkCheckButton-indicator-size: 16;
+    -GtkCheckMenuItem-indicator-size: 16;
     -GtkExpander-expander-size: 8;
     -GtkHTML-link-color: @link_color;
     -GtkIMHtml-hyperlink-color: @link_color;
@@ -191,28 +191,31 @@ assistant .sidebar {
  * button *
  **********/
 button {
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 0;
-
-    padding: 6px 6px;
+    padding: 3px 4px;
     border-width: 1px;
-    border-radius: 2px;
+    border-radius: 3px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.3);
+    border-color: shade(@theme_bg_color, 0.65);
     background-color: shade(@theme_bg_color, 1.08);
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    background-image: linear-gradient(to bottom, #f4fcfc 20%, #d7e4fb 35%);
     color: @theme_fg_color;
-    box-shadow: inset 0 0 3px 0px rgba(0,0,0,0.15);
 }
 
 button:hover {
-    border-color: shade(@theme_bg_color, 0.2);
-    box-shadow: inset 0 0 1px 2px #ffc73c;
+    border-color: shade(@theme_bg_color, 0.7);
+    box-shadow: inset 0 0 3px 4px #d0e2ff,
+                inset 0 0 0 1px #7ca4dc,
+                inset 0px 30px 40px -25px alpha(white, 0.7);
 }
 
-button:active {
-    border-color: shade(@theme_bg_color, 0.2);
-    background-color: shade(@theme_bg_color, 0.95);
+button:active,
+button:checked,
+button:checked:focus {
+    color: @theme_selected_fg_color;
+    border-color: shade(@theme_bg_color, 0.8);
+    box-shadow: inset 0 0 3px 4px #d0e2ff,
+                inset 0 0 0 1px #7ca4dc,
+                inset 0px 30px 40px -25px alpha(black, 0.45);
     background-image: linear-gradient(to bottom,
                                       shade(@button_bg_color, 0.6),
                                       shade(@button_bg_color, 0.7),
@@ -221,6 +224,7 @@ button:active {
 }
 
 button:active:hover {
+    color: @theme_fg_color;
     border-color: shade(@theme_bg_color, 0.2);
 }
 
@@ -228,6 +232,7 @@ button:focus,
 button:hover:focus,
 button:active:focus,
 button:active:hover:focus {
+    color: @theme_fg_color;
     border-color: shade(@theme_bg_color, 0.3);
     box-shadow: inset 0 0 1px 2px alpha(#379aff, 0.2);
 }
@@ -244,29 +249,6 @@ button:active *:insensitive {
     background-image: none;
 }
 
-/* default button */
-button.default {
-    border-color: shade(@theme_selected_bg_color, 0.8);
-    background-color: shade(@theme_selected_bg_color, 1.08);
-    box-shadow: inset 0 0 2px 1px #ffc73c;
-    color: @theme_selected_fg_color;
-}
-
-button.default:hover {
-    border-color: shade(@theme_selected_bg_color, 0.7);
-    background-color: @theme_selected_bg_color;
-}
-
-button.default:active {
-    border-color: shade(@theme_selected_bg_color, 0.8);
-    background-color: shade(@theme_selected_bg_color, 0.95);
-}
-
-button.default:active:hover {
-    border-color: shade(@theme_selected_bg_color, 0.7);
-    background-color: shade(@theme_selected_bg_color, 0.97);
-}
-
 /* flat button */
 button.flat {
     background-color: transparent;
@@ -277,9 +259,8 @@ button.flat {
 
 button.flat:hover {
     border-color: shade(@theme_bg_color, 0.2);
-    box-shadow: inset 0 0 1px 2px #ffc73c;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
     box-shadow: inset 0 0 3px 0px rgba(0,0,0,0.15);
+    background-image: linear-gradient(to bottom, #f4fcfc 20%, #d7e4fb 35%);
 }
 
 button.flat:active,
@@ -490,8 +471,14 @@ combobox toolbar.primary-toolbar button:hover,
 combobox entry button:active,
 combobox toolbar combobox button.combo:disabled {
     border-width: 1px 1px 1px 1px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
+    border-radius: 0;
+    padding: 3px 1px;
+    color: @theme_selected_fg_color;
+    box-shadow: inset 1px 0 #6ea0e2,
+                inset -1px 0 #6ea0e2,
+                inset 0 1px #5f91c9,
+                inset 0 -1px #5f91c9;
+    background-image: linear-gradient(to bottom, #6698d9, #5a85be, #6698d9);
 }
 
 /*********
@@ -863,13 +850,13 @@ image:selected:hover {
     color: @theme_selected_fg_color;
 }
 
-.viewimage,
-.viewimage:hover {
+view image,
+view image:hover {
     color: alpha(currentColor, 0.9);
 }
 
-.viewimage:selected,
-.viewimage:selected:hover {
+view image:selected,
+view image:selected:hover {
     color: @theme_selected_fg_color;
 }
 
@@ -1230,9 +1217,10 @@ notebook > header.frame {
 }
 
 notebook > stack:not(:only-child) {
-  backgroun-color: @theme_bg_color;
-  border: 1px solid shade(@theme_bg_color, 0.7);
-  box-shadow: none; }
+    background-color: @theme_bg_color;
+    border: 1px solid shade(@theme_bg_color, 0.7);
+    box-shadow: none; 
+}
 
 notebook tab {
     background-image: none;
@@ -1244,7 +1232,7 @@ notebook tab {
     border-radius: 0;
     background-image: linear-gradient(to bottom,
                                       shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
+                                      @bg_color 30%,
                                       @bg_color
                                       );
 }
@@ -1269,7 +1257,7 @@ notebook tab {
 
 notebook header.top tab:checked {
     padding: 3px 7px 1px 7px;
-    box-shadow: inset 0 2px #ffc73c,
+    box-shadow: inset 0 2px #054cab,
                 0 1px @theme_base_color;
 }
 
@@ -1281,7 +1269,7 @@ notebook header.top tab {
 
 notebook header.right tab:checked {
     padding: 4px 6px 4px 1px;
-    box-shadow: inset -2px 0 #ffc73c,
+    box-shadow: inset -2px 0 #054cab,
                 -1px 0 @theme_base_color;
     background-image: none;
     background-color: @theme_base_color;
@@ -1293,7 +1281,7 @@ notebook header.right tab {
     border-left-width: 0px;
     background-image: linear-gradient(to left,
                                       shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
+                                      @bg_color 30%,
                                       @bg_color
                                       );
     border-image-width: 1px 0;
@@ -1301,7 +1289,7 @@ notebook header.right tab {
 
 notebook header.bottom tab:checked {
     padding: 1px 7px 4px 7px;
-    box-shadow: inset 0 -2px #ffc73c,
+    box-shadow: inset 0 -2px #054cab,
                 0 -1px @theme_base_color;
     background-image: none;
     background-color: @theme_base_color;
@@ -1313,7 +1301,7 @@ notebook header.bottom tab {
     border-top-width: 0px;
     background-image: linear-gradient(to top,
                                       shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
+                                      @bg_color 30%,
                                       @bg_color
                                       );
 
@@ -1322,7 +1310,7 @@ notebook header.bottom tab {
 
 notebook header.left tab:checked {
     padding: 4px 1px 4px 6px;
-    box-shadow: inset 2px 0 #ffc73c,
+    box-shadow: inset 2px 0 #054cab,
                 1px 0 @theme_base_color;
     background-image: none;
     background-color: @theme_base_color;
@@ -1334,7 +1322,7 @@ notebook header.left tab {
     border-right-width: 0px;
     background-image: linear-gradient(to right,
                                       shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
+                                      @bg_color 30%,
                                       @bg_color
                                       );
 
@@ -1468,406 +1456,6 @@ levelbar block.empty-fill-block {
     background-image: none;
 }
 
-
-/************
- * GtkScale *
- ************/
-scale trough, scale fill {
-  border: 2px solid transparent;
-  border-radius: 0;
-  background-color: transparent;
-  box-shadow: none; }
-  row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill {
-    box-shadow: none; }
-    row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill, row:selected scale trough:disabled, scale row:selected trough:disabled, row:selected scale fill:disabled, scale row:selected fill:disabled {
-      border-color: #061f3e; }
-  .osd scale trough, scale .osd trough, .osd scale fill, scale .osd fill {
-    border-color: #a1a192;
-    background-color: rgba(161, 161, 146, 0.8);
-    box-shadow: none;
-    outline-color: rgba(0, 0, 0, 0.2); }
-    .osd scale trough:disabled, scale .osd trough:disabled, .osd scale fill:disabled, scale .osd fill:disabled {
-      background-color: #f4f4f2; }
-
-scale {
-  min-height: 10px;
-  min-width: 10px;
-  padding: 12px; }
-  scale fill,
-  scale highlight {
-    margin: -1px; }
-  scale.fine-tune fill,
-  scale.fine-tune highlight,
-  scale.fine-tune trough {
-    outline-offset: 4px;
-    -gtk-outline-radius: 1px; }
-  scale trough {
-    outline-offset: 11px;
-    -gtk-outline-radius: 2px; }
-  scale fill:disabled {
-    border-color: transparent;
-    background-color: transparent; }
-  .osd scale fill {
-    background-color: transparent; }
-    .osd scale fill:disabled, .osd scale fill:disabled:backdrop {
-      border-color: transparent;
-      background-color: transparent; }
-  scale.horizontal trough {
-    border-image: url("Range/trough-horz.png");
-    border-image-repeat: stretch;
-    border-width: 1px 2px;
-    border-image-slice: 1 2 1 2;
-    background-image: linear-gradient(to bottom, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.horizontal slider {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:hover {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz-hover.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:active {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz-active.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:disabled {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz-insensitive.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.vertical trough {
-    border-image: url("Range/trough-vert.png");
-    border-image-repeat: stretch;
-    border-width: 2px 1px;
-    border-image-slice: 2 1 2 1;
-    background-image: linear-gradient(to right, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.vertical slider {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:hover {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert-hover.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:active {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert-active.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:disabled {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert-insensitive.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale value {
-    color: alpha(currentColor,0.4); }
-  scale marks {
-    color: alpha(currentColor,0.4); }
-    scale marks.top {
-      margin-bottom: 11px;
-      margin-top: -15px; }
-    scale marks.bottom {
-      margin-top: 11px;
-      margin-bottom: -15px; }
-    scale marks.top {
-      margin-right: 11px;
-      margin-left: -15px; }
-    scale marks.bottom {
-      margin-left: 11px;
-      margin-right: -15px; }
-  scale.fine-tune marks.top {
-    margin-bottom: 11px;
-    margin-top: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-top: 11px;
-    margin-bottom: -12px; }
-  scale.fine-tune marks.top {
-    margin-right: 11px;
-    margin-left: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-left: 11px;
-    margin-right: -12px; }
-  scale.horizontal indicator {
-    min-height: 4px;
-    min-width: 1px; }
-  scale.horizontal.fine-tune indicator {
-    min-height: 1px; }
-  scale.vertical indicator {
-    min-height: 1px;
-    min-width: 4px; }
-  scale.vertical.fine-tune indicator {
-    min-width: 1px; }
-  scale.color.horizontal slider:hover, scale.color.horizontal slider:disabled, scale.color.horizontal slider,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.horizontal slider:hover,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above-hover.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.horizontal slider:active,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above-active.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.horizontal slider:disabled,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above-insensitive.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below-hover.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below-active.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below-insensitive.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:hover,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above-hover.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:active,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above-active.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:disabled,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above-insensitive.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:hover,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below-hover.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:active,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below-active.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:disabled,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below-insensitive.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color {
-    min-height: 0;
-    min-width: 0; }
-    scale.color trough {
-      border: none;
-      background-image: none;
-      background-repeat: no-repeat; }
-    scale.color.horizontal {
-      padding: 0 0 15px 0; }
-      scale.color.horizontal trough {
-        padding-bottom: 4px;
-        background-position: 0 -3px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.horizontal slider:hover, scale.color.horizontal slider:disabled, scale.color.horizontal slider {
-        margin-bottom: -10px;
-        margin-top: 0; }
-    scale.color.vertical:dir(ltr) {
-      padding: 0 0 0 15px; }
-      scale.color.vertical:dir(ltr) trough {
-        padding-left: 4px;
-        background-position: 3px 0;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider {
-        margin-left: -10px;
-        margin-right: 0; }
-    scale.color.vertical:dir(rtl) {
-      padding: 0 15px 0 0; }
-      scale.color.vertical:dir(rtl) trough {
-        padding-right: 4px;
-        background-position: -3px 0;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0; }
-      scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider {
-        margin-right: -10px;
-        margin-left: 0; }
-
 /*****************
  * Progress bars *
  *****************/
@@ -1885,184 +1473,182 @@ progressbar {
   progressbar.vertical progress {
     margin: 0; }
   progressbar trough {
+    border-width: 4px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: transparent;
+    background-image: linear-gradient(to top, #e4eef4);
+    border-image: url('assets/trough.png') 4 4 4 4 / 4px 4px 4px 4px stretch; }
+/*  progressbar.vertical trough {
     border: 1px solid #686868;
     border-radius: 3px;
     background-color: #ffffff;
     box-shadow: inset 0.5px 0.5px 0px 1.5px #efefef, inset 1px 1px #bebebe;
-    padding: 3px 4px; }
-  progressbar.vertical trough {
-    border: 1px solid #686868;
-    border-radius: 3px;
-    background-color: #ffffff;
-    box-shadow: inset 0.5px 0.5px 0px 1.5px #efefef, inset 1px 1px #bebebe;
-    padding: 4px 3px; }
+    padding: 4px 3px; } */
   progressbar progress {
-    background-image: linear-gradient(to right, transparent, transparent 37.5%, white 37.5%, white 50%, transparent 50%, transparent 87.5%, white 87.5%, white 100%), linear-gradient(to bottom,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95),
-					                  mix(@theme_selected_bg_color, #29d329, 0.95) 60%,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95)
-                                      );
-    background-size: 16px 16px, auto; }
+        background-image: none;
+        background-position:right center;
+        background-repeat:no-repeat;
+        box-shadow:none;
+        border-image: url('assets/progress.png') 4 4 4 4 / 8px 8px 8px 8px stretch; }
   progressbar.vertical progress {
-    background-image: linear-gradient(to bottom, transparent, transparent 37.5%, white 37.5%, white 50%, transparent 50%, transparent 87.5%, white 87.5%, white 100%), linear-gradient(to right,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95),
-					                  mix(@theme_selected_bg_color, #29d329, 0.95) 60%,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95)
-                                      );
-    background-size: 16px 16px, auto; }
-  progressbar.osd {
-    min-width: 3px;
-    min-height: 3px;
-    background-color: transparent; }
-    progressbar.osd trough {
-      border-style: none;
-      border-radius: 0;
-      background-color: transparent;
-      box-shadow: none; }
-    progressbar.osd progress {
-      border-style: none;
-      border-radius: 0; }
+        border-image: url('assets/progress-vert.png') 4 4 4 4 / 8px 8px 8px 8px stretch; }
 
 /*************
  * scrollbar *
  *************/
-
 scrollbar {
-  background-color: transparent;
-  border: 0 none transparent;
-  margin: 0;
-  padding: 0; }
+  background-color: shade(@theme_bg_color, 0.9);
+  background-image: linear-gradient(to bottom, #cad6e9, #fafbfb);
+  transition: 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   * {
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true; }
-  scrollbar.horizontal {
-    background: linear-gradient(to top,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-  scrollbar.horizontal slider {
-    border: 3px solid transparent;
-    border-image: url("Scrollbars/slider-horiz.png");
-    border-image-slice: 3 3 3 3;
-    border-image-repeat: stretch;
-    background: url("Scrollbars/handle-horiz.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
-    scrollbar.horizontal slider:hover {
-      border-image: url("Scrollbars/slider-horiz-prelight.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz-prelight.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
-    scrollbar.horizontal slider:hover:active {
-      border-image: url("Scrollbars/slider-horiz-active.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz-active.png") no-repeat center center, linear-gradient(to top, #afc9ee); }
-  scrollbar.vertical {
-    background: linear-gradient(to left,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-  scrollbar.vertical slider {
-    border: 3px solid transparent;
-    border-image: url("Scrollbars/slider-vert.png");
-    border-image-slice: 3 3 3 3;
-    border-image-repeat: stretch;
-    background: url("Scrollbars/handle-vert.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
-    scrollbar.vertical slider:hover {
-      border-image: url("Scrollbars/slider-vert-prelight.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert-prelight.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
-    scrollbar.vertical slider:hover:active {
-      border-image: url("Scrollbars/slider-vert-active.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert-active.png") no-repeat center center, linear-gradient(to top, #afc9ee); }
-  scrollbar.horizontal slider {
-    min-width: 10px;
-    min-height: 10px; }
-  scrollbar.vertical slider {
-    min-width: 10px;
-    min-height: 10px; }
+scrollbar.vertical {
+  background-image: linear-gradient(to right, #cad6e9, #fafbfb);
+}
+  scrollbar.top {
+    border-bottom: 1px solid shade(@theme_bg_color, 0.8); }
+  scrollbar.bottom {
+    border-top: 1px solid shade(@theme_bg_color, 0.8); }
+  scrollbar.left {
+    border-right: 1px solid shade(@theme_bg_color, 0.8); }
+  scrollbar.right {
+    border-left: 1px solid shade(@theme_bg_color, 0.8); }
+  scrollbar:backdrop {
+    background-color: shade(@theme_bg_color, 0.9);
+    border-color: shade(shade(@theme_bg_color, 0.8), 0.95);
+    transition: 200ms ease-out; }
+  scrollbar slider {
+    min-width: 14px;
+    min-height: 14px;
+    margin: 0;
+    border-width: 1px;
+    border-color: shade(@theme_base_color, 0.7);
+    border-radius: 0 6px 6px 0;
+    box-shadow: inset 0 0 2px 1px alpha(white, 0.65);
+    background-color: mix(@theme_bg_color, @theme_fg_color, 0.05); }
+    scrollbar slider:hover {
+      box-shadow: inset 0 0 2px 3px alpha(white, 0.8);
+      background-color: mix(@theme_bg_color, @theme_fg_color, 0.1); }
+    scrollbar slider:hover:active {
+      box-shadow: inset 0 0 2px 1px alpha(black, 0.35);
+      background-color: mix(@theme_bg_color, @theme_fg_color, 0.2); }
+    scrollbar slider:backdrop {
+      background-color: shade(@theme_bg_color, 1.1); }
+    scrollbar slider:disabled {
+      background-color: transparent; }
   scrollbar.fine-tune slider {
-    margin: 1px;
-    min-width: 10px;
-    min-height: 10px; }
+    min-width: 12px;
+    min-height: 12px; }
+  scrollbar.fine-tune.horizontal slider {
+    border-width: 1px 1px; }
+  scrollbar.fine-tune.vertical slider {
+    border-width: 1px 1px; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-    border: none;
+    border: solid 1px 0 0 0 shade(@theme_bg_color, 0.8);
     opacity: 1;
-    background: none; 
-    -GtkScrollbar-has-backward-stepper: true;
-    -GtkScrollbar-has-forward-stepper: true; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical {
-    border-right: 1px solid shade(@theme_bg_color); 
-    background: linear-gradient(to left,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal {
-    border-bottom: 1px solid shade(@theme_bg_color); 
-    background: linear-gradient(to left,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider.vertical {
+    margin: 0;
+    border-radius: 6px;
+    background-color: shade(@theme_bg_color, 0.9); }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider {
       margin: 0;
-      min-width: 16px;
-      min-height: 16px;
-      background-image: none;
+      min-width: 12px;
+      min-height: 12px;
+      background-color: shade(@theme_bg_color, 0.8);
+      border: 1px solid shade(@theme_bg_color, 0.8); }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering) button {
+      min-width: 12px;
+      min-height: 12px;
       background-color: transparent;
-      background-clip: padding-box; 
-      border: 3px solid transparent;
-      border-image: url("Scrollbars/slider-vert.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider.horizontal {
-      margin: 0;
-      min-width: 16px;
-      min-height: 16px;
-      background-image: none;
-      background-color: transparent;
-      background-clip: padding-box; 
-      border: 3px solid transparent;
-      border-image: url("Scrollbars/slider-horiz.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz.png") no-repeat center center, linear-gradient(to top, #cadbf3); }
+      background-clip: padding-box;
+      border-radius: 0;
+      border: none /*1px solid shade(@theme_bg_color, 0.8)*/;
+      -gtk-icon-source: none; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
+      margin: 0 2px;
+      min-width: 40px; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
+      margin: 1px 2px;
+      min-width: 5px; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
+      margin: 2px 0;
+      min-height: 40px; }
+    scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
+      margin: 2px 1px;
+      min-height: 5px; }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
     opacity: 1; }
-  scrollbar button:active, scrollbar button:hover, scrollbar button:disabled, scrollbar button {
+  scrollbar.horizontal slider {
+    min-width: 40px; }
+  scrollbar.vertical slider {
+    min-height: 40px; }
+  scrollbar button {
     padding: 0;
-    min-width: 17px;
-    min-height: 17px;
-    border: none;
+    min-width: 12px;
+    min-height: 12px;
+    border-style: none;
     border-radius: 0;
-    box-shadow: none;
-    -gtk-icon-source: none; }
-  scrollbar.horizontal button.up {
-    background: url("Scrollbars/left-stepper.png"); }
-    scrollbar.horizontal button.up:hover {
-      background: url("Scrollbars/left-stepper-prelight.png"); }
-    scrollbar.horizontal button.up:hover:active {
-      background: url("Scrollbars/left-stepper-active.png"); }
-  scrollbar.horizontal button.down {
-    background: url("Scrollbars/right-stepper.png"); }
-    scrollbar.horizontal button.down:hover {
-      background: url("Scrollbars/right-stepper-prelight.png"); }
-    scrollbar.horizontal button.down:hover:active {
-      background: url("Scrollbars/right-stepper-active.png"); }
-  scrollbar.vertical button.up {
-    background: url("Scrollbars/top-stepper.png"); }
-    scrollbar.vertical button.up:hover {
-      background: url("Scrollbars/top-stepper-prelight.png"); }
-    scrollbar.vertical button.up:hover:active {
-      background: url("Scrollbars/top-stepper-active.png"); }
+    transition-property: min-height, min-width, color;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: inset 0 1px transparent;
+    text-shadow: none;
+    -gtk-icon-shadow: none;
+    color: #787c7d; }
+    scrollbar button:hover {
+      border-color: transparent;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: inset 0 1px transparent;
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+      color: #535859; }
+    scrollbar button:active, scrollbar button:checked {
+      border-color: transparent;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: inset 0 1px transparent;
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+      color: shade(@theme_bg_color, 0.8); }
+    scrollbar button:disabled {
+      border-color: transparent;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: inset 0 1px transparent;
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+      color: rgba(120, 124, 125, 0.2); }
+    scrollbar button:backdrop {
+      border-color: transparent;
+      background-color: transparent;
+      background-image: none;
+      box-shadow: inset 0 1px transparent;
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+      color: #c3c4c4; }
+      scrollbar button:backdrop:disabled {
+        border-color: transparent;
+        background-color: transparent;
+        background-image: none;
+        box-shadow: inset 0 1px transparent;
+        text-shadow: none;
+        -gtk-icon-shadow: none;
+        color: rgba(195, 196, 196, 0.2); }
   scrollbar.vertical button.down {
-    background: url("Scrollbars/bottom-stepper.png"); }
-    scrollbar.vertical button.down:hover {
-      background: url("Scrollbars/bottom-stepper-prelight.png"); }
-    scrollbar.vertical button.down:hover:active {
-      background: url("Scrollbars/bottom-stepper-active.png"); }
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  scrollbar.vertical button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+  scrollbar.horizontal button.down {
+    -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+  scrollbar.horizontal button.up {
+    -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+
+treeview ~ scrollbar.vertical {
+  border-top: 1px solid shade(@theme_bg_color, 0.8);
+  margin-top: -1px; }
 
 /*************
  * separator *
@@ -2081,14 +1667,14 @@ separator,
 
 button separator,
 .separator,
-buttonseparator,
+button separator,
 .separator {
     border-color: shade(@theme_bg_color, 0.95);
 }
 
 button separator,
 .separator:disabled,
-buttonseparator,
+button separator,
 .separator:disabled {
     border-color: shade(@theme_bg_color, 0.85);
 }
@@ -2131,49 +1717,49 @@ headerbar separator,
 
 toolbar.primary-toolbar button separator,
 .separator,
-toolbar.primary-toolbar buttonseparator,
+toolbar.primary-toolbar button separator,
 .separator,
 toolbar button separator,
 .separator,
-toolbar buttonseparator,
+toolbar button separator,
 .separator {
     border-color: shade(@toolbar_bg_color, 0.95);
 }
 
 headerbar button separator,
 .separator,
-headerbar buttonseparator,
+headerbar button separator,
 .separator,
 headerbar.titlebar button separator,
 .separator,
-headerbar.titlebar buttonseparator,
+headerbar.titlebar button separator,
 .separator {
     border-color: shade(@titlebar_bg_color, 0.95);
 }
 
 toolbar.primary-toolbar button separator,
 .separator:disabled,
-toolbar.primary-toolbar buttonseparator,
+toolbar.primary-toolbar button separator,
 .separator:disabled,
 toolbar button separator,
 .separator:disabled,
-toolbar buttonseparator,
+toolbar button separator,
 .separator:disabled {
     border-color: shade(@toolbar_bg_color, 0.85);
 }
 
 headerbar button separator,
 .separator:disabled,
-headerbar buttonseparator,
+headerbar button separator,
 .separator:disabled,
 headerbar.titlebar button separator,
 .separator:disabled,
-headerbar.titlebar buttonseparator,
+headerbar.titlebar button separator,
 .separator:disabled {
     border-color: shade(@titlebar_bg_color, 0.85);
 }
 
-menuitemseparator,
+menuitem separator,
 .separator {
     -GtkMenuItem-horizontal-padding: 0;
     -GtkWidget-separator-height: 1;
@@ -2618,9 +2204,14 @@ headerbar {
     border-width: 0;
     border-style: solid;
     border-color: shade(@titlebar_bg_color, 0.8);
-    background-color: @titlebar_bg_color;
-    background-image: none;
     color: @titlebar_fg_color;
+    background-color: transparent;
+    background-size: cover;
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
+}
+
+headerbar:backdrop {
+    background-image: linear-gradient(to top, #4f88d6);
 }
 
 headerbar button.text-button {
@@ -2646,14 +2237,21 @@ headerbar .subtitle {
 headerbar combobox,
 headerbar button,
 headerbar .linked button {
-    border-color: shade(@titlebar_bg_color, 0.8);
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
-    color: @titlebar_fg_color;
-    padding: 6px;
+    padding: 3px 4px;
+    border-width: 1px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.65);
+    background-color: shade(@theme_bg_color, 1.08);
+    background-image: linear-gradient(to bottom, #f4fcfc 20%, #d7e4fb 35%);
+    color: @theme_fg_color;
 }
 
 headerbar button:hover {
-    border-color: shade(@titlebar_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
+    box-shadow: inset 0 0 3px 4px #d0e2ff,
+                inset 0 0 0 1px #7ca4dc,
+                inset 0px 30px 40px -25px alpha(white, 0.7);
 }
 
 headerbar button:active,
@@ -2705,9 +2303,15 @@ headerbar entry selection:focus {
 toolbar {
     padding: 4px;
     border-style: none;
-    background-color: @toolbar_bg_color;
-    background-image: linear-gradient(shade(@toolbar_bg_color, 1.02), shade(@toolbar_bg_color, 0.98));
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
     color: @toolbar_fg_color;
+}
+
+toolbar:backdrop {
+/* BUG: No load image on norm state */
+/*    background-image: linear-gradient(to top, #4f88d6);*/
 }
 
 toolbar button {
@@ -2743,8 +2347,9 @@ toolbarmenubar {
     border-width: 0 0 1px 0;
     border-style: solid;
     border-color: shade(@toolbar_bg_color, 0.8);
-    background-color: @toolbar_bg_color;
-    background-image: linear-gradient(@toolbar_bg_color, shade(@toolbar_bg_color, 0.98));
+    background-color: transparent;
+    background-size: cover;
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
     color: @toolbar_fg_color;
 }
 
@@ -3735,22 +3340,19 @@ progressbar ..osd progressbar.vertical progress {
     background-color: @osd_bg;
 }
 
-.osd scrollbar slider,
-scrollbar slider {
+.osd scrollbar slider {
     border-width: 1px;
     border-color: mix(shade(@osd_base, 0.87), @osd_fg, 0.21);
     border-radius: 0;
     background-color: mix(@osd_base, @osd_fg, 0.21);
 }
 
-.osd scrollbar slider,
-scrollbar slider:hover {
+.osd scrollbar slider {
     border-color: mix(shade(@osd_base, 0.87), @osd_fg, 0.31);
     background-color: mix(@osd_base, @osd_fg, 0.31);
 }
 
-.osd scrollbar slider,
-scrollbar slider:active {
+.osd scrollbar slider {
     border-color: shade(@theme_selected_bg_color, 0.9);
     background-color: @theme_selected_bg_color;
 }
@@ -3972,7 +3574,7 @@ GtkBubbleWindow toolbar {
 headerbar.titlebar {
     border-radius: 8px 8px 0 0;
     background-color: transparent;
-    background-image: url('assets/titlebar-focused-middle.png');
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
     background-size: 100% 100%;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
@@ -3980,7 +3582,7 @@ headerbar.titlebar {
 
 headerbar.titlebar:backdrop {
     background-color: transparent;
-    background-image: url('assets/titlebar-unfocused-middle.png');
+    background-image: linear-gradient(to top, #4f88d6);
     background-size: 100% 100%;
 }
 
@@ -4011,46 +3613,9 @@ headerbar.titlebar .title {
 }
 
 headerbar button.titlebutton {
-    padding: 2px;
-    border-style: solid;
-    border-radius: 4px;
-    border-color: #ffffff;
-    background: linear-gradient(to bottom, #5f8cf7, #135de6);
-    box-shadow: inset 0 0 1px 0 #0f47c0;
+    padding: 0;
     color: white;
-    icon-shadow: none;
-}
-
-headerbar button.titlebutton:hover,
-headerbar button.titlebutton:hover:focus {
-    background: none;
-    border-color: #ffffff;
-    color: white;
-}
-
-headerbar button.titlebutton:active,
-headerbar button.titlebutton:active:hover {
-    background: none;
-    border-color: #ffffff;
-    color: white;
-    box-shadow: none;
-}
-
-headerbar button.titlebutton:backdrop {
-    background-image: none;
-    background: linear-gradient(to bottom, #6788e8, #4a7ce5);
-    color: white;
-    icon-shadow: none;
-}
-
-headerbar button.titlebutton.close {
-    background: linear-gradient(to bottom, #e8795f, #e44f23, #d54216);
-    color: white;
-}
-
-headerbar button.titlebutton.close:hover {
-    background: linear-gradient(to bottom, #ff887a, #ff8165, #f66d51);
-    color: white;
+    border: none;
 }
 
 decoration {
@@ -4105,7 +3670,7 @@ messagedialog.csd decoration {
 /* Nautilus rename popup */
 .csd popover.background, popover.background {
     box-shadow: 0 0 2px 0px gray;
-    border: 1px solid @borders; }
+    border: 1px solid shade(@theme_bg_color, 0.8); }
 popover.background:backdrop {
     background-color: @theme_bg_color;
     box-shadow: none; }

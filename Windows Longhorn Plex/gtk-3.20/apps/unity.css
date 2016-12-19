@@ -23,8 +23,8 @@ UnityDecoration .top {
     border-radius: 6px 6px 0 0;
     padding: 1px 8px 0 8px;
     background-color: @titlebar_bg_color;
-    background-image: url('../assets/titlebar-focused-middle.png');
-	background-size: 100% 100%;
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
+    background-size: 100% 100%;
     color: #fff;
     text-shadow: none;
 }
@@ -33,25 +33,25 @@ UnityDecoration .top:backdrop {
     border: 0 solid @titlebar_bg_color;
     border-bottom-width: 0;
     background-color: @theme_unfocused_bg_color;
-    background-image: url('../assets/titlebar-unfocused-middle.png');
+    background-image: linear-gradient(to top, #4f88d6);
     color: mix(#fff, @titlebar_bg_color, 0.7);
 }
 
 UnityDecoration .left,
 UnityDecoration .right,
 UnityDecoration.bottom {
-    background-color: @titlebar_bg_color;
+    background-color: #4f88d6;
 }
 
 UnityDecoration .left:backdrop,
 UnityDecoration .right:backdrop,
 UnityDecoration.bottom:backdrop {
-    background-color: @titlebar_bg_color;
+    background-color: #4f88d6;
 }
 
 UnityDecoration .bottom {
     background-image: none;
-    background-color: @theme_bg_color;
+    background-color: #4f88d6;
 }
 
 UnityPanelWidget,
@@ -60,7 +60,7 @@ UnityPanelWidget,
     border-style: solid;
     border-color: @panel_bg_color;
     background-color: @panel_bg_color;
-    background-image: url('../assets/titlebar-focused-middle.png');
+    background-image: url('../assets/panel.png');
     color: @panel_fg_color;
 }
 
@@ -76,7 +76,7 @@ UnityPanelWidget,
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-    background-image: none;
+    background-image: linear-gradient(to top, @theme_selected_bg_color);
     color: shade(@panel_fg_color, 1.08);
 }
 

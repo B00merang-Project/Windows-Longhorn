@@ -23,8 +23,8 @@ UnityDecoration.top {
     border-radius: 0px 0px 0 0;
     padding: 1px 8px 0 8px;
     background-color: @titlebar_bg_color;
-    background-image: url('../assets/titlebar-focused-middle.png');
-	background-size: 100% 100%;
+    background-image: linear-gradient(to right, #4f88d6 2%, #64a1e8 13.8%, #70b0f3 27%, #70b0f3 73%, #64a1e8 86.2%, #4f88d6 98%);
+    background-size: 100% 100%;
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
     text-shadow: none;
 }
@@ -33,20 +33,20 @@ UnityDecoration.top:backdrop {
     border: 1px solid mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
     border-bottom-width: 0;
     background-color: @titlebar_bg_color;
-    background-image: url('../assets/titlebar-unfocused-middle.png');
+    background-image: linear-gradient(to top, #4f88d6);
     color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
 }
  
 UnityDecoration.left,
 UnityDecoration.right,
 UnityDecoration.bottom {
-    background-color: mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
+    background-image: linear-gradient(to top, #4f88d6);
 }
  
 UnityDecoration.left:backdrop,
 UnityDecoration.right:backdrop,
 UnityDecoration.bottom:backdrop {
-    background-color: mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
+    background-image: linear-gradient(to top, #4f88d6);
 }
  
 /* blx*/
@@ -59,7 +59,7 @@ UnityPanelWidget,
     border-style: solid;
     border-color: @panel_bg_color;
     background-color: @panel_bg_color;
-    background-image: none;
+    background-image: url('../assets/panel.png');
     color: @panel_fg_color;
 }
 /* blx*/
@@ -76,8 +76,8 @@ UnityPanelWidget,
  
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-    border-color: #000 /*mix(@panel_bg_color, @panel_fg_color, 0.21)*/;
-    background-color: #000 /*mix(@panel_bg_color, @panel_fg_color, 0.21)*/;
+    border-color: #fff /*mix(@panel_bg_color, @panel_fg_color, 0.21)*/;
+    background-image: linear-gradient(to top, @theme_selected_bg_color);
     background-image: none;
     color: #fff /*shade(@panel_fg_color, 1.08)*/;
 }
@@ -89,61 +89,4 @@ UnityPanelWidget,
 .menuitem GtkCalendar.view {
     background-color: #000;
     color: #fff /*@fg_color*/;
-}
-
-UnityDecoration.top {
-    border: 1px solid mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
-    border-bottom-width: 0;
-    border-radius: 2px 2px 0 0;
-    padding: 1px 8px 0 8px;
-    background-color: @titlebar_bg_color;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
-    text-shadow: none;
-}
-
-UnityDecoration.top:backdrop {
-    border: 1px solid mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
-    border-bottom-width: 0;
-    background-color: @titlebar_bg_color;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.4);
-}
-
-UnityDecoration.left,
-UnityDecoration.right,
-UnityDecoration.bottom {
-    background-color: mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
-}
-
-UnityDecoration.left:backdrop,
-UnityDecoration.right:backdrop,
-UnityDecoration.bottom:backdrop {
-    background-color: mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
-}
-
-UnityPanelWidget,
-.unity-panel {
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #000 /*@panel_bg_color*/;
-    background-color: #000 /*@panel_bg_color*/;
-    background-image: none;
-    color: #fff /*@panel_fg_color*/;
-}
-
-.unity-panel.menubar,
-.unity-panel .menubar {
-}
-
-.unity-panel.menuitem,
-.unity-panel .menuitem {
-    border-width: 0 1px;
-    color: #fff /*@panel_fg_color*/;
-}
-
-.unity-panel.menubar.menuitem:hover,
-.unity-panel.menubar .menuitem *:hover {
-    border-color: #000 /*mix(@panel_bg_color, @panel_fg_color, 0.21)*/;
-    background-color: #000 /*mix(@panel_bg_color, @panel_fg_color, 0.21)*/;
-    background-image: none;
-    color: #fff /*shade(@panel_fg_color, 1.08)*/;
 }

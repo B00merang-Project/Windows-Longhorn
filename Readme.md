@@ -6,7 +6,7 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 ### Note: This project is still a work in progress ###
 
 **Included themes**
-- Windows Basic (Vista Beta 2/Old Windows Basic) [Elbullazul]
+- Windows Basic (Vista Beta 2) [Elbullazul]
 - Longhorn 4074 Aero [feren/Elbullazul]
 - Longhorn 405x Slate [Elbullazul]
 - Longhorn 4039 Plex III [Elbullazul/feren]
@@ -20,6 +20,6 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 Start Menu in Jade and Aero: Dejco, http://dejco.deviantart.com/art/Hillel-Start-Background-527435193
 
 ## Using our themes? ##
-Check out this guide to make Cinnamon more like the theme you've chosen: https://github.com/Elbullazul/Longhorn-Collaboration/blob/master/Tips%20for%20themes.md
+Check out [this guide](https://github.com/Elbullazul/Longhorn-Collaboration/blob/master/Tips%20for%20themes.md) to make Cinnamon more like the theme you've chosen
 
 **All resources belong to Microsoft Corporation. All rights are reserved to Microsoft. Windows is a trademark of Microsoft. Windows Longhorn is a trademark of Microsoft. Windows Vista is a trademark of Microsoft.**

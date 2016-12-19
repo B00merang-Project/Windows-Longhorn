@@ -10,7 +10,7 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 - Longhorn 4074 Aero [feren/Elbullazul]
 - Longhorn 405x Slate [Elbullazul]
 - Longhorn 4039 Plex III [Elbullazul/feren]
-- Longhorn 4074 Icon Set [feren]
+- [Longhorn 4074 Icon Set [feren]](https://github.com/Elbullazul/Longhorn-Collaboration/tree/icons)
 - Longhorn 4074 Jade [feren/Elbullazul]
 - Longhorn 5048 Aero [Elbullazul]
 

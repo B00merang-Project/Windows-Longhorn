@@ -49,7 +49,7 @@ UnityDecoration.bottom:backdrop {
     background-image: linear-gradient(to top, #4f88d6);
 }
  
-/* blx*/
+/* unity top bar */
 .gnome-panel-menu-bar,
 PanelApplet > GtkMenuBar.menubar,
 PanelMenuBar.menubar,
@@ -59,34 +59,33 @@ UnityPanelWidget,
     border-style: solid;
     border-color: @panel_bg_color;
     background-color: @panel_bg_color;
-    background-image: url('../assets/panel.png');
+    background-image: none;
     color: @panel_fg_color;
 }
-/* blx*/
- 
+
 .unity-panel.menubar,
 .unity-panel .menubar {
 }
  
 .unity-panel.menuitem,
 .unity-panel .menuitem {
-    border-width: 0 1px;
-    color: #fff /*@panel_fg_color*/;
+    border-width: 0;
+    border-color: transparent;
 }
  
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-    border-color: #fff /*mix(@panel_bg_color, @panel_fg_color, 0.21)*/;
-    background-image: linear-gradient(to top, @theme_selected_bg_color);
+    border-color: @theme_selected_bg_color;
+    background-color: @theme_selected_bg_color;
     background-image: none;
-    color: #fff /*shade(@panel_fg_color, 1.08)*/;
+    color: @theme_selected_fg_color;
 }
  
-/* blx*/
+/* misc stuff on calendar */
 .menuitem GtkCalendar,
 .menuitem GtkCalendar.button,
 .menuitem GtkCalendar.header,
 .menuitem GtkCalendar.view {
-    background-color: #000;
-    color: #fff /*@fg_color*/;
+    background-color: @theme_selected_bg_color;;
+    color: @theme_selected_fg_color;
 }

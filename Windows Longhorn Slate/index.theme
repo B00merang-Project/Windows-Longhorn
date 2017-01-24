@@ -1,11 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=CinnXP
-Comment=
+Name=Windows Longhorn Slate
+Comment=Windows XP themes for Linux OSes
+Comment=Author : Christian Medel (Elbullazul)
+Version=rolling
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=CinnXP
-MetacityTheme=CinnXP
-IconTheme=CinnXP
-CursorTheme=default
+GtkTheme=Windows Longhorn Slate
+MetacityTheme=Windows Longhorn Slate
+ButtonLayout=:minimize,maximize,close

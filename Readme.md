@@ -6,13 +6,34 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 ### Note: This project is still a work in progress ###
 
 **Included themes**
-- Windows Basic (Vista Beta 2) [Elbullazul]
-- Longhorn 4074 Aero [feren/Elbullazul]
-- Longhorn 405x Slate [Elbullazul]
-- Longhorn 4039 Plex III [Elbullazul/feren]
+---
+
+![plex](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-10-19-14-03-43_orig.png)
+**Longhorn 4039 Plex III [Elbullazul/feren]**
+
+***
+![slate](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-10-02-18-49-06_orig.png)
+**Longhorn 405x Slate [Elbullazul]**
+
+***
+![aero](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/49b70188-a4b1-11e6-8eff-2cd527fbcdae_orig.png)
+**Longhorn 4074 Aero [feren/Elbullazul]**
+
+***
+![jade](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-09-30-16-22-05_orig.png)
+**Longhorn 4074 Jade [feren/Elbullazul]**
+
+***
+![aero 5048](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/virtualbox-linux-mint-18-1-07-12-2016-14-05-28_orig.png)
+**Longhorn 5048 Aero [Elbullazul]**
+
+***
+![aero basic](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/546111039_orig.png)
+**Windows Basic (Vista Beta 2) [Elbullazul]**
+
+### Bonus material
 - [Longhorn 4074 Icon Set [feren]](https://github.com/Elbullazul/Longhorn-Collaboration/tree/icons)
-- Longhorn 4074 Jade [feren/Elbullazul]
-- Longhorn 5048 Aero [Elbullazul]
+
 
 `Currently Supported DEs: Cinnamon, GTK 3, Metacity`
 

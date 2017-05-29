@@ -135,39 +135,30 @@ GtkAssistant .sidebar {
 
 GtkSwitch.slider,
 .button {
- background-image: -gtk-gradient (linear, left top, left bottom, 
-                   from (#FDFDFD), 
-                    color-stop (0.111,#FAFAFA),
-                    color-stop (0.222,#EDEDED),
-                    color-stop (0.333,#E4E4E4),
-                    color-stop (0.444,#DEDEDE),
-                    color-stop (0.556,#D7D7D7),
-                    color-stop (0.667,#C9C9C9),
-                    color-stop (0.778,#D2D2D2),
-                    color-stop (0.889,#DDDDDD),
-                               to (#D0D1D2)); 
+ background-image: linear-gradient(to bottom, #fdfdfd,
+                                   #fafafa 11%,
+                                   #ededed 22%,
+                                   #e4e4e4 33%,
+                                   #dedede 44%,
+                                   #d7d7d7 55%,
+                                   #c9c9c9 66%,
+                                   #d2d2d2 77%,
+                                   #dddddd 88%,
+                                   #d0d1d1);
     color: @fg_color;
-    border: 1px solid #989898;
-    box-shadow: inset 0 0 5px 3px alpha(black, 0.1);
+    border: 1px solid #58616d;
+    box-shadow: inset 0 0 2px 1px #c2c3c5;
     text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
 }
 
-.button { border-radius: 2px; }
+.button { border-radius: 2px;
+    transition: all 250ms ease-in; }
 
 .button:hover {
- background-image: -gtk-gradient (linear, left top, left bottom, 
-                   from (#FFFFFF), 
-                    color-stop (0.111,#FFFFFF),
-                    color-stop (0.222,#FCFFFF),
-                    color-stop (0.333,#E3F3FB),
-                    color-stop (0.444,#D7ECF7),
-                    color-stop (0.556,#D1E9F5),
-                    color-stop (0.667,#A8D3EB),
-                    color-stop (0.778,#9FD2ED),
-                    color-stop (0.889,#ACDAF3),
-                               to (#D1EEFA));  
-    border: 1px solid #12558a;
-    box-shadow: inset 0 -15px 9px 6px #E5F1FD;
+ background-image: linear-gradient(to bottom, #fff, #d4dde5 60%, #86c9eb 78%, #acdaf1);    border: 1px solid #12558a;
+ border: 1px solid #14588d;  
+    box-shadow: inset 0 0 2px 1px #8db1c8,
+                inset 0 0 3px 2px #cef1fd;
 }
 
 
@@ -177,20 +168,11 @@ GtkSwitch.slider,
     box-shadow: inset 0 0 5px 3px alpha(black, 0.5);
 }
 
-.button:active,
-.button:checked {
- background-image: -gtk-gradient (linear, left top, left bottom, 
-                   from (#fdfefe), 
-                    color-stop (0.111,#edf9fe),
-                    color-stop (0.222,#e0f1fa),
-                    color-stop (0.333,#e1f2fb),
-                    color-stop (0.444,#d9eef8),
-                    color-stop (0.556,#d0e8f4),
-                    color-stop (0.667,#c4e3f3),
-                    color-stop (0.778,#afdcf4),
-                    color-stop (0.889,#aedbf3),
-                               to (#d2f1fe));
-    border: 1px solid #12558a;  
+.button:checked,
+.button:active {
+ background-image: linear-gradient(to bottom, #fff, #d4dde5 66%, #86c9eb 72%, #acdaf1);
+ border: 1px solid #14588d;  
+ box-shadow: inset 0 0 5px 5px #c2e0ee;
 }
 
 .button:active:hover {
@@ -209,18 +191,18 @@ GtkSwitch.slider,
 }
 
 .button:focus {
- background-image: -gtk-gradient (linear, left top, left bottom, 
-                   from (#ffffff), 
-                    color-stop (0.111,#fbfbfd),
-                    color-stop (0.222,#efeff5),
-                    color-stop (0.333,#eeeef4),
-                    color-stop (0.444,#e4e4ed),
-                    color-stop (0.556,#deddea),
-                    color-stop (0.667,#dcdce8),
-                    color-stop (0.778,#bebfd6),
-                    color-stop (0.889,#bebfd6),
-                               to (#dbdbe8));
+ background-image: linear-gradient (to bottom, #ffffff,
+                    #fbfbfd 11%,
+                    #efeff5 22%,
+                    #eeeef4 33%,
+                    #e4e4ed 44%,
+                    #deddea 55%,
+                    #dcdce8 66%,
+                    #bebfd6 77%,
+                    #bebfd6 88%,
+                    #dbdbe8);
  border-color: #070961;
+ box-shadow: inset 0 0 2px 1px #7778a9;
 }
 
 /* Set up shadows and hilights for button visual separation */
@@ -1217,7 +1199,7 @@ GtkProgressBar {
 .progressbar row:selected,
 .progressbar row:selected:focused,
 .progressbar row:nth-child(odd) {
-    border-radius: 2px;
+    border-radius: 0;
     border-width: 0px;
     border-style: solid;
 }

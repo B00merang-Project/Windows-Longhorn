@@ -1,23 +1,22 @@
-/*# name: Windows XP Embedded
+/*# name: Windows 10 Light
   # author: Christian Medel (Elbullazul)
-  # date: January March 11th, 2016
-  # description: Windows Embedded theme*/
+  # date: April 7th, 2016
+  # description: Windows 10 Default White color*/
 
 /* default color scheme */
-@define-color bg_color #ebe9ed;
-@define-color fg_color #000;
+@define-color bg_color #e8ecf6;
+@define-color fg_color #000000; 
 @define-color base_color #ffffff;
-@define-color text_color #4c4c4c;
-@define-color selected_bg_color #EDB081;
-@define-color selected_fg_color #262626;
-@define-color tooltip_bg_color #e9e9e9;
-@define-color tooltip_fg_color #000;
-@define-color sidebar_bg_color #fff;
-@define-color sidebar_fg_color #000;
-@define-color button_bg_color #f7f7f7;
+@define-color text_color #000000;
+@define-color selected_bg_color #3399ff;
+@define-color selected_fg_color #ffffff;
+@define-color tooltip_bg_color #f7ff7e;
+@define-color tooltip_fg_color #4c4c4c;
+@define-color sidebar_bg_color @bg_color;
+@define-color sidebar_fg_color @fg_color;
 
 /* dark color scheme */
-@define-color dark_bg_color #ebe9ed;
+@define-color dark_bg_color #f0f0f0;
 @define-color dark_fg_color #000;
 
 /* colormap actually used by the theme, to be overridden in other css files */
@@ -31,7 +30,7 @@
 @define-color theme_tooltip_fg_color @tooltip_fg_color;
 
 /*Nemo Desktop shadow fix*/
- @define-color desktop_item_fg #ffffff;
+ @define-color desktop_item_fg #fff;
  @define-color desktop_item_selected_fg shade(@theme_selected_fg_color, 0.8);
  @define-color desktop_item_text_shadow alpha(black, 0.8);
 
@@ -57,11 +56,11 @@
 @define-color titlebar_bg_color @dark_bg_color;
 @define-color titlebar_fg_color @dark_fg_color;
 @define-color menubar_bg_color @dark_bg_color;
-@define-color menubar_fg_color #fff;
+@define-color menubar_fg_color @dark_fg_color;
 @define-color toolbar_bg_color @dark_bg_color; /*@theme_bg_color;*/
-@define-color toolbar_fg_color #fff; /*@theme_fg_color;*/
-@define-color menu_bg_color @theme_base_color;
-@define-color menu_fg_color @dark_fg_color;
+@define-color toolbar_fg_color @dark_fg_color; /*@theme_fg_color;*/
+@define-color menu_bg_color #f4f4f4;
+@define-color menu_fg_color @fg_color;
 @define-color panel_bg_color @dark_bg_color;
 @define-color panel_fg_color @dark_fg_color;
 
@@ -89,6 +88,9 @@
 
 /*Terminal Text color*/
 @define-color terminal_text_color @bg_color;
+
+/*Progressbar bg color*/
+@define-color progressbar_color #06B025;
 
 @import url("gtk-widgets.css");
 @import url("gtk-widgets-assets.css");

@@ -187,112 +187,79 @@ assistant .sidebar {
     color: mix(@theme_fg_color, @theme_bg_color, 0.1);
 }
 
-
 /**********
  * button *
  **********/
 button {
-    -GtkWidget-focus-padding: 1;
-    -GtkWidget-focus-line-width: 0;
-
-    padding: 6px 6px;
-    border-width: 1px;
-    border-radius: 2px;
-    border-style: solid;
-    border-color: shade(@theme_bg_color, 0.3);
-    background-color: shade(@theme_bg_color, 1.08);
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    padding: 5px 6px;
+    background-image: linear-gradient(to bottom, shade (#ebebeb, 1.00) 50%,
+                                     shade (#dddddd, 1.00) 51%,
+                                     shade (#cfcfcf, 1.05));
     color: @theme_fg_color;
-    box-shadow: inset 0 0 3px 0px rgba(0,0,0,0.15);
+    border: 1px solid #7e7e7e;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px white;
 }
 
 button:hover {
-    border-color: shade(@theme_bg_color, 0.2);
-    box-shadow: inset 0 0 1px 2px #ffc73c;
+    border-color: #4f8bb8;
+    background-image: linear gradient,to bottom,
+                                     shade (#eaf6fd, 1.05),
+                                     shade (#d9f0fc, 1.00) 50%,
+                                     shade (#bee6fd, 1.00) 51%,
+                                     shade (#a7d9f5, 1.05));
 }
 
-button:active {
-    border-color: shade(@theme_bg_color, 0.2);
-    background-color: shade(@theme_bg_color, 0.95);
-    background-image: linear-gradient(to bottom,
-                                      shade(@button_bg_color, 0.6),
-                                      shade(@button_bg_color, 0.7),
-                                      shade(@button_bg_color, 0.75)
-                                      );
+button:active,
+button:focus:checked {
+    border-color: #4c4c4c;
+    background-image: linear-fradient, to bottom,
+                      shade (#efefef, 1.0),
+                      shade (#efefef, 1.0));
+    box-shadow: inset 0 0 0 1px alpha(#6cb9e0, 0.7),
+                inset 0 0 3px 2px alpha(black, 0.35);
 }
 
-button:active:hover {
-    border-color: shade(@theme_bg_color, 0.2);
+button:checked {
+    box-shadow: inset 0 0 3px 2px alpha(black, 0.35);
 }
 
-button:focus,
-button:hover:focus,
+button:focus/*,
 button:active:focus,
-button:active:hover:focus {
-    border-color: shade(@theme_bg_color, 0.3);
-    box-shadow: inset 0 0 1px 2px alpha(#379aff, 0.2);
+button:active:hover:focus*/ {
+    border-color: #4f8cb8;
+    box-shadow: inset 0 0 2px 1px #52dfff;
 }
 
-button:insensitive {
-    border-color: shade(@theme_bg_color, 0.85);
-    background-color: shade(@theme_bg_color, 0.9);
-    background-image: none;
-}
-
+button:insensitive,
 button:active *:insensitive {
-    border-color: shade(@theme_bg_color, 0.75);
-    background-color: shade(@theme_bg_color, 0.80);
-    background-image: none;
+    background-image: linear gradient, to bottom,
+                      shade (#efefef, 1.0),
+                      shade (#efefef, 1.0));
 }
 
-/* default button
+/* default button 
 button.default {
-    border-color: shade(@theme_selected_bg_color, 0.8);
-    background-color: shade(@theme_selected_bg_color, 1.08);
-    box-shadow: inset 0 0 2px 1px #ffc73c;
-    color: @theme_selected_fg_color;
+    box-shadow: inset 0 0 0 1px shade(@theme_selected_bg_color, 0.6);
+    border-color: shade(@theme_selected_bg_color, 0.6);
+    background-color: shade(@theme_bg_color, 1.0);
+    color: @theme_fg_color;
 }
 
 button.default:hover {
-    border-color: shade(@theme_selected_bg_color, 0.7);
-    background-color: @theme_selected_bg_color;
+    border-color: shade(@theme_selected_bg_color, 0.6);
+    background-color: shade(@theme_selected_bg_color, 1.02);
 }
 
 button.default:active {
-    border-color: shade(@theme_selected_bg_color, 0.8);
+    border-color: shade(@theme_selected_bg_color, 0.6);
     background-color: shade(@theme_selected_bg_color, 0.95);
 }
 
 button.default:active:hover {
-    border-color: shade(@theme_selected_bg_color, 0.7);
+    border-color: shade(@theme_selected_bg_color, 0.6);
     background-color: shade(@theme_selected_bg_color, 0.97);
 } */
-
-/* flat button */
-button.flat {
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent;
-    box-shadow: none;
-}
-
-button.flat:hover {
-    border-color: shade(@theme_bg_color, 0.2);
-    box-shadow: inset 0 0 1px 2px #ffc73c;
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
-    box-shadow: inset 0 0 3px 0px rgba(0,0,0,0.15);
-}
-
-button.flat:active {
-    border-color: shade(@theme_bg_color, 0.2);
-    background-color: shade(@theme_bg_color, 0.95);
-    box-shadow: inset 0 0 3px 0px rgba(0,0,0,0.15);
-    background-image: linear-gradient(to bottom,
-                                      shade(@button_bg_color, 0.6),
-                                      shade(@button_bg_color, 0.7),
-                                      shade(@button_bg_color, 0.75)
-                                      );
-}
 
 
 
@@ -498,50 +465,46 @@ combobox toolbar combobox button.combo:disabled {
 }
 
 
-
 /*********
  * entry *
  *********/
 entry {
-    padding: 7px 3px;
+    padding: 5px 7px;
     border-width: 1px;
     border-style: solid;
-    border-color: shade(@theme_bg_color, 0.8);
+    border-color: #888a8d;
+    border-bottom-color: #c7c8cb;
     border-radius: 2px;
     background-color: @theme_base_color;
-    background-image: none;
+    background-image: linear-gradient(to bottom, shade(@theme_base_color, 0.96), @theme_base_color);
     color: @theme_text_color;
 }
 
 entry:active,
-entry selection:focus {
-    border-color: shade(@theme_bg_color, 0.7);
+entry:focus {
+    border-top-color: #3d7bad;
+    border-color: #96b9d8;
+    box-shadow: inset 0 0 0 1px #a2c9e7;
 }
 
-entry selection,
 entry:selected,
-entry selection,
 entry:selected:focus {
     background-color: @theme_selected_bg_color;
     color: @theme_selected_fg_color;
 }
 
-entry:disabled {
-    background-color: shade(@theme_bg_color, 0.95);
+entry:insensitive {
+    background-color: #f5f5f5;
     background-image: none;
     color: mix(@theme_text_color, @theme_base_color, 0.5);
 }
 
-entry progress {
+entry progressbar {
     border-width: 0;
-    border-radius: 2px;
-    background-color: @theme_selected_bg_color;
+    border-radius: 0px;
+    background-color: @bg_color;
     background-image: none;
-    color: @theme_selected_fg_color;
-}
-
-treeview entry {
-	padding: 0 6px;
+    color: @theme_fg_color;
 }
 
 
@@ -956,26 +919,25 @@ combobox:drop(active) {
 /********
  * menu *
  ********/
-treemenu menu,
-toolbutton menu,
-combobox menu {
+GtkTreeMenumenu,
+GtkMenuToolButtonmenu,
+GtkComboBox menu {
     background-color: @menu_bg_color;
 }
 
 .primary-toolbar menu,
-toolbar.primary-toolbar button menu,
+.primary-toolbar button menu,
 toolbar menu,
 toolbar .primary-toolbar menu,
 headerbar menu,
 headerbar .primary-toolbar menu,
 menu {
-    padding: 4px;
+    padding: 0;
     border-radius: 0;
-    border: 3px solid transparent;
+    border-width: 1px;
+    border-color: #888888;
     background-color: @menu_bg_color;
     color: @menu_fg_color;
-    border-image: url('assets/menu-bg.png') 3 3 3 3;
-    box-shadow: none;
 }
 
 /* Hover-effect on play-button in ubuntu soundmenu */
@@ -983,16 +945,11 @@ menu:selected {
     background-color: @selected_bg_color;
 }
 
-menu button,
-.menu button:hover,
-menu button,
-.menu button:active,
-menu button,
-.menu button:active *:disabled,
-menu button,
-.menu button:disabled,
-menu button,
-.menu button {
+menu button:hover,
+menu button:active,
+menu button:active *:insensitive,
+menu button:insensitive,
+menu button {
     border-width: 0;
     background-color: @menu_bg_color;
     background-image: none;
@@ -1013,18 +970,17 @@ menu button,
  ***********/
 menubar {
     -GtkWidget-window-dragging: true;
-
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: shade(@menubar_bg_color, 0.8);
-    background-color: @menubar_bg_color;
+    background-image: url('assets/toolbar.png');
     background-size: 100% 100%;
-    background-image: url('titlebar/focused.png');
-    color: @menubar_fg_color;
+    border-width: 0px;
+    border-color: #b6bccc;
+    border-style: solid;
+    color: @dark_fg_color;
+    text-shadow: @none;
 }
 
 menubar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+    background-image: url('assets/toolbar-inactive.png');
 }
 
 /***************
@@ -1232,17 +1188,17 @@ notebook {
     border-radius: 0;
     padding: 0;
     background-clip: border-box;
-    border-color: shade(@bg_color, 0.82);
+    border-color: #858585;
     border-width: 1px;
     border-style: solid;
 }
 
 notebook > frame {
-    border: none;
+    border-width: 1px;
 }
 
 notebook > header {
-    border: none;
+    border-width: 0;
     background-color: @theme_bg_color;
 }
 
@@ -1251,28 +1207,39 @@ notebook > header > frame {
     box-shadow: none;
 }
 
-notebook > stack:not(:only-child) {
-  background-color: @theme_bg_color;
-  border: 1px solid shade(@theme_bg_color, 0.7);
-  box-shadow: none; }
-
 notebook tab {
-    background-image: none;
-    background-color: transparent;
+    background-color: @theme_bg_color;
     border-style: solid;
-    border-color: shade(@bg_color, 0.8);
+    border-color: #858585;
     border-width: 1px;
+    border-radius: 0px;
     box-shadow: none;
-    border-radius: 0;
-    background-image: linear-gradient(to bottom,
-                                      shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
-                                      @bg_color
-                                      );
+    background-image:  linear-gradient(to bottom, 
+                       #EAEAEA, 
+                       #EAEAEB 15.8%,
+                       #EBEBEB 21.1%,
+                       #EBEBEC 42.1%,
+                       #ECECED 47.4%,
+                       #ECECED 49.49%,
+                       #DDDDDF 47.495%,
+                       #DDDDDF 52.6%,
+                       #DCDCDE 57.9%,
+                       #DBDBDD 63.2%,
+                       #D9D9DC 68.4%,
+                       #D8D8DB 73.7%,
+                       #D7D7DA 78.9%,
+                       #D6D6D9 84.2%,
+                       #D5D5D8 89.5%,
+                       #D4D4D7 94.7%,
+                       #D3D3D6); 
+}
+
+notebook tab:hover {
+    background-color: alpha(@theme_selected_bg_color, 0.3);
 }
 
 notebook tab:checked {
-    border-color: shade(@bg_color, 0.82);
+    border-color: shade(#858585, 0.82);
     border-style: solid;
     border-width: 1px;
     background-color: @theme_base_color;
@@ -1282,84 +1249,64 @@ notebook tab:checked {
 
 notebook tab label {
     /*padding: 1px;*/
-    padding: 7px 8px 7px 8px;
+    padding: 4px 8px 4px 8px;
 }
 
 notebook tab {
-    color: shade(@bg_color, 0.48);
+    color: shade (@bg_color, 0.48);
 }
 
 notebook header.top tab:checked {
     padding: 3px 7px 1px 7px;
-    box-shadow: inset 0 2px #ffc73c,
-                0 1px @theme_base_color;
+    border-radius: 2px 2px 0 0;
+    box-shadow: inset 0 1px @theme_base_color,
+                inset 1px 0 @theme_base_color,
+                inset -1px 0 @theme_base_color;
 }
 
 notebook header.top tab {
     padding: 2px 5px 0 5px;
-    border-bottom-width: 0px;
-    border-radius: 4px 4px 0 0;
 }
 
 notebook header.right tab:checked {
     padding: 4px 6px 4px 1px;
-    box-shadow: inset -2px 0 #ffc73c,
-                -1px 0 @theme_base_color;
+    border-radius: 0 2px 2px 0;
     background-image: none;
-    background-color: @theme_base_color;
+    box-shadow: inset 0 1px @theme_base_color,
+                inset 0 -1px @theme_base_color,
+                inset -1px 0 @theme_base_color;
 }
 
 notebook header.right tab {
     padding: 3px 4px 3px 0;
-    border-radius: 0 4px 4px 0;
-    border-left-width: 0px;
-    background-image: linear-gradient(to left,
-                                      shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
-                                      @bg_color
-                                      );
     border-image-width: 1px 0;
 }
 
 notebook header.bottom tab:checked {
     padding: 1px 7px 4px 7px;
-    box-shadow: inset 0 -2px #ffc73c,
-                0 -1px @theme_base_color;
+    border-radius: 0 0 2px 2px;
     background-image: none;
-    background-color: @theme_base_color;
+    box-shadow: inset 0 -1px @theme_base_color,
+                inset 1px 0 @theme_base_color,
+                inset -1px 0 @theme_base_color;
 }
 
 notebook header.bottom tab {
     padding: 0 5px 3px 5px;
-    border-radius: 0 0 4px 4px;
-    border-top-width: 0px;
-    background-image: linear-gradient(to top,
-                                      shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
-                                      @bg_color
-                                      );
-
     border-image-width: 0 1px;
 }
 
 notebook header.left tab:checked {
     padding: 4px 1px 4px 6px;
-    box-shadow: inset 2px 0 #ffc73c,
-                1px 0 @theme_base_color;
+    border-radius: 2px 0 0 2px;
     background-image: none;
-    background-color: @theme_base_color;
+    box-shadow: inset 0 1px @theme_base_color,
+                inset 0 -1px @theme_base_color,
+                inset 1px 0 @theme_base_color;
 }
 
 notebook header.left tab {
     padding: 3px 0 3px 4px;
-    border-radius: 4px 0 0 4px;
-    border-right-width: 0px;
-    background-image: linear-gradient(to right,
-                                      shade(@bg_color, 1.05) 15%,
-                                      @bg_color,
-                                      @bg_color
-                                      );
-
     border-image-width: 1px 0;
 }
 
@@ -1367,38 +1314,27 @@ notebook tab button {
     padding: 0;
 }
 
-notebook GtkDrawingArea {
-        background-color: shade(@bg_color, 1.02);
+notebook drawingarea {
+        background-color: @theme_base_color;
 }
 
-notebookframe {
+notebook > frame {
     border-width: 1px;
 }
 
 /* close button styling */
 notebook tab button,
-notebook tab button:active,
+notebook tab button:checked,
 notebook tab button:hover {
     padding: 1px;
-    border-width: 1px;
+    border-width: 0px;
     border-radius: 2px;
     border-style: solid;
     border-color: transparent;
     background-image: none;
     background-color: transparent;
-    color: mix(@theme_text_color, @theme_base_color, 0.5);
     box-shadow: none;
-}
-
-notebook tab button:hover {
-    color: @theme_text_color;
-    border-color: shade(@theme_base_color, 0.8);
-}
-
-notebook tab button:active,
-notebook tab button:active:hover {
-    border-color: shade(@theme_base_color, 0.7);
-    background-color: shade(@theme_base_color, 0.95);
+    color: mix(@theme_text_color, @theme_base_color, 0.5);
 }
 
 /******************
@@ -1413,60 +1349,62 @@ paned .sidebar  paned .sidebar.left, paned .sidebar.right, paned .sidebar.left:d
     border-style: none; }r.left, paned .sidebar.right, paned .sidebar.left:dir(rtl), paned .sidebar:dir(rtl), paned .sidebar:dir(ltr), paned .sidebar {
     border-style: none; }
 
-/*****************
- * Progress bars *
- *****************/
+/***************
+ * progressbar *
+ ***************/
 progressbar {
-  font-size: smaller;
-  color: rgba(0, 0, 0, 0.4); }
-  progressbar.horizontal trough,
-  progressbar.horizontal progress {
-    min-height: 16px; }
-  progressbar.vertical trough,
-  progressbar.vertical progress {
-    min-width: 16px; }
-  progressbar.horizontal progress {
-    margin: 0; }
-  progressbar.vertical progress {
-    margin: 0; }
-  progressbar trough {
-    border: 1px solid #686868;
-    border-radius: 3px;
-    background-color: #ffffff;
-    box-shadow: inset 0.5px 0.5px 0px 1.5px #efefef, inset 1px 1px #bebebe;
-    padding: 3px 4px; }
-  progressbar.vertical trough {
-    border: 1px solid #686868;
-    border-radius: 3px;
-    background-color: #ffffff;
-    box-shadow: inset 0.5px 0.5px 0px 1.5px #efefef, inset 1px 1px #bebebe;
-    padding: 4px 3px; }
-  progressbar progress {
-    background-image: linear-gradient(to right, transparent, transparent 37.5%, white 37.5%, white 50%, transparent 50%, transparent 87.5%, white 87.5%, white 100%), linear-gradient(to bottom,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95),
-					                  mix(@theme_selected_bg_color, #29d329, 0.95) 60%,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95)
-                                      );
-    background-size: 16px 16px, auto; }
-  progressbar.vertical progress {
-    background-image: linear-gradient(to bottom, transparent, transparent 37.5%, white 37.5%, white 50%, transparent 50%, transparent 87.5%, white 87.5%, white 100%), linear-gradient(to right,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95),
-					                  mix(@theme_selected_bg_color, #29d329, 0.95) 60%,
-					                  mix(@theme_selected_bg_color, #adefad, 0.95)
-                                      );
-    background-size: 16px 16px, auto; }
-  progressbar.osd {
-    min-width: 3px;
-    min-height: 3px;
-    background-color: transparent; }
-    progressbar.osd trough {
-      border-style: none;
-      border-radius: 0;
-      background-color: transparent;
-      box-shadow: none; }
-    progressbar.osd progress {
-      border-style: none;
-      border-radius: 0; }
+    padding: 0;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+progressbar progress,
+progressbar trough {
+    min-height: 18px;
+    min-width: 18px;
+}
+
+progress,
+progress row,
+progress row:hover,
+progress row:selected,
+progress row:selected:focus {
+    min-height: 16px;
+    min-width: 16px;
+    background-image: none;
+    background-color: @progressbar_color; 
+    border: 1px solid transparent;
+    background-image: linear-gradient(to bottom, #cdffcd, #a6efb3 45%, #00d020 56%, #1ce233);
+    box-shadow: inset -6px 0 4px 0 alpha(black, 0.08),
+                inset 6px 0 4px 0 alpha(black, 0.08);
+}
+ 
+progress.vertical {
+    background-image: linear-gradient(to right, #cdffcd, #a6efb3 45%, #00d020 56%, #1ce233);
+    box-shadow: inset -6px 0 4px 0 alpha(black, 0.08),
+                inset 6px 0 4px 0 alpha(black, 0.08);
+}
+
+trough,
+trough row,
+trough row:hover,
+trough row:selected,
+trough row:selected:focus {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #7d7d7d;
+    background-color: shade(@theme_bg_color, 0.85);
+    background-image: linear-gradient(to bottom, #ffffff 20%, #c9cacb 65%, #ffffff 98%);
+    box-shadow: inset -6px 0 4px 0 alpha(black, 0.08),
+                inset 6px 0 4px 0 alpha(black, 0.08);
+}
+
+trough.vertical {
+    background-image: linear-gradient(to right, #ffffff 20%, #c9cacb 65%, #ffffff 98%);
+    box-shadow: inset -6px 0 4px 0 alpha(black, 0.08),
+                inset 6px 0 4px 0 alpha(black, 0.08);
+}
 
 /* level bars as used for password quality or remaining power */
 GtkLevelBar {
@@ -1491,16 +1429,16 @@ levelbar block {
     background-color: @theme_selected_bg_color;
 }
 
-levelbar.indicator-continuous.fill-block {
+levelbar.indicator-continuous block {
     padding: 1px;
     border-radius: 0px;
 }
 
-levelbar.indicator-discrete.fill-block.horizontal {
+levelbar.discrete block.horizontal {
     margin: 0 1px;
 }
 
-levelbar.indicator-discrete.fill-block.vertical {
+levelbar.discrete block.vertical {
     margin: 1px 0;
 }
 
@@ -1508,24 +1446,24 @@ levelbar.indicator-discrete.fill-block.vertical {
    uncomment when :nth-child will be working
    on the widget
 
-levelbar.indicator-discrete.fill-block.horizontal:first-child {
+levelbar.discrete block.horizontal:first-child {
     border-radius: 2px 0 0 2px;
 }
 
-levelbar.indicator-discrete.fill-block.horizontal:last-child {
+levelbar.discrete block.horizontal:last-child {
     border-radius: 0 2px 2px 0;
 }
 
-levelbar.indicator-discrete.fill-block.vertical:first-child {
+levelbar.discrete block.vertical:first-child {
     border-radius: 2px 2px 0 0;
 }
 
-levelbar.indicator-discrete.fill-block.vertical:last-child {
+levelbar.discrete block.vertical:last-child {
     border-radius: 0 0 2px 2px;
 }
 */
 
-levelbar block.level-high {
+levelbar block.high {
     border-color: shade(@success_color, 0.85);
     background-image: linear-gradient(to bottom,
                                       shade(@success_color, 1.2),
@@ -1534,7 +1472,7 @@ levelbar block.level-high {
                                       );
 }
 
-levelbar block.level-low {
+levelbar block.low {
     border-color: shade(@warning_color, 0.80);
     background-image: linear-gradient(to bottom,
                                       shade(@warning_color, 1.3),
@@ -1543,550 +1481,252 @@ levelbar block.level-low {
                                       );
 }
 
-levelbar block.empty-fill-block {
+levelbar block.empty {
     border-color: alpha(@theme_fg_color, 0.1);
     background-color: transparent;
     background-image: none;
 }
 
-/************
- * GtkScale *
- ************/
-scale trough, scale fill {
-  border: 2px solid transparent;
-  border-radius: 0;
-  background-color: transparent;
-  box-shadow: none; }
-  row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill {
-    box-shadow: none; }
-    row:selected scale trough, scale row:selected trough, row:selected scale fill, scale row:selected fill, row:selected scale trough:disabled, scale row:selected trough:disabled, row:selected scale fill:disabled, scale row:selected fill:disabled {
-      border-color: #061f3e; }
-  .osd scale trough, scale .osd trough, .osd scale fill, scale .osd fill {
-    border-color: #a1a192;
-    background-color: rgba(161, 161, 146, 0.8);
-    box-shadow: none;
-    outline-color: rgba(0, 0, 0, 0.2); }
-    .osd scale trough:disabled, scale .osd trough:disabled, .osd scale fill:disabled, scale .osd fill:disabled {
-      background-color: #f4f4f2; }
-
+/*********
+ * scale *
+ *********/
 scale {
-  min-height: 10px;
-  min-width: 10px;
-  padding: 12px; }
-  scale fill,
-  scale highlight {
-    margin: -1px; }
-  scale.fine-tune fill,
-  scale.fine-tune highlight,
-  scale.fine-tune trough {
-    outline-offset: 4px;
-    -gtk-outline-radius: 1px; }
-  scale trough {
-    outline-offset: 11px;
-    -gtk-outline-radius: 2px; }
-  scale fill:disabled {
-    border-color: transparent;
-    background-color: transparent; }
-  .osd scale fill {
-    background-color: transparent; }
-    .osd scale fill:disabled, .osd scale fill:disabled:backdrop {
-      border-color: transparent;
-      background-color: transparent; }
-  scale.horizontal trough {
-    border-image: url("Range/trough-horz.png");
-    border-image-repeat: stretch;
-    border-width: 1px 2px;
-    border-image-slice: 1 2 1 2;
-    background-image: linear-gradient(to bottom, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.horizontal slider {
-    border-style: none;
+    min-height: 10px;
+    min-width: 10px;
+    padding: 12px;
+    border-width: 1px;
     border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz.png"));
+}
+
+scale slider {
+    min-height: 19px;
+    min-width: 11px;
+    margin: -10px;
+    border-radius: 0px;
+    background-image: url('assets/slider-horiz.png');
+}
+
+scale.vertical slider {
+    min-height: 11px;
+    min-width: 19px;
+}
+
+scale slider:disabled {
+    border-radius: 0px;
+    background-image: url('assets/slider-horiz-disabled.png');
+}
+
+/* vertical sliders */
+scale slider.vertical {
+    border-radius: 0px;
+    background-image: url('assets/slider-vert.png');
+}
+
+scale slider.vertical:disabled {
+    border-radius: 0px;
+    background-image: url('assets/slider-vert-disabled.png');
+}
+
+scale slider.fine-tune:active,
+scale slider.fine-tune:active:hover,
+scale slider.fine-tune.horizontal:active,
+scale slider.fine-tune.horizontal:active:hover {
+    background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:hover {
-    border-style: none;
+}
+
+scale marks {
+    border-color: shade(@theme_bg_color, 0.8);
+}
+
+scale trough {
+    margin: 9px 0;
+    border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz-hover.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:active {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz-active.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:disabled {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-horz-insensitive.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.vertical trough {
-    border-image: url("Range/trough-vert.png");
-    border-image-repeat: stretch;
-    border-width: 2px 1px;
-    border-image-slice: 2 1 2 1;
-    background-image: linear-gradient(to right, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.vertical slider {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:hover {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert-hover.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:active {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert-active.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:disabled {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("Range/slider-vert-insensitive.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale value {
-    color: alpha(currentColor,0.4); }
-  scale marks {
-    color: alpha(currentColor,0.4); }
-    scale marks.top {
-      margin-bottom: 11px;
-      margin-top: -15px; }
-    scale marks.bottom {
-      margin-top: 11px;
-      margin-bottom: -15px; }
-    scale marks.top {
-      margin-right: 11px;
-      margin-left: -15px; }
-    scale marks.bottom {
-      margin-left: 11px;
-      margin-right: -15px; }
-  scale.fine-tune marks.top {
-    margin-bottom: 11px;
-    margin-top: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-top: 11px;
-    margin-bottom: -12px; }
-  scale.fine-tune marks.top {
-    margin-right: 11px;
-    margin-left: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-left: 11px;
-    margin-right: -12px; }
-  scale.horizontal indicator {
-    min-height: 4px;
-    min-width: 1px; }
-  scale.horizontal.fine-tune indicator {
-    min-height: 1px; }
-  scale.vertical indicator {
-    min-height: 1px;
-    min-width: 4px; }
-  scale.vertical.fine-tune indicator {
-    min-width: 1px; }
-  scale.color.horizontal slider:hover, scale.color.horizontal slider:disabled, scale.color.horizontal slider,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.horizontal slider:hover,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above-hover.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.horizontal slider:active,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above-active.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.horizontal slider:disabled,
-  scale.horizontal contents:last-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-above-insensitive.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below-hover.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below-active.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.horizontal contents:first-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-horz-scale-has-marks-below-insensitive.png"));
-    min-height: 21px;
-    min-width: 11px;
-    margin-top: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:hover,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above-hover.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:active,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above-active.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(rtl) slider:disabled,
-  scale.vertical contents:last-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-above-insensitive.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -9px;
-    margin-bottom: -10px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:hover,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:hover {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below-hover.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:active,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:active {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below-active.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color.vertical:dir(ltr) slider:disabled,
-  scale.vertical contents:first-child:not(:only-child) > trough > slider:disabled {
-    border-style: none;
-    border-radius: 0;
-    background-image: -gtk-scaled(url("Range/slider-vert-scale-has-marks-below-insensitive.png"));
-    min-height: 11px;
-    min-width: 21px;
-    margin-left: -10px;
-    margin-bottom: -9px;
-    background-repeat: no-repeat;
-    box-shadow: none; }
-  scale.color {
-    min-height: 0;
-    min-width: 0; }
-    scale.color trough {
-      border: none;
-      background-image: none;
-      background-repeat: no-repeat; }
-    scale.color.horizontal {
-      padding: 0 0 15px 0; }
-      scale.color.horizontal trough {
-        padding-bottom: 4px;
-        background-position: 0 -3px;
-        border-top-left-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.horizontal slider:hover, scale.color.horizontal slider:disabled, scale.color.horizontal slider {
-        margin-bottom: -10px;
-        margin-top: 0; }
-    scale.color.vertical:dir(ltr) {
-      padding: 0 0 0 15px; }
-      scale.color.vertical:dir(ltr) trough {
-        padding-left: 4px;
-        background-position: 3px 0;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0; }
-      scale.color.vertical:dir(ltr) slider:hover, scale.color.vertical:dir(ltr) slider:disabled, scale.color.vertical:dir(ltr) slider {
-        margin-left: -10px;
-        margin-right: 0; }
-    scale.color.vertical:dir(rtl) {
-      padding: 0 15px 0 0; }
-      scale.color.vertical:dir(rtl) trough {
-        padding-right: 4px;
-        background-position: -3px 0;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0; }
-      scale.color.vertical:dir(rtl) slider:hover, scale.color.vertical:dir(rtl) slider:disabled, scale.color.vertical:dir(rtl) slider {
-        margin-right: -10px;
-        margin-left: 0; }
+    background-color: shade(@theme_bg_color, 1.08);
+    background-image: none;
+    border-image: none;
+}
+
+scale trough.vertical {
+    margin: 0 9px;
+}
+
+scale highlight {
+    border-color: @theme_selected_bg_color;
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
+scale trough:disabled,
+scale highlight:disabled {
+    border-color: shade(@theme_bg_color, 0.85);
+    background-color: shade(@theme_bg_color, 0.9);
+    background-image: none;
+}
 
 /*************
  * scrollbar *
  *************/
 scrollbar {
-  background-color: transparent;
-  border: 0 none transparent;
-  margin: 0;
-  padding: 0; }
-  * {
-    -GtkScrollbar-has-backward-stepper: true;
-    -GtkScrollbar-has-forward-stepper: true; }
-  scrollbar.horizontal {
-    background: linear-gradient(to top,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-  scrollbar.horizontal slider {
-    border: 3px solid transparent;
-    border-image: url("Scrollbars/slider-horiz.png");
-    border-image-slice: 3 3 3 3;
-    border-image-repeat: stretch;
-    background: url("Scrollbars/handle-horiz.png") no-repeat center center, linear-gradient(to top, #e0e0e0); }
-    scrollbar.horizontal slider:hover {
-      border-image: url("Scrollbars/slider-horiz-prelight.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz-prelight.png") no-repeat center center, linear-gradient(to top, #e4e4e4); }
-    scrollbar.horizontal slider:hover:active {
-      border-image: url("Scrollbars/slider-horiz-active.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz-active.png") no-repeat center center, linear-gradient(to top, #d1d1d1); }
-  scrollbar.vertical {
-    background: linear-gradient(to left,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-  scrollbar.vertical slider {
-    border: 3px solid transparent;
-    border-image: url("Scrollbars/slider-vert.png");
-    border-image-slice: 3 3 3 3;
-    border-image-repeat: stretch;
-    background: url("Scrollbars/handle-vert.png") no-repeat center center, linear-gradient(to top, #e0e0e0); }
-    scrollbar.vertical slider:hover {
-      border-image: url("Scrollbars/slider-vert-prelight.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert-prelight.png") no-repeat center center, linear-gradient(to top, #e4e4e4); }
-    scrollbar.vertical slider:hover:active {
-      border-image: url("Scrollbars/slider-vert-active.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert-active.png") no-repeat center center, linear-gradient(to top, #d1d1d1); }
-  scrollbar.horizontal slider {
-    min-width: 10px;
-    min-height: 10px; }
-  scrollbar.vertical slider {
-    min-width: 10px;
-    min-height: 10px; }
-  scrollbar.fine-tune slider {
-    margin: 1px;
-    min-width: 10px;
-    min-height: 10px; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering) {
-    border: none;
-    opacity: 1;
-    background: none; 
-    -GtkScrollbar-has-backward-stepper: true;
-    -GtkScrollbar-has-forward-stepper: true; }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical {
-    border-right: 1px solid shade(@theme_bg_color); 
-    background: linear-gradient(to left,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-  scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal {
-    border-bottom: 1px solid shade(@theme_bg_color); 
-    background: linear-gradient(to left,
-                                      shade(@bg_color, 1.1),
-                                      shade(@bg_color, 1.05)
-                                      ); }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider.vertical {
-      margin: 0;
-      min-width: 16px;
-      min-height: 16px;
-      background-image: none;
-      background-color: transparent;
-      background-clip: padding-box; 
-      border: 3px solid transparent;
-      border-image: url("Scrollbars/slider-vert.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-vert.png") no-repeat center center, linear-gradient(to top, #e0e0e0); }
-    scrollbar.overlay-indicator:not(.dragging):not(.hovering) slider.horizontal {
-      margin: 0;
-      min-width: 16px;
-      min-height: 16px;
-      background-image: none;
-      background-color: transparent;
-      background-clip: padding-box; 
-      border: 3px solid transparent;
-      border-image: url("Scrollbars/slider-horiz.png");
-      border-image-slice: 3 3 3 3;
-      border-image-repeat: stretch;
-      background: url("Scrollbars/handle-horiz.png") no-repeat center center, linear-gradient(to top, #e0e0e0); }
-  scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
-    opacity: 1; }
-  scrollbar button:active, scrollbar button:hover, scrollbar button:disabled, scrollbar button {
-    padding: 0;
-    min-width: 17px;
-    min-height: 17px;
-    border: none;
-    border-radius: 0;
+	-GtkScrollbar-has-forward-stepper: 1;
+	-GtkScrollbar-has-backward-stepper: 1;
+	-GtkScrollbar-has-secondary-forward-stepper: 0;
+	-GtkScrollbar-has-secondary-backward-stepper: 0;
+
+	-GtkRange-stepper-size: 16;
+	-GtkRange-slider-width: 16; 
+	-GtkScrollbar-slider-width: 16;
+	color: @transparent;
+}
+
+scrollbar button,
+scrollbar button:hover,
+scrollbar button:disabled {
+	border-width: 0px;
+    border-radius: 0px;
+	border-style: none;
+    border-image: none;
     box-shadow: none;
-    -gtk-icon-source: none; }
-  scrollbar.horizontal button.up {
-    background: url("Scrollbars/left-stepper.png"); }
-    scrollbar.horizontal button.up:hover {
-      background: url("Scrollbars/left-stepper-prelight.png"); }
-    scrollbar.horizontal button.up:hover:active {
-      background: url("Scrollbars/left-stepper-active.png"); }
-  scrollbar.horizontal button.down {
-    background: url("Scrollbars/right-stepper.png"); }
-    scrollbar.horizontal button.down:hover {
-      background: url("Scrollbars/right-stepper-prelight.png"); }
-    scrollbar.horizontal button.down:hover:active {
-      background: url("Scrollbars/right-stepper-active.png"); }
-  scrollbar.vertical button.up {
-    background: url("Scrollbars/top-stepper.png"); }
-    scrollbar.vertical button.up:hover {
-      background: url("Scrollbars/top-stepper-prelight.png"); }
-    scrollbar.vertical button.up:hover:active {
-      background: url("Scrollbars/top-stepper-active.png"); }
-  scrollbar.vertical button.down {
-    background: url("Scrollbars/bottom-stepper.png"); }
-    scrollbar.vertical button.down:hover {
-      background: url("Scrollbars/bottom-stepper-prelight.png"); }
-    scrollbar.vertical button.down:hover:active {
-      background: url("Scrollbars/bottom-stepper-active.png"); }
+    min-width: 16px;
+    min-height: 16px;
+    border-color: transparent;
+    background-color: transparent;
+    background-size: 100% 100%;
+	
+}
+
+scrollbar button.vertical.top,
+scrollbar button.vertical.top:disabled {
+	background-image: url("assets/stepper-up-insens.png");
+        border-image: url("assets/stepper-up-insens.png");
+       
+}
+
+scrollbar button.vertical.bottom,
+scrollbar button.vertical.bottom:disabled {
+	background-image: url("assets/stepper-down-insens.png");
+        border-image: url("assets/stepper-down-insens.png");
+}
+
+scrollbar button.horizontal.left,
+scrollbar button.horizontal.left:disabled {
+	background-image: url("assets/stepper-left-insens.png");
+        border-image: url("assets/stepper-left-insens.png");
+}
+
+scrollbar button.horizontal.right,
+scrollbar button.horizontal.right:disabled {
+	background-image: url("assets/stepper-right-insens.png");
+        border-image: url("assets/stepper-right-insens.png");
+}
+
+scrollbar button.vertical.top:hover {
+	background-image: url("assets/stepper-up-hover.png");
+        border-image: url("assets/stepper-up-hover.png");
+}
+
+scrollbar button.vertical.bottom:hover {
+	background-image: url("assets/stepper-down-hover.png");
+        border-image: url("assets/stepper-down-hover.png");
+}
+
+scrollbar button.horizontal.left:hover {
+	background-image: url("assets/stepper-left-hover.png");
+        border-image: url("assets/stepper-left-hover.png");
+}
+
+scrollbar button.horizontal.right:hover {
+	background-image: url("assets/stepper-right-hover.png");
+        border-image: url("assets/stepper-right-hover.png");
+   
+}
+
+scrollbar trough {
+	border-image: linear-gradient(to bottom,
+                                     shade (@bg_color, 0.74),
+                                     shade (@bg_color, 0.74));
+}
+
+scrollbar trough.vertical {
+	background-image: linear-gradient(to right,
+                                         #e9e9e9,
+                                         #fcfcfc);
+}
+
+scrollbar trough.horizontal {
+	background-image: linear-gradient(to bottom,
+                                       #e9e9e9,
+                                       #fcfcfc);
+}
+
+scrollbar slider {
+    border-width: 1px;
+    border-style: solid ; 
+    border-color: #979797;
+	border-radius: 2px;
+    min-width: 16px;
+    min-height: 16px;
+    background-repeat: no-repeat;
+	background-position: center center ;
+    background-clip: padding-box;
+    box-shadow: inset 1px 0 #f6f6f6,
+                inset -1px 0 #f6f6f6,
+                inset 0 1px #f6f6f6,
+                inset 0 -1px #f6f6f6;
+}
+
+scrollbar slider:hover {
+    border-width: 1px;
+    border-style: solid ; 
+    border-color: #3c7fb1;
+	border-radius: 2px;
+    box-shadow: inset 1px 0 #f6f6f6,
+                inset -1px 0 #f6f6f6,
+                inset 0 1px #f6f6f6,
+                inset 0 -1px #f6f6f6;
+}
+
+
+scrollbar slider.vertical {
+background-image:  url("assets/sv.png"),
+                   linear-gradient(to right,
+                   #F4F4F4,
+                   #E9E9EB 45%, 
+                   #D9DADC 46%,
+                   #C0C0C4); 			 
+}
+
+scrollbar slider.horizontal {
+ background-image: url("assets/sh.png"),
+                   linear-gradient(to bottom,
+                   #F4F4F4,
+                   #E9E9EB 45%,
+                   #D9DADC 45%,
+                   #C0C0C4);
+
+}
+
+scrollbar slider.vertical:hover {
+background-image:  url("assets/sv2.png"),
+                   linear-gradient(to right,
+                   #E3F4FC,
+                   #D6EEFB 4%,
+                   #A9DBF6 46%,
+                   #A4D5EF 90%,
+                   #9CCAE3);
+}
+
+scrollbar slider.horizontal:hover {
+background-image:  url("assets/sh2.png"),
+                   linear-gradient(to bottom,
+                   #E3F4FC,
+                   #D6EEFB 45%,
+                   #A9DBF6 46%,
+                   #A4D5EF 90%,
+                   #9CCAE3);
+}
 
 /*************
  * separator *
@@ -2177,7 +1817,7 @@ headerbar .separator:insensitive {
     -gtk-icon-source: none;
     border-style: none;
     background-color: transparent;
-    background-image: image(shade(@theme_bg_color, 0.35));
+    background-image: image(shade(@theme_bg_color, 0.7));
     background-size: 1px 1px;
 }
 
@@ -2189,15 +1829,13 @@ toolbar button separator,
 .separator,
 toolbar button separator,
 .separator {
-    border-color: shade(@toolbar_bg_color, 0.95);
     min-width: 1px;
     min-height: 1px;
     -gtk-icon-source: none;
     border-style: none;
     background-color: transparent;
-    background-image: image(shade(@toolbar_bg_color, 0.95));
+    background-image: image(shade(@theme_bg_color, 0.95));
     background-size: 1px 1px;
-
 }
 
 headerbar button separator,
@@ -2213,7 +1851,7 @@ headerbar.titlebar button separator,
     -gtk-icon-source: none;
     border-style: none;
     background-color: transparent;
-    background-image: image(shade(@titlebar_bg_color, 0.95));
+    background-image: image(shade(@theme_bg_color, 0.95));
     background-size: 1px 1px;
 }
 
@@ -2225,13 +1863,7 @@ toolbar button separator,
 .separator:disabled,
 toolbar button separator,
 .separator:disabled {
-    min-width: 1px;
-    min-height: 1px;
-    -gtk-icon-source: none;
-    border-style: none;
-    background-color: transparent;
-    background-image: image(shade(@toolbar_bg_color, 0.85));
-    background-size: 1px 1px;
+    border-color: shade(@toolbar_bg_color, 0.85);
 }
 
 headerbar button separator,
@@ -2247,9 +1879,10 @@ headerbar.titlebar button separator,
     -gtk-icon-source: none;
     border-style: none;
     background-color: transparent;
-    background-image: image(shade(@titlebar_bg_color, 0.85));
+    background-image: image(shade(@theme_bg_color, 0.85));
     background-size: 1px 1px;
 }
+
 
 menuitem separator,
 .separator {
@@ -2488,30 +2121,52 @@ statusbar {
     color: @theme_fg_color;
 }
 
-
 /**********
  * switch *
  **********/
 switch {
-    -switch-slider-width: 35px;
-    font-size: smaller;
-    background-color: @theme_bg_color;
     padding: 0;
-    border-radius: 2px;
+    border-radius: 0px;
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: shade(@theme_bg_color, 0.95);
+    background-image: none;
     color: @theme_fg_color;
-    box-shadow: inset 0 0 0 1px shade(@theme_base_color, 0.5);
+}
+
+switch:checked {
+    border-color: shade(@theme_selected_bg_color, 0.9);
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+    color: @theme_selected_fg_color;
+}
+
+switch:disabled {
+    border-color: shade(@theme_bg_color, 0.85);
+    background-color: shade(@theme_bg_color, 0.9);
+    background-image: none;
+    color: mix(@theme_fg_color, @theme_bg_color, 0.5);
 }
 
 switch slider {
     min-width: 20px;
     min-height: 20px;
-    padding: 0;
-    border-radius: 2px;
-    border: 1px solid shade(@theme_bg_color, 0.7);
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: shade(@theme_bg_color, 1.08);
+    background-image: linear-gradient(to bottom, shade (#ebebeb, 1.00) 50%,
+                                     shade (#dddddd, 1.00) 51%,
+                                     shade (#cfcfcf, 1.05));
+    border: 1px solid #7e7e7e;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px white;
 }
 
-
+switch slider:disabled {
+    border-color: shade(@theme_bg_color, 0.85);
+    background-color: shade(@theme_bg_color, 0.9);
+    background-image: none;
+}
 /************
  * textview *
  ************/
@@ -2654,117 +2309,138 @@ GtkColorButtonbutton {
  * header-bar *
  **************/
 headerbar {
-    padding: 4px 4px;
-    border-width: 0;
+    padding: 4px;
+    border-width: 0 0 1px 0;
     border-style: solid;
-    border-color: shade(@titlebar_bg_color, 0.8);
-    background-color: @titlebar_bg_color;
-    background-size: 100% 100%;
-    background-image: url('titlebar/focused.png');
-    color: @titlebar_fg_color;
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: @theme_bg_color;
+    background-image: none;
+    color: @theme_fg_color;
 }
 
-headerbar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+headerbar button.text-button {
+    padding: 4px 6px;
 }
 
-headerbar button image-button {
+headerbar button.image-button {
     padding: 6px 8px;
 }
 
 headerbar .title {
     font: bold;
-    color: white;
     padding: 0 12px;
 }
 
 headerbar .subtitle {
     font: smaller;
     padding: 0 12px;
-    color: white;
 }
 
-headerbar combobox,
-headerbar button,
-headerbar .linked button {
-    border-color: shade(@titlebar_bg_color, 0.8);
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
-    color: @titlebar_fg_color;
-    padding: 6px;
+headerbar button {
+    text-shadow: none;
 }
 
 headerbar button:hover {
-    border-color: shade(@titlebar_bg_color, 0.7);
+    border-color: #4f8bb8;
+    background-image: linear gradient,to bottom,
+                                     shade (#eaf6fd, 1.05),
+                                     shade (#d9f0fc, 1.00) 50%,
+                                     shade (#bee6fd, 1.00) 51%,
+                                     shade (#a7d9f5, 1.05));
 }
 
 headerbar button:active,
 headerbar button:checked {
-    border-color: shade(@titlebar_bg_color, 0.8);
-    background-color: shade(@titlebar_bg_color, 0.95);
-    background-image: linear-gradient(to bottom,
-                                      shade(@button_bg_color, 0.6),
-                                      shade(@button_bg_color, 0.7),
-                                      shade(@button_bg_color, 0.75)
-                                      );
+    border-color: #4c4c4c;
+    background-image: linear-fradient, to bottom,
+                      shade (#efefef, 1.0),
+                      shade (#efefef, 1.0));
+    box-shadow: inset 0 0 0 1px alpha(#6cb9e0, 0.7),
+                inset 0 0 3px 2px alpha(black, 0.35);
+}
+
+/* headerbar combobox,
+headerbar button {
+    border-color: shade(@theme_bg_color, 0.8);
+    background-color: shade(@theme_bg_color, 1.08);
+    background-image: linear-gradient(to bottom, @theme_bg_color, shade(@theme_bg_color, 0.90));
+    color: @theme_fg_color;
+}
+
+headerbar button:hover {
+    border-color: shade(@theme_selected_bg_color, 0.7);
+    background-color: shade(@theme_bg_color, 1.10);
+    background-image: linear-gradient(to bottom, alpha(@theme_selected_bg_color, 0.3), alpha(@theme_selected_bg_color, 0.6));
+}
+
+headerbar button:active,
+headerbar button:checked {
+    border-color: shade(@theme_selected_bg_color, 0.8);
+    background-color: shade(@theme_bg_color, 0.95);
+    background-image: linear-gradient(to bottom, alpha(@theme_selected_bg_color, 0.3), alpha(@theme_selected_bg_color, 0.6));
 }
 
 headerbar button:active:hover {
-    border-color: shade(@titlebar_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 }
 
 headerbar button:focus,
 headerbar button:hover:focus,
 headerbar button:active:focus,
 headerbar button:active:hover:focus {
-    border-color: shade(@titlebar_bg_color, 0.7);
+    border-color: shade(@theme_bg_color, 0.7);
 }
 
 headerbar button:disabled {
-    border-color: shade(@titlebar_bg_color, 0.85);
-    background-color: shade(@titlebar_bg_color, 0.9);
+    border-color: shade(@theme_bg_color, 0.85);
+    background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
 }
 
 headerbar button:active *:disabled {
-    border-color: shade(@titlebar_bg_color, 0.75);
-    background-color: shade(@titlebar_bg_color, 0.80);
+    border-color: shade(@theme_bg_color, 0.75);
+    background-color: shade(@theme_bg_color, 0.80);
     background-image: none;
-}
+} */
 
 headerbar entry {
-    border-color: shade(@titlebar_bg_color, 0.8);
+    border-width: 1px;
+    border-color: shade(@bg_color, 0.6);
 }
 
 headerbar entry:active,
-headerbar entry selection:focus {
-    border-color: shade(@titlebar_bg_color, 0.7);
+headerbar entry:focus {
+    border-width: 1px;
+    border-color: shade(@selected_bg_color, 0.6);
 }
 
 /***********
  * toolbar *
  ***********/
 toolbar {
-    padding: 4px;
-    border-style: none;
-    background-color: @toolbar_bg_color;
-    background-size: 100% 100%;
-    background-image: url('titlebar/focused.png');
-    color: @toolbar_fg_color;
-}
-
-toolbar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+    background-image: linear-gradient(to bottom,
+                                     shade(#fefeff, 1.05),
+                                     shade(#e5eaf5, 1.00) 40%,
+                                     shade(#d2d9ec, 1.00) 41%,
+                                     shade(#e2e7f7, 1.00) 89%,
+                                     shade(#d5dbeb, 1.00) 90%,
+                                     shade(#b6bccc, 1.05));
+    padding: 5px;
+    color: @fg_color;
+    text-shadow: none;
+	border-radius: 2px 2px 0 0;
+	border: 1px solid alpha(gray, 0.8);
 }
 
 toolbar button {
-    padding: 4px 4px;
+    padding: 2px;
 }
 
 toolbar button.text-button {
     padding: 2px 4px;
 }
 
-toolbar button image-button {
+toolbar button.image-button {
     padding: 4px 3px 3px 4px;
 }
 
@@ -2782,37 +2458,113 @@ toolbar menubar {
  * primary-toolbar *
  *******************/
 .primary-toolbar,
-.primary-toolbar toolbar {
+.primary-toolbar toolbar,
+.primary-toolbar > toolbar {
     -GtkWidget-window-dragging: true;
 
     padding: 4px;
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: shade(@toolbar_bg_color, 0.8);
-    background-color: @toolbar_bg_color;
     background-size: 100% 100%;
-    background-image: url('titlebar/focused.png');
+    background-color: transparent;
+    border-bottom-color: #b6bccc;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    background-color: #bbd1e8;
+    background-image: url('assets/toolbar.png');
     color: @toolbar_fg_color;
 }
 
-.primary-toolbar:backdrop {
-    background-image: url('titlebar/backdrop.png');
+.primary-toolbar .raised button,
+.primary-toolbar .raised > button,
+toolbar combobox,
+toolbar button,
+.primary-toolbar combobox,
+.primary-toolbar button {
+    padding: 10px;
 }
+
+/* .primary-toolbar combobox,
+.primary-toolbar button {
+    padding: 2px;
+    border-width: 1px;
+    border-color: shade(@theme_bg_color, 0.9);
+    border-radius: 0px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, @theme_bg_color, shade(@theme_bg_color, 0.90));
+    color: @toolbar_fg_color;
+}
+
+.primary-toolbar .raised button,
+.primary-toolbar .raised > button,
+toolbar combobox,
+toolbar button {
+    padding: 10px;
+    border-color: shade(@theme_bg_color, 0.9);
+    background-color: shade(@toolbar_bg_color, 1.08);
+    background-image: linear-gradient(to bottom, @theme_bg_color, shade(@theme_bg_color, 0.90));
+    color: @toolbar_fg_color;
+}
+
+.primary-toolbar button:hover,
+toolbar button:hover {
+    border-color: shade(@theme_selected_bg_color, 0.9);
+    background-color: shade(@toolbar_bg_color, 1.10);
+    background-image: linear-gradient(to bottom, alpha(@theme_selected_bg_color, 0.3), alpha(@theme_selected_bg_color, 0.6));
+}
+
+.primary-toolbar button:checked,
+.primary-toolbar button:active,
+toolbar button:active {
+    border-color: shade(@theme_selected_bg_color, 0.8);
+    background-color: shade(@theme_selected_bg_color, 0.95);
+    background-image: linear-gradient(to bottom, alpha(@theme_selected_bg_color, 0.3), alpha(@theme_selected_bg_color, 0.6));
+}
+
+.primary-toolbar button:active:hover,
+toolbar button:active:hover {
+    border-color: shade(@theme_selected_bg_color, 0.75);
+}
+
+.primary-toolbar button:focus,
+.primary-toolbar button:hover:focus,
+.primary-toolbar button:active:focus,
+.primary-toolbar button:active:hover:focus,
+toolbar button:focus,
+toolbar button:hover:focus,
+toolbar button:active:focus,
+toolbar button:active:hover:focus {
+    border-color: transparent;
+}
+
+.primary-toolbar button:disabled,
+toolbar button:disabled {
+    border-color: transparent;
+    background-color: @toolbar_bg_color;
+    background-image: none;
+}
+
+.primary-toolbar button:active *:disabled,
+toolbar button:active *:disabled {
+    border-color: transparent;
+    background-color: shade(@toolbar_bg_color, 0.80);
+    background-image: none;
+} */
 
 .primary-toolbar entry,
 toolbar entry {
-    border-color: shade(@toolbar_bg_color, 0.8);
+    border-width: 1px;
+    border-color: shade(@bg_color, 0.6);
 }
 
 .primary-toolbar entry:active,
-.primary-toolbar entry selection:focus,
+.primary-toolbar entry:focus,
 toolbar entry:active,
-toolbar entry selection:focus {
-    border-color: shade(@toolbar_bg_color, 0.7);
+toolbar entry:focus {
+    border-width: 1px;
+    border-color: shade(@selected_bg_color, 0.6);
 }
 
 /* inline-toolbar */
-.inline-toolbar toolbar {
+.inline-toolbar > toolbar {
     -GtkToolbar-button-relief: normal;
 
     padding: 1px;
@@ -2824,15 +2576,15 @@ toolbar entry selection:focus {
     background-image: none;
 }
 
-.inline-toolbar toolbar:last-child {
-    border-width: 1px 1px 1px 1px;
+.inline-toolbar > toolbar:last-child {
+    border-width: 1px;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
 }
 
-toolbar.inline-toolbar button {
-    padding: 4px 4px;
-    border-width: 1px 1px 1px 1px;
+.inline-toolbar > toolbar button {
+    padding: 1px;
+    border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
@@ -2841,38 +2593,38 @@ toolbar.inline-toolbar button {
     color: @theme_fg_color;
 }
 
-toolbar.inline-toolbar button:hover {
+.inline-toolbar > toolbar button:hover {
     border-color: shade(@theme_bg_color, 0.7);
     background-color: shade(@theme_bg_color, 1.10);
     background-image: none;
 }
 
-toolbar.inline-toolbar button:active {
+.inline-toolbar > toolbar button:active {
     border-color: shade(@theme_bg_color, 0.8);
     background-color: shade(@theme_bg_color, 0.95);
     background-image: none;
 }
 
-toolbar.inline-toolbar button:active:hover {
+.inline-toolbar > toolbar button:active:hover {
     border-color: shade(@theme_bg_color, 0.7);
 }
 
-toolbar.inline-toolbar button:focus,
-toolbar.inline-toolbar button:hover:focus,
-toolbar.inline-toolbar button:active:focus,
-toolbar.inline-toolbar button:active:hover:focus {
+.inline-toolbar > toolbar button:focus,
+.inline-toolbar > toolbar button:hover:focus,
+.inline-toolbar > toolbar button:active:focus,
+.inline-toolbar > toolbar button:active:hover:focus {
     border-color: shade(@theme_bg_color, 0.7);
 }
 
-toolbar.inline-toolbar button:disabled,
-.inline-toolbar toolbar toolbutton button:disabled {
+.inline-toolbar > toolbar button:disabled,
+.inline-toolbar > toolbar toolbutton button:disabled {
     border-color: shade(@theme_bg_color, 0.85);
     background-color: shade(@theme_bg_color, 0.9);
     background-image: none;
 }
 
-toolbar.inline-toolbar button:active *:disabled
-.inline-toolbar toolbar toolbutton button:active *:disabled {
+.inline-toolbar > toolbar button:active *:disabled
+.inline-toolbar > toolbar toolbutton button:active *:disabled {
     border-color: shade(@theme_bg_color, 0.75);
     background-color: shade(@theme_bg_color, 0.80);
     background-image: none;
@@ -3291,11 +3043,16 @@ headerbar .linked button {
 
 headerbar button.raised.linked:active,
 headerbar .raised.linked button:active,
-headerbar .linked button:active {
+headerbar .linked button:active,
+headerbar .button.raised.linked:checked,
+headerbar .raised.linked button:checked,
+headerbar .linked button:checked {
+
     box-shadow: inset -1px 0 shade(@dark_bg_color, 0.9),
                 inset 1px 0 alpha(@dark_shadow, 0.07),
                 inset 0 1px alpha(@dark_shadow, 0.08),
-                inset 0 -1px alpha(@dark_shadow, 0.05);
+                inset 0 -1px alpha(@dark_shadow, 0.05),
+                inset 0 0 3px 2px alpha(@dark_shadow, 0.35);
 }
 
 headerbar button.raised.linked:disabled,
@@ -4013,104 +3770,97 @@ GtkBubbleWindow toolbar {
     background-color: transparent;
 }
 
-/*******
- * CSD *
- *******/
 headerbar,
-headerbar.titlebar {
-    border-radius: 8px 8px 0 0;
-    background-color: transparent;
-    background-image: url('titlebar/focused.png');
+.titlebar {
+    border-radius: 7px 7px 0 0;
+    padding: 2px 5px;
+    background-image: url('assets/toolbar.png');
+    border-color: shade (@dark_bg_color, 1.5);
+    border-style: solid;
     background-size: 100% 100%;
-    color: mix(@titlebar_fg_color, @titlebar_bg_color, 0.1);
-    text-shadow: none;
+    border-width: 1px 0 0 0;
+    border-radius: 7px 7px 0 0;
+    color: @dark_fg_color;
+    text-shadow: 0 -1px shade (@dark_bg_color, 0.7);
+    box-shadow: inset 0 1px shade (@dark_bg_color, 1.65);
 }
 
 headerbar:backdrop,
-headerbar.titlebar:backdrop {
-    background-color: transparent;
-    background-image: url('titlebar/backdrop.png');
+.titlebar:backdrop {
+    background-image: url('assets/toolbar-inchecked.png');
     background-size: 100% 100%;
 }
 
-headerbar.titlebar.default-decoration {
-    border: none;
-    box-shadow: none;
-}
-
-.tiled headerbar.titlebar {
-    border-radius: 0;
-}
-
-.maximized headerbar.titlebar {
-    border-radius: 0;
-}
-
-/* this is the default titlebar that is added by GTK
- * when client-side decorations are in use and the application
- * did not set a custom titlebar.
- */
-headerbar.titlebar.default-decoration {
-    border: none;
-    box-shadow: none;
-}
-
-headerbar.titlebar .title {
+.titlebar .title {
     font: bold;
 }
 
-headerbar button.titlebutton {
-    padding: 0px;
+.maximized .titlebar {
+    border-radius: 0;
     border: none;
+}
+
+.titlebar .titlebutton {
+    background-color: transparent;
+    border-image-width: 0;
+    box-shadow: none;
+}
+
+.titlebar .titlebutton:hover {
+    border-image-width: 0;
+}
+
+.titlebar .titlebutton {
+    padding: 0px;
+    border-radius: 3px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border: 1px solid #8c8c8c;
+    color: white;
+    icon-shadow: 0 0 2px black;
+    box-shadow: inset 0 0 0px 1px rgba(255,255,255,0.5);
+    background-image: linear-gradient(to bottom, alpha(#d4d4d6, 0.25) ,alpha(#bababf, 0.25) 49%, alpha(#66666d, 0.25) 50%, alpha(#66666d, 0.25));
+}
+
+.titlebar .titlebutton.close {
+    background-clip: padding-box;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.titlebar .titlebutton.close:hover {
+    background-image: linear-gradient(to bottom, #fcc8bf, #faa99b 50%, #d22302 51%, #e6934e);
+}
+
+.titlebar .titlebutton.close:checked {
+    background-image: linear-gradient(to top, #ec6e44, #e76b41);
+}
+
+.titlebar .titlebutton:hover {
+    background-image: linear-gradient(to bottom, alpha(#a9d4f4, 0.65), alpha(#7cbfea, 0.65) 50%, alpha(#2e71a5, 0.65) 51%, alpha(#23c8e8, 0.65));
+}
+
+.titlebar .titlebutton:checked {
+    icon-shadow: none;
+    background-image: linear-gradient(to bottom, #89acd0 50%, #4973a1 51%);
 }
 
 decoration {
     border-style: none;
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0 3px 7px 1px alpha(black, 0.7);
+    border-radius: 7px;
+    box-shadow: 0 3px 7px 1px alpha(black, 0.7),
+                0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.21);
 
     /* this is used for the resize cursor area */
     margin: 10px;
 }
 
-.tiled decoration {
+decoration.tiled {
     border-radius: 0;
 }
 
 decoration:backdrop {
-    box-shadow: 0 6px 6px 1px alpha(black, 0.5),
-                0 0 0 1px mix(shade(@titlebar_bg_color, 0.7), @titlebar_fg_color, 0.12);
-}
-
-/* Server-side decoration (SSD) */
-.ssd decoration {
-    border-radius: 0;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.18); 
-}
-
-.ssd decoration,
-.ssd decoration:backdrop {
-    background-color: @titlebar_bg_color;
-}
-
-/* Client-side Decorations (CSD)*/
-decoration.csdtooltip,
-tooltip {
-    border-radius: 0;
-    box-shadow: none; 
-}
-
-messagedialog.csd decoration {
-    border-radius: 0;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.13); 
-}
-
-.solid-csd decoration {
-     border: solid 1px shade(@bg_color, 0.8);
-     border-radius: 0;
-     margin: 2px;
-     background-color: @titlebar_bg_color;
-     box-shadow: none; 
+    box-shadow: 0 6px 6px 1px alpha(black, 0.5);
 }
 
 decoration {

@@ -32,7 +32,7 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 **Windows Basic (Vista Beta 2) [Elbullazul]**
 
 ### Bonus material
-- [Longhorn 4074 Icon Set [feren]](https://github.com/Elbullazul/Longhorn-Collaboration/tree/icons)
+- [Longhorn 4074 Icon Set [feren]](https://github.com/Elbullazul/Longhorn-Icon-theme)
 
 
 `Currently Supported DEs: Cinnamon, GTK 3, Metacity`

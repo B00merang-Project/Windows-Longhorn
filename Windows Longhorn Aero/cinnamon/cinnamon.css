@@ -151,7 +151,7 @@ StScrollBar StButton#vhandle:hover {
     border: 1px solid #767676; */
 }
 
-.popup-submenu-menu-item:open, {
+.popup-submenu-menu-item:open {
     background-color: #2975E9;
     color: white;
 }
@@ -303,11 +303,11 @@ StScrollBar StButton#vhandle:hover {
 }
 
 #panelLeft .applet-box:first-child {
-    border-image: url('menu-assets/start-here.png') 7 0 0 0;
+    border-image: url('menu-assets/menu.png') 7 0 0 0;
     padding-right: 18px;
-    min-width: 58px;
+/*    min-width: 58px;
     min-height: 25px; 
-    font-size: 0;
+    font-size: 0; */
     font-weight: normal;
 }
 #panelLeft:dnd {

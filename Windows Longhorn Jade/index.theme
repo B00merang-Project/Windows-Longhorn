@@ -1,19 +1,12 @@
 [Desktop Entry]
-Name=Windows7-Aero
 Type=X-GNOME-Metatheme
-Comment=Theme by Brahim Salem inspired by Win2-7 
+Name=Windows Longhorn Jade
+Comment=Windows Longhorn Jade theme for Linux OSes; based on the MTAC architecture
+Comment=Author : Christian Medel (Elbullazul)
+Version=rolling
+Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Windows7-Aero
-MetacityTheme=Windows7-Aero
-IconTheme=Win2-7
-CursorTheme=aero-drop
-CursorSize=18
-ButtonLayout=menu:minimize,maximize,close
-
-#Fonts
-ApplicationFont=Segoe UI 10
-DocumentFont=Segoe UI 10
-DesktopFont=Segoe UI 10
-WindowTitleFont=Segoe UI 10
-FixedWidthFont=Monospace 10
+GtkTheme=Windows Longhorn Jade
+MetacityTheme=Windows Longhorn Jade
+ButtonLayout=:minimize,maximize,close

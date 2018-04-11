@@ -1,34 +1,11 @@
-
 * {
-    -GtkArrow-arrow-scaling: 0.5;
-    -GtkButton-child-displacement-x: 0;
-    -GtkButton-child-displacement-y: 0;
-    -GtkButton-default-border: 0;
-    -GtkButton-image-spacing: 0;
-    -GtkButton-inner-border: 1;
-    -GtkButton-interior-focus: true;
-    -GtkButtonBox-child-min-height: 24;
-    -GtkButtonBox-child-internal-pad-y: 1;
-
-    -GtkCheckButton-indicator-size: 14;
-    -GtkCheckMenuItem-indicator-size: 14;
-
-    -GtkExpander-expander-size: 8;
-    -GtkHTML-link-color: @link_color;
-    -GtkIMHtml-hyperlink-color: @link_color;
-    -GtkMenu-horizontal-padding: 0;
-    -GtkRange-stepper-spacing: 0;
-    -GtkRange-trough-border: 0;
-    -GtkRange-trough-under-steppers: 1;
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true;
-    -GtkScrollbar-min-slider-length: 80;
-    -GtkScrolledWindow-scrollbar-spacing: 0;
-    -GtkScrolledWindow-scrollbars-within-bevel: 1;
-    -GtkStatusbar-shadow-type: none;
-    -GtkTextView-error-underline-color: @error_color;
-    -GtkToolItemGroup-expander-size: 8;
-    -WnckTasklist-fade-overlay-rect: 0;
+    -GtkScrolledwindow-scrollbar-spacing: 0;
+    -GtkScrolledwindow-scrollbars-within-bevel: 1;
+    -textview-error-underline-color: @error_color;
+    -GtkToolbutton-icon-spacing: 6;
+    -GtkTreeview-expander-size: 8;
 
     background-clip: padding-box;
 
@@ -199,7 +176,7 @@ button {
     color: @fg_color;
     border: 1px solid #58616d;
     box-shadow: inset 0 0 2px 1px #c2c3c5;
-    text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
+    text-shadow: 0 1px alpha (shade(@button_bg_color, 1.25), 0.4);
     border-radius: 2px;
     transition: all 250ms ease-in;
 }
@@ -280,9 +257,7 @@ row { padding: 4px;
 row:selected,
 row:selected:hover,
 row:selected:focus {
-    border-width: 1px 0;
-    border-style: solid;
-    border-color: shade(@theme_selected_bg_color, 0.9);
+    border: none;
     background-color: @theme_selected_bg_color;
     background-image: none;
     color: @theme_selected_fg_color;
@@ -354,6 +329,7 @@ button:link > label, button:visited > label {
 treeview header button,
 treeview header button:active {
     border-width: 0 1px 1px 0;
+    padding: none;
     border-radius: 0;
 }
 
@@ -361,6 +337,7 @@ treeview header button,
 treeview header button:active,
 treeview header button:focus,
 treeview header button:active:focus {
+    border-width: 0 1px 1px 0;
     border-color: shade(@theme_base_color, 0.9);
     border-bottom-color: shade(@theme_base_color, 0.8);
     background-color: shade(@theme_base_color, 0.97);
@@ -371,6 +348,7 @@ treeview header button:hover,
 treeview header button:active:hover,
 treeview header button:hover:focus,
 treeview header button:active:hover:focus {
+    border-width: 0 1px 1px 0;
     border-color: shade(@theme_base_color, 0.9);
     border-bottom-color: shade(@theme_base_color, 0.8);
     background-color: shade(@theme_base_color, 0.99);
@@ -541,11 +519,18 @@ entry.readonly {
 
 entry progress {
     background-image: linear-gradient(to bottom,
-                                     shade (@selected_bg_color, 0.8),
-                                     shade (@selected_bg_color, 0.9) 10%,
-                                     shade (@selected_bg_color, 1.1));
+                                     shade(@selected_bg_color, 0.8),
+                                     shade(@selected_bg_color, 0.9) 10%,
+                                     shade(@selected_bg_color, 1.1));
     border-width: 0;
     color: @selected_fg_color;
+}
+
+entry entry {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
 }
 
 /************
@@ -598,15 +583,18 @@ list-row:selected {
 /*********
  * frame *
  *********/
-frame {
+frame > border {
     border-width: 1px;
     border-style: solid;
     border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0;
+    box-shadow: none;
 }
 
-statusbar frame {
-    border-width: 0;
+frame.flat > border,
+frame > border.flat,
+statusbar frame > border {
+    border: none;
 }
 
 /*******************
@@ -1005,10 +993,7 @@ combobox:drop(active) {
  ********/
 treemenu menu,
 toolbutton menu,
-combobox  menu {
-    background-color: @menu_bg_color;
-}
-
+combobox  menu,
 menu,
 toolbar menu,
 headerbar  menu,
@@ -1016,6 +1001,7 @@ headerbar  menu,
 .primary-toolbar button menu,
 toolbar .primary-toolbar menu,
 headerbar .primary-toolbar menu {
+    margin: 4px;
     padding: 0;
     border-radius: 0;
     border-width: 1px;
@@ -1043,10 +1029,18 @@ menu button {
     font: initial;
 }
 
-/* ubuntu software center menu */
-#toolbar-popup {
-    background-color: @menu_bg_color;
-    color: @menu_fg_color;
+menu > arrow.top,
+.menu > arrow.top {
+    margin-top: -3px;
+    border-bottom: 1px solid shade(@theme_bg_color, 0.9);
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
+}
+
+menu > arrow.bottom,
+.menu > arrow.bottom {
+    margin-bottom: -3px;
+    border-top: 1px solid shade(@theme_bg_color, 0.9);
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
 /***********
@@ -1302,7 +1296,7 @@ notebook {
     padding: 0;
     background-clip: border-box;
     border-color: #858585;
-    border-width: 1px;
+    border-width: 0;
     border-style: solid;
 }
 
@@ -1317,6 +1311,12 @@ notebook > header {
 
 notebook > header > frame {
     border-color: @theme_bg_color;
+    box-shadow: none;
+}
+
+notebook > stack:not(:only-child) {
+    background-color: @theme_base_color;
+    border: 1px solid #858585;
     box-shadow: none;
 }
 
@@ -1366,7 +1366,7 @@ notebook tab label {
 }
 
 notebook tab {
-    color: shade (@bg_color, 0.48);
+    color: shade(@bg_color, 0.48);
 }
 
 notebook header.top tab:checked {
@@ -1374,7 +1374,8 @@ notebook header.top tab:checked {
     border-radius: 2px 2px 0 0;
     box-shadow: inset 0 1px @theme_base_color,
                 inset 1px 0 @theme_base_color,
-                inset -1px 0 @theme_base_color;
+                inset -1px 0 @theme_base_color,
+                0 1px @theme_base_color;
 }
 
 notebook header.top tab {
@@ -1388,7 +1389,8 @@ notebook header.right tab:checked {
     background-image: none;
     box-shadow: inset 0 1px @theme_base_color,
                 inset 0 -1px @theme_base_color,
-                inset -1px 0 @theme_base_color;
+                inset -1px 0 @theme_base_color,
+                -1px 0 @theme_base_color;
 }
 
 notebook header.right tab {
@@ -1403,7 +1405,8 @@ notebook header.bottom tab:checked {
     background-image: none;
     box-shadow: inset 0 -1px @theme_base_color,
                 inset 1px 0 @theme_base_color,
-                inset -1px 0 @theme_base_color;
+                inset -1px 0 @theme_base_color,
+                0 -1px @theme_base_color;
 }
 
 notebook header.bottom tab {
@@ -1418,7 +1421,8 @@ notebook header.left tab:checked {
     background-image: none;
     box-shadow: inset 0 1px @theme_base_color,
                 inset 0 -1px @theme_base_color,
-                inset 1px 0 @theme_base_color;
+                inset 1px 0 @theme_base_color,
+                1px 0 @theme_base_color;
 }
 
 notebook header.left tab {
@@ -1709,10 +1713,10 @@ scale highlight:disabled {
  * scrollbar *
  *************/
 scrollbar {
-  background-color: transparent;
-  border: 0 none transparent;
-  margin: 0;
-  padding: 0;
+    background-color: transparent;
+    border: 0 none transparent;
+    margin: 0;
+    padding: 0;
 }
 
 scrollbar button,
@@ -1814,7 +1818,7 @@ scrollbar slider {
     border-color: #979797;
 	border-radius: 2px;
     min-width: 45px;
-    min-height: 12px;
+    min-height: 15px;
     background-repeat: no-repeat;
 	background-position: center center ;
     background-clip: padding-box;
@@ -1825,7 +1829,7 @@ scrollbar slider {
 }
 
 scrollbar.vertical slider {
-    min-width: 12px;
+    min-width: 15px;
     min-height: 45px;
 }
 
@@ -2170,7 +2174,7 @@ statusbar frame {
 switch {
     color: @fg_color;
     text-shadow: none;
-    border-radius: 2px;
+    border-radius: 6px;
     background-image: linear-gradient(to bottom,
                                       #cecece,
                                       #e8e8e8);
@@ -2185,7 +2189,7 @@ switch:checked {
 }
 
 switch:disabled {
-    color: shade (@bg_color, 0.6);
+    color: shade(@bg_color, 0.6);
     text-shadow: 0 1px alpha(shade(@bg_color, 1.25), 0.5);
     background-image: linear-gradient(to bottom,
                                       shade(@bg_color, 0.93),
@@ -2199,7 +2203,7 @@ switch slider {
     color: @fg_color;
     border: 1px solid #58616d;
     box-shadow: inset 0 0 2px 1px #c2c3c5;
-    text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
+    text-shadow: 0 1px alpha (shade(@button_bg_color, 1.25), 0.4);
     background-image: linear-gradient(to bottom, #fdfdfd,
                                       #fafafa 11%,
                                       #ededed 22%,
@@ -2340,9 +2344,9 @@ GtkColorEditor button.color {
 /*************
  * headerbar *
  *************/
-.header-bar {
+headerbar {
     -GtkWidget-window-dragging: true;
-	background-image: url('assets/toolbar.png');
+	background-image: none;
 	background-size: cover;
 	background-color: transparent;
     border-bottom-color: #b6bccc;
@@ -2352,10 +2356,7 @@ GtkColorEditor button.color {
     color: black;
     text-shadow: none;
     box-shadow: none;
-}
-
-.header-bar:backdrop {
-	background-image: url('assets/toolbar-inactive.png');
+    padding: 2px;
 }
 
 /***********
@@ -3249,6 +3250,10 @@ button.file image:last-child {
     color: @theme_text_color;
 }
 
+.app-notification border {
+    border: none;
+}
+
 /*******
  * osd *
  *******/
@@ -3715,16 +3720,15 @@ GtkBubbleWindow toolbar {
 
 .titlebar {
     border-radius: 7px 7px 0 0;
-    padding: 2px 5px;
     background-image: url('assets/toolbar.png');
-    border-color: shade (@dark_bg_color, 1.5);
+    border-color: shade(@dark_bg_color, 1.5);
     border-style: solid;
     background-size: 100% 100%;
     border-width: 1px 0 0 0;
     border-radius: 7px 7px 0 0;
     color: @dark_fg_color;
-    /*text-shadow: 0 -1px shade (@dark_bg_color, 0.7);*/
-    box-shadow: inset 0 1px shade (@dark_bg_color, 1.65);
+    /*text-shadow: 0 -1px shade(@dark_bg_color, 0.7);*/
+    box-shadow: inset 0 1px shade(@dark_bg_color, 1.65);
 }
 
 .titlebar:backdrop {
@@ -3840,10 +3844,12 @@ decoration:backdrop {
     transition: 200ms ease-out;
 }
 
-.tiled decoration,
-.maximized decoration,
-.fullscreen decoration,
-.ssd decoration.maximized {
+.maximized headerbar,
+.maximized headerbar:backdrop,
+.tiled .titlebar:not(headerbar),
+.tiled .titlebar:backdrop:not(headerbar),
+.maximized .titlebar:not(headerbar),
+.maximized .titlebar:backdrop:not(headerbar) {
     border-radius: 0;
 }
 

@@ -4,8 +4,8 @@
 check {
   padding: 4px;
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked.png")); }
-  checkbutton.flat, .header-bar check.titlebuttonbutton,
-  headerbar.titlebar check.titlebuttonbutton, .floating-bar checkbutton {
+  checkbutton.flat, .header-bar check.titlebutton button,
+  headerbar.titlebar check.titlebutton button, .floating-bar checkbutton {
     -gtk-icon-shadow: none; }
 
 .view check:selected, calendar check:selected,
@@ -17,8 +17,8 @@ list-row:selected check {
 
 check:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-hover.png")); }
-  check:hoverbutton.flat, .header-bar check.titlebuttonbutton:hover,
-  headerbar.titlebar check.titlebuttonbutton:hover, .floating-bar checkbutton:hover {
+  check:hover button.flat, .header-bar check.titlebutton button:hover,
+  headerbar.titlebar check.titlebutton button:hover, .floating-bar checkbutton:hover {
     -gtk-icon-shadow: none; }
 
 .view check:hover:selected, calendar check:hover:selected,
@@ -30,8 +30,8 @@ list-row:selected check:hover {
 
 check:active {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-active.png")); }
-  check:active button.flat, .header-bar check.titlebuttonbutton:active,
-  headerbar.titlebar check.titlebuttonbutton:active, .floating-bar checkbutton:active {
+  check:active button.flat, .header-bar check.titlebutton button:active,
+  headerbar.titlebar check.titlebutton button:active, .floating-bar checkbutton:active {
     -gtk-icon-shadow: none; }
 
 .view check:active:selected, calendar check:active:selected,
@@ -43,8 +43,8 @@ list-row:selected check:active {
 
 check:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-insensitive.png")); }
-  check:disabledbutton.flat, .header-bar check.titlebuttonbutton:disabled,
-  headerbar.titlebar check.titlebuttonbutton:disabled, .floating-bar checkbutton:disabled {
+  check:disabledbutton.flat, .header-bar check.titlebutton button:disabled,
+  headerbar.titlebar check.titlebutton button:disabled, .floating-bar checkbutton:disabled {
     -gtk-icon-shadow: none; }
 
 .view check:disabled:selected, calendar check:disabled:selected,
@@ -54,62 +54,62 @@ list-row:selected check:disabled {
   list-row:selected check:disabled:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-unchecked-insensitive.png")); }
 
-check:indeterminated {
+check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed.png")); }
-  check:indeterminatedbutton.flat, .header-bar check.titlebuttonbutton:indeterminated,
-  headerbar.titlebar check.titlebuttonbutton:indeterminated, .floating-bar checkbutton:indeterminated {
+  check:indeterminatebutton.flat, .header-bar check.titlebutton button:indeterminate,
+  headerbar.titlebar check.titlebutton button:indeterminate, .floating-bar checkbutton:indeterminate {
     -gtk-icon-shadow: none; }
 
-.view check:indeterminated:selected, calendar check:indeterminated:selected,
-list-row:selected check:indeterminated {
+.view check:indeterminate:selected, calendar check:indeterminate:selected,
+list-row:selected check:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed.png")); }
-  .view check:indeterminated:selected:backdrop, calendar check:indeterminated:backdrop:selected,
-  list-row:selected check:indeterminated:backdrop {
+  .view check:indeterminate:selected:backdrop, calendar check:indeterminate:backdrop:selected,
+  list-row:selected check:indeterminate:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed.png")); }
 
-check:indeterminated:hover {
+check:indeterminate:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-hover.png")); }
-  check:indeterminated:hoverbutton.flat, .header-bar check.titlebuttonbutton:indeterminated:hover,
-  headerbar.titlebar check.titlebuttonbutton:indeterminated:hover, .floating-bar checkbutton:indeterminated:hover {
+  check:indeterminate:hover button.flat, .header-bar check.titlebutton button:indeterminate:hover,
+  headerbar.titlebar check.titlebutton button:indeterminate:hover, .floating-bar checkbutton:indeterminate:hover {
     -gtk-icon-shadow: none; }
 
-.view check:indeterminated:hover:selected, calendar check:indeterminated:hover:selected,
-list-row:selected check:indeterminated:hover {
+.view check:indeterminate:hover:selected, calendar check:indeterminate:hover:selected,
+list-row:selected check:indeterminate:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed-hover.png")); }
-  .view check:indeterminated:hover:selected:backdrop, calendar check:indeterminated:hover:backdrop:selected,
-  list-row:selected check:indeterminated:hover:backdrop {
+  .view check:indeterminate:hover:selected:backdrop, calendar check:indeterminate:hover:backdrop:selected,
+  list-row:selected check:indeterminate:hover:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-hover.png")); }
 
-check:indeterminated:selected {
+check:indeterminate:selected {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-active.png")); }
-  check:indeterminated:selectedbutton.flat, .header-bar check.titlebuttonbutton:indeterminated:selected,
-  headerbar.titlebar check.titlebuttonbutton:indeterminated:selected, .floating-bar checkbutton:indeterminated:selected {
+  check:indeterminate:selectedbutton.flat, .header-bar check.titlebutton button:indeterminate:selected,
+  headerbar.titlebar check.titlebutton button:indeterminate:selected, .floating-bar checkbutton:indeterminate:selected {
     -gtk-icon-shadow: none; }
 
-.view check:indeterminated:selected:selected, calendar check:indeterminated:selected,
-list-row:selected check:indeterminated:selected {
+.view check:indeterminate:selected:selected, calendar check:indeterminate:selected,
+list-row:selected check:indeterminate:selected {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed-active.png")); }
-  .view check:indeterminated:selected:selected:backdrop, calendar check:indeterminated:backdrop:selected,
-  list-row:selected check:indeterminated:selected:backdrop {
+  .view check:indeterminate:selected:selected:backdrop, calendar check:indeterminate:backdrop:selected,
+  list-row:selected check:indeterminate:selected:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-active.png")); }
 
-check:indeterminated:disabled {
+check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-insensitive.png")); }
-  check:indeterminated:disabledbutton.flat, .header-bar check.titlebuttonbutton:indeterminated:disabled,
-  headerbar.titlebar check.titlebuttonbutton:indeterminated:disabled, .floating-bar checkbutton:indeterminated:disabled {
+  check:indeterminate:disabledbutton.flat, .header-bar check.titlebutton button:indeterminate:disabled,
+  headerbar.titlebar check.titlebutton button:indeterminate:disabled, .floating-bar checkbutton:indeterminate:disabled {
     -gtk-icon-shadow: none; }
 
-.view check:indeterminated:disabled:selected, calendar check:indeterminated:disabled:selected,
-list-row:selected check:indeterminated:disabled {
+.view check:indeterminate:disabled:selected, calendar check:indeterminate:disabled:selected,
+list-row:selected check:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-checkbox-mixed-insensitive.png")); }
-  .view check:indeterminated:disabled:selected:backdrop, calendar check:indeterminated:disabled:backdrop:selected,
-  list-row:selected check:indeterminated:disabled:backdrop {
+  .view check:indeterminate:disabled:selected:backdrop, calendar check:indeterminate:disabled:backdrop:selected,
+  list-row:selected check:indeterminate:disabled:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-mixed-insensitive.png")); }
 
 check:checked {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked.png")); }
-  check:checkedbutton.flat, .header-bar check.titlebuttonbutton:checked,
-  headerbar.titlebar check.titlebuttonbutton:checked, .floating-bar checkbutton:checked {
+  check:checkedbutton.flat, .header-bar check.titlebutton button:checked,
+  headerbar.titlebar check.titlebutton button:checked, .floating-bar checkbutton:checked {
     -gtk-icon-shadow: none; }
 
 .view check:checked:selected, calendar check:checked:selected,
@@ -121,8 +121,8 @@ list-row:selected check:checked {
 
 check:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-insensitive.png")); }
-  check:checked:disabledbutton.flat, .header-bar check.titlebuttonbutton:checked:disabled,
-  headerbar.titlebar check.titlebuttonbutton:checked:disabled, .floating-bar checkbutton:checked:disabled {
+  check:checked:disabledbutton.flat, .header-bar check.titlebutton button:checked:disabled,
+  headerbar.titlebar check.titlebutton button:checked:disabled, .floating-bar checkbutton:checked:disabled {
     -gtk-icon-shadow: none; }
 
 .view check:checked:disabled:selected, calendar check:checked:disabled:selected,
@@ -134,8 +134,8 @@ list-row:selected check:checked:disabled {
 
 check:checked:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-hover.png")); }
-  check:checked:hoverbutton.flat, .header-bar check.titlebuttonbutton:checked:hover,
-  headerbar.titlebar check.titlebuttonbutton:checked:hover, .floating-bar checkbutton:checked:hover {
+  check:checked:hover button.flat, .header-bar check.titlebutton button:checked:hover,
+  headerbar.titlebar check.titlebutton button:checked:hover, .floating-bar checkbutton:checked:hover {
     -gtk-icon-shadow: none; }
 
 .view check:checked:hover:selected, calendar check:checked:hover:selected,
@@ -147,8 +147,8 @@ list-row:selected check:checked:hover {
 
 check:checked:active {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/checkbox-checked-active.png")); }
-  check:checked:active button.flat, .header-bar check.titlebuttonbutton:checked:active,
-  headerbar.titlebar check.titlebuttonbutton:checked:active, .floating-bar checkbutton:checked:active {
+  check:checked:active button.flat, .header-bar check.titlebutton button:checked:active,
+  headerbar.titlebar check.titlebutton button:checked:active, .floating-bar checkbutton:checked:active {
     -gtk-icon-shadow: none; }
 
 .view check:checked:active:selected, calendar check:checked:active:selected,
@@ -175,20 +175,20 @@ menu menuitemcheck:active:disabled, menu menuitem,
 menu menuitemcheck:checked:disabled {
       -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-checked-insensitive.png")); }
   menu menuitem,
-menu menuitemcheck:indeterminated {
+menu menuitemcheck:indeterminate {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-mixed.png")); }
     menu menuitem,
-menu menuitemcheck:indeterminated:hover {
+menu menuitemcheck:indeterminate:hover {
       -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-mixed-hover.png")); }
     menu menuitem,
-menu menuitemcheck:indeterminated:disabled {
+menu menuitemcheck:indeterminate:disabled {
       -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-check-mixed-insensitive.png")); }
 
 radio {
   padding: 4px;
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked.png")); }
-  radiobutton.flat, .header-bar radio.titlebuttonbutton,
-  headerbar.titlebar radio.titlebuttonbutton, .floating-bar radiobutton {
+  radiobutton.flat, .header-bar radio.titlebutton button,
+  headerbar.titlebar radio.titlebutton button, .floating-bar radiobutton {
     -gtk-icon-shadow: none; }
 
 .viewradio:selected, calendarradio:selected,
@@ -200,8 +200,8 @@ list-row:selected radio {
 
 radio:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-hover.png")); }
-  radio:hoverbutton.flat, .header-bar radio.titlebuttonbutton:hover,
-  headerbar.titlebar radio.titlebuttonbutton:hover, .floating-bar radiobutton:hover {
+  radio:hover button.flat, .header-bar radio.titlebutton button:hover,
+  headerbar.titlebar radio.titlebutton button:hover, .floating-bar radiobutton:hover {
     -gtk-icon-shadow: none; }
 
 .viewradio:hover:selected, calendarradio:hover:selected,
@@ -213,8 +213,8 @@ list-row:selected radio:hover {
 
 radio:active {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-active.png")); }
-  radio:active button.flat, .header-bar radio.titlebuttonbutton:active,
-  headerbar.titlebar radio.titlebuttonbutton:active, .floating-bar radiobutton:active {
+  radio:active button.flat, .header-bar radio.titlebutton button:active,
+  headerbar.titlebar radio.titlebutton button:active, .floating-bar radiobutton:active {
     -gtk-icon-shadow: none; }
 
 .viewradio:active:selected, calendarradio:active:selected,
@@ -226,8 +226,8 @@ list-row:selected radio:active {
 
 radio:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-insensitive.png")); }
-  radio:disabledbutton.flat, .header-bar radio.titlebuttonbutton:disabled,
-  headerbar.titlebar radio.titlebuttonbutton:disabled, .floating-bar radiobutton:disabled {
+  radio:disabledbutton.flat, .header-bar radio.titlebutton button:disabled,
+  headerbar.titlebar radio.titlebutton button:disabled, .floating-bar radiobutton:disabled {
     -gtk-icon-shadow: none; }
 
 .viewradio:disabled:selected, calendarradio:disabled:selected,
@@ -237,62 +237,62 @@ list-row:selected radio:disabled {
   list-row:selected radio:disabled:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-unchecked-insensitive.png")); }
 
-radio:indeterminated {
+radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed.png")); }
-  radio:indeterminatedbutton.flat, .header-bar radio.titlebuttonbutton:indeterminated,
-  headerbar.titlebar radio.titlebuttonbutton:indeterminated, .floating-bar radiobutton:indeterminated {
+  radio:indeterminatebutton.flat, .header-bar radio.titlebutton button:indeterminate,
+  headerbar.titlebar radio.titlebutton button:indeterminate, .floating-bar radiobutton:indeterminate {
     -gtk-icon-shadow: none; }
 
-.viewradio:indeterminated:selected, calendarradio:indeterminated:selected,
-list-row:selected radio:indeterminated {
+.viewradio:indeterminate:selected, calendarradio:indeterminate:selected,
+list-row:selected radio:indeterminate {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed.png")); }
-  .viewradio:indeterminated:selected:backdrop, calendarradio:indeterminated:backdrop:selected,
-  list-row:selected radio:indeterminated:backdrop {
+  .viewradio:indeterminate:selected:backdrop, calendarradio:indeterminate:backdrop:selected,
+  list-row:selected radio:indeterminate:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed.png")); }
 
-radio:indeterminated:hover {
+radio:indeterminate:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-hover.png")); }
-  radio:indeterminated:hoverbutton.flat, .header-bar radio.titlebuttonbutton:indeterminated:hover,
-  headerbar.titlebar radio.titlebuttonbutton:indeterminated:hover, .floating-bar radiobutton:indeterminated:hover {
+  radio:indeterminate:hover button.flat, .header-bar radio.titlebutton button:indeterminate:hover,
+  headerbar.titlebar radio.titlebutton button:indeterminate:hover, .floating-bar radiobutton:indeterminate:hover {
     -gtk-icon-shadow: none; }
 
-.viewradio:indeterminated:hover:selected, calendarradio:indeterminated:hover:selected,
-list-row:selected radio:indeterminated:hover {
+.viewradio:indeterminate:hover:selected, calendarradio:indeterminate:hover:selected,
+list-row:selected radio:indeterminate:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed-hover.png")); }
-  .viewradio:indeterminated:hover:selected:backdrop, calendarradio:indeterminated:hover:backdrop:selected,
-  list-row:selected radio:indeterminated:hover:backdrop {
+  .viewradio:indeterminate:hover:selected:backdrop, calendarradio:indeterminate:hover:backdrop:selected,
+  list-row:selected radio:indeterminate:hover:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-hover.png")); }
 
-radio:indeterminated:selected {
+radio:indeterminate:selected {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-active.png")); }
-  radio:indeterminated:selectedbutton.flat, .header-bar radio.titlebuttonbutton:indeterminated:selected,
-  headerbar.titlebar radio.titlebuttonbutton:indeterminated:selected, .floating-bar radiobutton:indeterminated:selected {
+  radio:indeterminate:selectedbutton.flat, .header-bar radio.titlebutton button:indeterminate:selected,
+  headerbar.titlebar radio.titlebutton button:indeterminate:selected, .floating-bar radiobutton:indeterminate:selected {
     -gtk-icon-shadow: none; }
 
-.viewradio:indeterminated:selected:selected, calendarradio:indeterminated:selected,
-list-row:selected radio:indeterminated:selected {
+.viewradio:indeterminate:selected:selected, calendarradio:indeterminate:selected,
+list-row:selected radio:indeterminate:selected {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed-active.png")); }
-  .viewradio:indeterminated:selected:selected:backdrop, calendarradio:indeterminated:backdrop:selected,
-  list-row:selected radio:indeterminated:selected:backdrop {
+  .viewradio:indeterminate:selected:selected:backdrop, calendarradio:indeterminate:backdrop:selected,
+  list-row:selected radio:indeterminate:selected:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-active.png")); }
 
-radio:indeterminated:disabled {
+radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-insensitive.png")); }
-  radio:indeterminated:disabledbutton.flat, .header-bar radio.titlebuttonbutton:indeterminated:disabled,
-  headerbar.titlebar radio.titlebuttonbutton:indeterminated:disabled, .floating-bar radiobutton:indeterminated:disabled {
+  radio:indeterminate:disabledbutton.flat, .header-bar radio.titlebutton button:indeterminate:disabled,
+  headerbar.titlebar radio.titlebutton button:indeterminate:disabled, .floating-bar radiobutton:indeterminate:disabled {
     -gtk-icon-shadow: none; }
 
-.viewradio:indeterminated:disabled:selected, calendarradio:indeterminated:disabled:selected,
-list-row:selected radio:indeterminated:disabled {
+.viewradio:indeterminate:disabled:selected, calendarradio:indeterminate:disabled:selected,
+list-row:selected radio:indeterminate:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/selected-radio-mixed-insensitive.png")); }
-  .viewradio:indeterminated:disabled:selected:backdrop, calendarradio:indeterminated:disabled:backdrop:selected,
-  list-row:selected radio:indeterminated:disabled:backdrop {
+  .viewradio:indeterminate:disabled:selected:backdrop, calendarradio:indeterminate:disabled:backdrop:selected,
+  list-row:selected radio:indeterminate:disabled:backdrop {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-mixed-insensitive.png")); }
 
 radio:checked {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked.png")); }
-  radio:checkedbutton.flat, .header-bar radio.titlebuttonbutton:checked,
-  headerbar.titlebar radio.titlebuttonbutton:checked, .floating-bar radiobutton:checked {
+  radio:checkedbutton.flat, .header-bar radio.titlebutton button:checked,
+  headerbar.titlebar radio.titlebutton button:checked, .floating-bar radiobutton:checked {
     -gtk-icon-shadow: none; }
 
 .viewradio:checked:selected, calendarradio:checked:selected,
@@ -304,8 +304,8 @@ list-row:selected radio:checked {
 
 radio:checked:disabled {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-insensitive.png")); }
-  radio:checked:disabledbutton.flat, .header-bar radio.titlebuttonbutton:checked:disabled,
-  headerbar.titlebar radio.titlebuttonbutton:checked:disabled, .floating-bar radiobutton:checked:disabled {
+  radio:checked:disabledbutton.flat, .header-bar radio.titlebutton button:checked:disabled,
+  headerbar.titlebar radio.titlebutton button:checked:disabled, .floating-bar radiobutton:checked:disabled {
     -gtk-icon-shadow: none; }
 
 .viewradio:checked:disabled:selected, calendarradio:checked:disabled:selected,
@@ -317,8 +317,8 @@ list-row:selected radio:checked:disabled {
 
 radio:checked:hover {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-hover.png")); }
-  radio:checked:hoverbutton.flat, .header-bar radio.titlebuttonbutton:checked:hover,
-  headerbar.titlebar radio.titlebuttonbutton:checked:hover, .floating-bar radiobutton:checked:hover {
+  radio:checked:hover button.flat, .header-bar radio.titlebutton button:checked:hover,
+  headerbar.titlebar radio.titlebutton button:checked:hover, .floating-bar radiobutton:checked:hover {
     -gtk-icon-shadow: none; }
 
 .viewradio:checked:hover:selected, calendarradio:checked:hover:selected,
@@ -330,8 +330,8 @@ list-row:selected radio:checked:hover {
 
 radio:checked:active {
   -gtk-icon-source: -gtk-scaled(url("Check-Radio/radio-checked-active.png")); }
-  radio:checked:active button.flat, .header-bar radio.titlebuttonbutton:checked:active,
-  headerbar.titlebar radio.titlebuttonbutton:checked:active, .floating-bar radiobutton:checked:active {
+  radio:checked:active button.flat, .header-bar radio.titlebutton button:checked:active,
+  headerbar.titlebar radio.titlebutton button:checked:active, .floating-bar radiobutton:checked:active {
     -gtk-icon-shadow: none; }
 
 .viewradio:checked:active:selected, calendarradio:checked:active:selected,
@@ -358,13 +358,13 @@ menu menuitemradio:active:disabled, menu menuitem,
 menu menuitemradio:checked:disabled {
       -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-checked-insensitive.png")); }
   menu menuitem,
-menu menuitemradio:indeterminated {
+menu menuitemradio:indeterminate {
     -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-mixed.png")); }
     menu menuitem,
-menu menuitemradio:indeterminated:hover {
+menu menuitemradio:indeterminate:hover {
       -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-mixed-hover.png")); }
     menu menuitem,
-menu menuitemradio:indeterminated:disabled {
+menu menuitemradio:indeterminate:disabled {
       -gtk-icon-source: -gtk-scaled(url("Check-Radio/menu-radio-mixed-insensitive.png")); }
 
 .view check, .viewradio,
@@ -411,7 +411,7 @@ list-row check, list-row radio {
 GtkCheckButton.text-button, GtkRadioButton.text-button {
     padding: 1px 2px 4px;
   outline-offset: 0; }
-  GtkCheckButton.text-button:disabled, GtkCheckButton.text-button:disabled:active, GtkCheckButton.text-button:disabled:indeterminated, GtkRadioButton.text-button:disabled, GtkRadioButton.text-button:disabled:active, GtkRadioButton.text-button:disabled:indeterminated {
+  GtkCheckButton.text-button:disabled, GtkCheckButton.text-button:disabled:active, GtkCheckButton.text-button:disabled:indeterminate, GtkRadioButton.text-button:disabled, GtkRadioButton.text-button:disabled:active, GtkRadioButton.text-button:disabled:indeterminate {
     color: #a1a192; }
 
 /*************************

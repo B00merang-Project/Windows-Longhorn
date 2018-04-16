@@ -1104,10 +1104,10 @@ menubar > menuitem {
 
 menubar menuitem:hover,
 menubar > menuitem:hover {
-    border-color: mix(@menubar_bg_color, @menubar_fg_color, 0.21);
-    background-color: mix(@menubar_bg_color, @menubar_fg_color, 0.21);
+    border-color: @theme_selected_bg_color;
+    background-color: @theme_selected_bg_color;
     background-image: none;
-    color: shade(@menubar_fg_color, 1.08);
+    color: @theme_selected_fg_color;
 }
 
 menubar menuitem *:hover,
@@ -1180,6 +1180,8 @@ menuitem radio,
 menuitem radio:hover,
 menuitem radio:disabled {
     border-style: none;
+    min-width: 16px;
+    min-height: 16px;
     background-color: transparent;
     background-image: none;
 }

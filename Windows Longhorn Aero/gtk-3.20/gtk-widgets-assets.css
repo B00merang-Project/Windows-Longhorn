@@ -10,7 +10,7 @@ check row:selected:focus {
 check:disabled,
 check row:selected:disabled,
 check row:selected:focus:disabled {
-    -gtk-icon-source: url("assets/checkbox-unchecked-disabled.png");
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.png");
 }
 
 check:active, check:checked,
@@ -22,7 +22,7 @@ check row:selected:focus:active, check row:selected:focus:checked {
 check:active:disabled, check:checked:disabled,
 check row:selected:active:disabled, check row:selected:checked:disabled,
 check row:selected:focus:active:disabled, check row:selected:focus:checked:disabled {
-    -gtk-icon-source: url("assets/checkbox-checked-disabled.png");
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive.png");
 }
 
 
@@ -35,7 +35,7 @@ check row:selected:focus:indeterminate {
 check:indeterminate:disabled,
 check row:selected:indeterminate:disabled,
 check row:selected:focus:indeterminate:disabled {
-    -gtk-icon-source: url("assets/checkbox-mixed-disabled.png");
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive.png");
 }
 
 radio,
@@ -47,7 +47,7 @@ radio row:selected:focus {
 radio:disabled,
 radio row:selected:disabled,
 radio row:selected:focus:disabled {
-    -gtk-icon-source: url("assets/radio-unselected-disabled.png");
+    -gtk-icon-source: url("assets/radio-unselected-insensitive.png");
 }
 
 radio:active, radio:checked,
@@ -59,7 +59,7 @@ radio row:selected:focus:active, radio row:selected:focus:checked {
 radio:active:disabled, radio:checked:disabled,
 radio row:selected:active:disabled, radio row:selected:checked:disabled,
 radio row:selected:focus:active:disabled, radio row:selected:focus:checked:disabled {
-    -gtk-icon-source: url("assets/radio-selected-disabled.png");
+    -gtk-icon-source: url("assets/radio-selected-insensitive.png");
 }
 
 radio:indeterminate,
@@ -71,7 +71,7 @@ radio row:selected:focus:indeterminate {
 radio:indeterminate:disabled,
 radio row:selected:indeterminate:disabled,
 radio row:selected:focus:indeterminate:disabled {
-    -gtk-icon-source: url("assets/radio-mixed-disabled.png");
+    -gtk-icon-source: url("assets/radio-mixed-insensitive.png");
 }
 
 /**************************
@@ -139,7 +139,7 @@ scale.marks-after slider:disabled,
 scale.marks-before slider:disabled,
 scale.marks-after slider.horizontal:disabled,
 scale.marks-before slider.horizontal:disabled {
-	background-image: url("./assets/slider-horiz-disabled.png");
+	background-image: url("./assets/slider-horiz-insensitive.png");
 }
 
 scale slider.vertical,
@@ -156,6 +156,6 @@ scale slider.vertical:active:hover {
 
 scale slider.vertical:disabled,
 scale slider.vertical:disabled:hover {
-	background-image: url("assets/slider-vert-disabled.png");
+	background-image: url("assets/slider-vert-insensitive.png");
 }
 

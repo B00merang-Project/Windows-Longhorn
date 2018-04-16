@@ -232,7 +232,18 @@ button.default:active:hover {
     background-color: shade(@theme_selected_bg_color, 0.97);
 } */
 
-
+/* flat button */
+button.flat,
+button.flat:backdrop {
+    padding: 3px 8px;
+    border-width: 1px;
+    border-radius: 5px;
+    border-style: solid;
+    box-shadow: none;
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+}
 
 /****************
  * cell and row *
@@ -267,6 +278,7 @@ check,
 radio,
 check:disabled,
 radio:disabled {
+    margin: 3px;
     border-style: none;
     background-color: transparent;
 }
@@ -1151,6 +1163,8 @@ menuitem radio,
 menuitem radio:hover,
 menuitem radio:disabled {
     border-style: none;
+    min-width: 16px;
+    min-height: 16px;
     background-color: transparent;
     background-image: none;
 }

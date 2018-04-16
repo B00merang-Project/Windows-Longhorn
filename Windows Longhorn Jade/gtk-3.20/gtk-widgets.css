@@ -271,6 +271,7 @@ radio,
 check:disabled,
 radio:disabled {
     border-style: none;
+    margin: 3px;
     background-color: transparent;
 }
 
@@ -1154,6 +1155,8 @@ menuitem radio,
 menuitem radio:hover,
 menuitem radio:disabled {
     border-style: none;
+    min-width: 16px;
+    min-height: 16px;
     background-color: transparent;
     background-image: none;
 }

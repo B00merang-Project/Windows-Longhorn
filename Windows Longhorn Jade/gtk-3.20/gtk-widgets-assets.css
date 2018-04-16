@@ -19,7 +19,7 @@ check row:selected:focus:hover {
 }
 
 check:disabled {
-    -gtk-icon-source: url("assets/checkbox-unchecked-disabled.png");
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.png");
 }
 
 check row:disabled {
@@ -30,7 +30,7 @@ check row:disabled,
 check row:selected:disabled,
 check row:selected:focus:disabled {
     background-color: transparent;
-    -gtk-icon-source: url("assets/checkbox-unchecked-disabled-alt.png");
+    -gtk-icon-source: url("assets/checkbox-unchecked-insensitive-alt.png");
 }
 
 check:checked {
@@ -54,13 +54,13 @@ check row:selected:checked:focus:hover {
 }
 
 check:checked:disabled {
-    -gtk-icon-source: url("assets/checkbox-checked-disabled.png");
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive.png");
 }
 
 check row:checked:disabled,
 check row:selected:checked:disabled,
 check row:selected:focus:checked:disabled {
-    -gtk-icon-source: url("assets/checkbox-checked-disabled-alt.png-alt");
+    -gtk-icon-source: url("assets/checkbox-checked-insensitive-alt.png-alt");
 }
 
 check:indeterminate {
@@ -84,13 +84,13 @@ check row:selected:focus:indeterminate:hover {
 }
 
 check:indeterminate:disabled {
-    -gtk-icon-source: url("assets/checkbox-mixed-disabled.png");
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive.png");
 }
 
 check row:indeterminate:disabled,
 check row:selected:indeterminate:disabled,
 check row:selected:focus:indeterminate:disabled {
-    -gtk-icon-source: url("assets/checkbox-mixed-disabled-alt.png");
+    -gtk-icon-source: url("assets/checkbox-mixed-insensitive-alt.png");
 }
 
 
@@ -116,7 +116,7 @@ radio row:selected:focus:hover {
 }
 
 radio:disabled {
-    -gtk-icon-source: url("assets/radio-unselected-disabled.png");
+    -gtk-icon-source: url("assets/radio-unselected-insensitive.png");
 }
 
 radio row:disabled {
@@ -126,7 +126,7 @@ radio row:disabled {
 radio row:disabled,
 radio row:selected:disabled,
 radio row:selected:focus:disabled {
-    -gtk-icon-source: url("assets/radio-unselected-disabled-alt.png");
+    -gtk-icon-source: url("assets/radio-unselected-insensitive-alt.png");
 }
 
 
@@ -151,13 +151,13 @@ radio row:selected:focus:checked:hover {
 }
 
 radio:checked:disabled {
-    -gtk-icon-source: url("assets/radio-selected-disabled.png");
+    -gtk-icon-source: url("assets/radio-selected-insensitive.png");
 }
 
 radio row:disabled,
 radio row:selected:checked:disabled,
 radio row:selected:focus:checked:disabled {
-    -gtk-icon-source: url("assets/radio-selected-disabled-alt.png");
+    -gtk-icon-source: url("assets/radio-selected-insensitive-alt.png");
 }
 
 radio:indeterminate {
@@ -181,11 +181,11 @@ radio row:selected:focus:indeterminate:hover {
 }
 
 radio:indeterminate:disabled {
-    -gtk-icon-source: url("assets/radio-mixed-disabled.png");
+    -gtk-icon-source: url("assets/radio-mixed-insensitive.png");
 }
 
 radio row:indeterminate:disabled,
 radio row:selected:indeterminate:disabled,
 radio row:selected:focus:indeterminate:disabled {
-    -gtk-icon-source: url("assets/radio-mixed-disabled-alt.png");
+    -gtk-icon-source: url("assets/radio-mixed-insensitive-alt.png");
 }

@@ -1662,176 +1662,112 @@ scale trough, scale fill {
     .osd scale trough:disabled, scale .osd trough:disabled, .osd scale fill:disabled, scale .osd fill:disabled {
       background-color: #f4f4f2; }
 
-/* slider */
+/*********
+ * scale *
+ *********/
 scale {
-  min-height: 10px;
-  min-width: 10px;
-  padding: 12px; }
-  scale fill,
-  scale highlight {
-    margin: -1px; }
-  scale.fine-tune fill,
-  scale.fine-tune highlight,
-  scale.fine-tune trough {
-    outline-offset: 4px;
-    -gtk-outline-radius: 1px; }
-  scale trough {
-    outline-offset: 11px;
-    -gtk-outline-radius: 2px; }
-  scale fill:disabled {
-    border-color: transparent;
-    background-color: transparent; }
-  .osd scale fill {
-    background-color: transparent; }
-    .osd scale fill:disabled, .osd scale fill:disabled:backdrop {
-      border-color: transparent;
-      background-color: transparent; }
-  scale.horizontal trough {
-    border-image: url("assets/trough.png");
-    border-image-repeat: stretch;
-    border-width: 1px 2px;
-    border-image-slice: 1 2 1 2;
-    background-image: linear-gradient(to bottom, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.horizontal slider {
-    border-style: none;
+    min-height: 10px;
+    min-width: 10px;
+    padding: 12px;
+}
+
+scale trough, scale fill {
+    border-width: 1px;
+    border-style: solid;
+    border-color: shade(@theme_bg_color, 0.8);
     border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-horiz.png"));
+    background-color: shade(@theme_bg_color, 1.08);
+    background-image: none;
+}
+
+scale slider {
+    min-height: 19px;
+    min-width: 19px;
+    margin: -9px;
+    border-radius: 0px;
+    background: url('assets/slider-horiz.png') center center no-repeat;
+}
+
+scale.vertical slider {
+    min-height: 19px;
+    min-width: 19px;
+}
+
+scale slider:disabled {
+    border-radius: 0px;
+    background: url('assets/slider-horiz-disabled.png') center center no-repeat;
+}
+
+/* vertical sliders */
+scale.vertical slider {
+    border-radius: 0px;
+    background: url('assets/slider-vert.png') center center no-repeat;
+}
+
+scale.vertical slider:disabled {
+    border-radius: 0px;
+    background: url('assets/slider-vert-disabled.png') center center no-repeat;
+}
+
+scale.fine-tune slider:active,
+scale.fine-tune slider:active:hover,
+scale.fine-tune slider.horizontal:active,
+scale.fine-tune slider.horizontal:active:hover {
+    background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:hover {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-horiz-hover.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:active {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-horiz-active.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.horizontal slider:disabled {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-horiz-disabled.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 22px;
-    min-width: 11px;
-    margin-top: -10px;
-    margin-bottom: -10px; }
-  scale.vertical trough {
-    border-image: url("assets/trough.png");
-    border-image-repeat: stretch;
-    border-width: 2px 1px;
-    border-image-slice: 2 1 2 1;
-    background-image: linear-gradient(to right, rgba(236, 236, 231, 0.8) 1px, rgba(245, 244, 239, 0.8)); }
-  scale.vertical slider {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-vert.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:hover {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-vert-hover.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:active {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-vert-active.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale.vertical slider:disabled {
-    border-style: none;
-    border-radius: 0px;
-    background-color: transparent;
-    background-image: -gtk-scaled(url("assets/slider-vert-disabled.png"));
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: none;
-    min-height: 11px;
-    min-width: 22px;
-    margin-left: -10px;
-    margin-right: -10px; }
-  scale value {
-    color: alpha(currentColor,0.4); }
-  scale marks {
-    color: alpha(currentColor,0.4); }
-    scale marks.top {
-      margin-bottom: 11px;
-      margin-top: -15px; }
-    scale marks.bottom {
-      margin-top: 11px;
-      margin-bottom: -15px; }
-    scale marks.top {
-      margin-right: 11px;
-      margin-left: -15px; }
-    scale marks.bottom {
-      margin-left: 11px;
-      margin-right: -15px; }
-  scale.fine-tune marks.top {
-    margin-bottom: 11px;
-    margin-top: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-top: 11px;
-    margin-bottom: -12px; }
-  scale.fine-tune marks.top {
-    margin-right: 11px;
-    margin-left: -12px; }
-  scale.fine-tune marks.bottom {
-    margin-left: 11px;
-    margin-right: -12px; }
-  scale.horizontal indicator {
-    min-height: 4px;
-    min-width: 1px; }
-  scale.horizontal.fine-tune indicator {
-    min-height: 1px; }
-  scale.vertical indicator {
+}
+
+scale marks {
+    color: alpha(currentColor,0.55);
+}
+
+scale marks.top,
+scale.fine-tune marks.top {
+    margin-bottom: 6px;
+    margin-top: -12px;
+}
+
+scale marks.bottom,
+scale.fine-tune marks.bottom {
+    margin-top: 6px;
+    margin-bottom: -12px;
+}
+
+scale marks.top,
+scale.fine-tune marks.top {
+    margin-right: 6px;
+    margin-left: -12px;
+}
+
+scale marks.bottom,
+scale.fine-tune marks.bottom {
+    margin-left: 6px;
+    margin-right: -12px;
+}
+
+scale.horizontal indicator {
+    min-height: 6px;
+    min-width: 1px;
+}
+
+scale.vertical indicator {
     min-height: 1px;
-    min-width: 4px; }
-  scale.vertical.fine-tune indicator {
-    min-width: 1px; }
+    min-width: 6px;
+}
+
+scale highlight {
+    border-color: @theme_selected_bg_color;
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+}
+
+scale trough:disabled,
+scale highlight:disabled {
+    border-color: shade(@theme_bg_color, 0.85);
+    background-color: shade(@theme_bg_color, 0.9);
+    background-image: none;
+}
 
 /*************
  * scrollbar *

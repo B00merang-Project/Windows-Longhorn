@@ -2141,13 +2141,11 @@ scrollbar {
     -GtkScrollbar-has-backward-stepper: true;
     -GtkScrollbar-has-forward-stepper: true; }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical {
-    border-right: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to left,
                                       shade(@bg_color, 1.1),
                                       shade(@bg_color, 1.05)
                                       ); }
   scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal {
-    border-bottom: 1px solid shade(@theme_bg_color, 0.9); 
     background: linear-gradient(to left,
                                       shade(@bg_color, 1.1),
                                       shade(@bg_color, 1.05)

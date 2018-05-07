@@ -1795,13 +1795,14 @@ scrollbar trough {
     background-image: linear-gradient(to right, #cad6e9, #fafbfb);
 }
 
-scrollbar trough.horizontal {
+scrollbar.horizontal trough {
     background-image: linear-gradient(to bottom, #cad6e9, #fafbfb);
 }
 
 scrollbar button,
 scrollbar button:active,
-scrollbar button:active:hover {
+scrollbar button:active:hover,
+scrollbar button:disabled {
     min-width: 8px;
     min-height: 8px;
     border-width: 0;
@@ -1827,9 +1828,10 @@ scrollbar slider {
     background-color: mix(@theme_bg_color, @theme_fg_color, 0.05);
 }
 
-scrollbar slider.horizontal {
+scrollbar.horizontal slider {
     min-width: 40px;
     min-height: 14px;
+    border-radius: 6px 6px 0 0;
 }
 
 scrollbar slider:hover {
@@ -1852,9 +1854,11 @@ scrollbar.vertical button.down {
 scrollbar.vertical button.up {
     -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
 scrollbar.horizontal button.down {
-    -gtk-icon-source: -gtk-icontheme("pan-right-symbolic"); }
+/*    -gtk-icon-source: -gtk-icontheme("pan-right-symbolic");*/
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
 scrollbar.horizontal button.up {
-    -gtk-icon-source: -gtk-icontheme("pan-left-symbolic"); }
+/*    -gtk-icon-source: -gtk-icontheme("pan-left-symbolic");*/
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
 
 treeview ~ scrollbar.vertical {
   border-top: 1px solid shade(@theme_bg_color, 0.8);

@@ -10,25 +10,25 @@ Collaborators : [feren](https://github.com/feren), [Elbullazul](https://github.c
 
 **Longhorn 4039 Plex III [Elbullazul/feren]**
 
-![plex](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-10-19-14-03-43_orig.png)
+![plex](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-plex_1_orig.png)
 
 ***
 
 **Longhorn 405x Slate [Elbullazul]**
 
-![slate](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-10-02-18-49-06_orig.png)
+![slate](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-slate_1_orig.png)
 
 ***
 
 **Longhorn 4074 Aero [feren/Elbullazul]**
 
-![aero](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/49b70188-a4b1-11e6-8eff-2cd527fbcdae_orig.png)
+![aero](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-aero_1_orig.png)
 
 ***
 
 **Longhorn 4074 Jade [feren/Elbullazul]**
 
-![jade](http://b00merang.weebly.com/uploads/1/6/8/1/16813022/screenshot-2016-09-30-16-22-05_orig.png)
+![jade](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-jade_1_orig.png)
 
 
 # UNSUPPORTED THEMES #

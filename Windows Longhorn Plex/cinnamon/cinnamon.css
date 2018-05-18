@@ -1169,7 +1169,7 @@ StScrollView .notification-icon-button:active {
 
 .window-list-box {
     spacing: 0px;
-    padding: 4px 2px;
+    padding: 0px 2px;
 }
 
 .window-list-item-label {

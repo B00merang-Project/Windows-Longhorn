@@ -806,7 +806,7 @@ border-radius: 0px;
 
 .calendar-day-base:hover {
 /*    background-color: #2975E9; */
-    border-image: url('menu-assets/hover.png) 5;
+    border-image: url('menu-assets/hover.png') 5;
     color: black;
 }
 
@@ -1755,12 +1755,13 @@ border-radius: 1px;
     font-weight: normal;
     font-size: 9pt;
     border-image: url("panel-assets/item-normal.png") 4;
+    padding: 0px 4px;
 }
 
 
 .window-list-item-box:hover  {     
     /*box-shadow: inset 0px 0px 0px 1px rgba(120,120,120,0.5);  */
-        border-image:url("panel-assets/item-active.png") 4;
+    border-image:url("panel-assets/item-active.png") 4;
 
 }
 

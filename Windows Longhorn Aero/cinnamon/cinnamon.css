@@ -1,6 +1,6 @@
 /* ###################################################################
  * Section common with Gnome Shell
- * ... contains a few cinnamon specific styles (rare occurences) 
+ * ... contains a few cinnamon specific styles (rare occurences)
  * ###################################################################*/
 stage {
     font-family: Noto Sans, sans-serif;
@@ -61,12 +61,12 @@ StScrollBar StButton#vhandle:hover {
     background-gradient-direction: vertical;
     color: black;
     font-size: 8.5pt;
-    font-weight: normal;    
+    font-weight: normal;
     text-align: center;
 }
 
 /* ===================================================================
- * Shared button properties 
+ * Shared button properties
  * ===================================================================*/
 
 .notification-button, .notification-icon-button,
@@ -75,7 +75,7 @@ StScrollBar StButton#vhandle:hover {
     color: black;
     border-image: url('buttons/button.png') 5;
     font-size: 8.5pt;
-    font-weight: normal;    
+    font-weight: normal;
     text-align: center;
 }
 
@@ -126,14 +126,13 @@ StScrollBar StButton#vhandle:hover {
 }
 
 /* ===================================================================
- * PopupMenu (popupMenu.js) 
+ * PopupMenu (popupMenu.js)
  * ===================================================================*/
 
 .popup-menu-boxpointer {
     -arrow-border-radius: 16px;
     -boxpointer-gap: -1px;
     -arrow-base: 40px;
-    border-image: url('menu-assets/background.png') 8;
 }
 
 /* Cinnamon 3.2 fix */
@@ -147,8 +146,7 @@ StScrollBar StButton#vhandle:hover {
     min-width: 250px;
     min-height: 80px;
     box-shadow: none;
-/*    background-color: #ebebeb;
-    border: 1px solid #767676; */
+    border-image: url('menu-assets/background.png') 8;
 }
 
 .popup-submenu-menu-item:open {
@@ -230,7 +228,7 @@ StScrollBar StButton#vhandle:hover {
 .popup-separator-menu-item {
     background-color: rgba(20,20,20,0.3);
     box-shadow: 0 1px rgba(220,220,220,0.6);
-    border-radius: 0; 
+    border-radius: 0;
     -margin-horizontal: 14px;
     height: 1px;
 }
@@ -299,33 +297,33 @@ StScrollBar StButton#vhandle:hover {
 
 #panelRight {
     padding-left: 13px;
-    border-image: url('panel-right.png') 15;
+    border-image: url('panel-right.png') 14;
 }
 
 #panelLeft .applet-box:first-child {
     border-image: url('menu-assets/menu.png') 7 0 0 0;
     padding-right: 18px;
 /*    min-width: 58px;
-    min-height: 25px; 
+    min-height: 25px;
     font-size: 0; */
     font-weight: normal;
 }
 #panelLeft:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(255,0,0,0.05);
-    background-gradient-end: rgba(255,0,0,0.4);    
+    background-gradient-end: rgba(255,0,0,0.4);
 }
 
 #panelCenter:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0,255,0,0.05);
-    background-gradient-end: rgba(0,255,0,0.4);    
+    background-gradient-end: rgba(0,255,0,0.4);
 }
 
 #panelRight:dnd {
     background-gradient-direction: vertical;
     background-gradient-start: rgba(0,0,255,0.05);
-    background-gradient-end: rgba(0,0,255,0.4);    
+    background-gradient-end: rgba(0,0,255,0.4);
 }
 
 #panelLeft:ltr {
@@ -348,7 +346,7 @@ StScrollBar StButton#vhandle:hover {
     -minimum-hpadding: 5px;
     font-weight: bold;
     border: 1px solid transparent;
-    transition-duration: 150; 
+    transition-duration: 150;
 }
 
 .panel-status-button:hover,
@@ -367,7 +365,7 @@ StScrollBar StButton#vhandle:hover {
 
 .system-status-icon {
     padding-left: 0px;
-    padding-right: 0px;    
+    padding-right: 0px;
     spacing: 0px;
     margin: 0px;
 }
@@ -425,7 +423,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 /* ===================================================================
- * Overview 
+ * Overview
  * ===================================================================*/
 
 #overview {
@@ -480,7 +478,7 @@ StScrollBar StButton#vhandle:hover {
     transition-duration: 300;
 }
 
-.workspace-add-button:hover {  
+.workspace-add-button:hover {
     background-image: url("add-workspace-hover.png");
     transition-duration: 300;
 }
@@ -560,13 +558,13 @@ StScrollBar StButton#vhandle:hover {
 .expo-workspace-thumbnail-frame#active {
   border: 1px, #2975E9;
   background-color: #2975E9;
-} 
+}
 
 /* ===================================================================
 * Desklets (desklet.js)
 * ===================================================================*/
-.desklet {    
-color: #eee;  
+.desklet {
+color: #eee;
 }
 
 .desklet-with-borders {
@@ -576,7 +574,7 @@ border: 1px solid #444;
       border-right: 0px;
     background-color: #232323;
     border-radius: 0px;
-color: #eee;  
+color: #eee;
 }
 
 .desklet-with-borders-and-header {
@@ -585,31 +583,31 @@ border: 1px solid #444;
       border-left: 0px;
       border-right: 0px;
     background-color: #232323;
-color: #eee;   
+color: #eee;
     border-radius-bottomleft: 0px;
     border-radius-bottomright: 0px;
 }
 
-.desklet-header { 
+.desklet-header {
     border-radius-topleft: 0px;
     border-radius-topright: 0px;
     font-size: 10.5pt;
- 
+
 border: 1px solid #444;
     border-bottom: 0px;
       border-left: 0px;
       border-right: 0px;
     background-color: #232323;
     border-radius: 0px;
-color: #eee;  
+color: #eee;
     padding: 6px;
 }
 
-.desklet-drag-placeholder { 
+.desklet-drag-placeholder {
     background-color: rgba(57,156,238,.31);
 }
 
- 
+
 .clock-desklet-label {
 }
 
@@ -621,7 +619,7 @@ border: 1px solid #444;
       border-right: 0px;
     background-color: #232323;
     border-radius: 0px;
- 
+
 }
 .xkcd-box {
 padding: 0px;
@@ -631,14 +629,14 @@ border-radius: 0px;
 }
 
 /* ===================================================================
- * Clock Desklet (desklet.js) 
+ * Clock Desklet (desklet.js)
  * ===================================================================*/
 .clock-desklet-label {
-} 
+}
 
 
 /* ===================================================================
- * Looking Glass 
+ * Looking Glass
  * ===================================================================*/
 
 #LookingGlassDialog {
@@ -738,7 +736,7 @@ border-radius: 0px;
 }
 
 /* ===================================================================
- * Date applet 
+ * Date applet
  * ===================================================================*/
 
 .calendar {
@@ -871,7 +869,7 @@ border-radius: 0px;
     background-gradient-direction: vertical;
     color: black;
     font-size: 8.5pt;
-    font-weight: normal;    
+    font-weight: normal;
     text-align: center;
     spacing-rows: 10px;
     spacing-columns: 10px;
@@ -1008,9 +1006,7 @@ border-radius: 0px;
 .switcher-list {
     border-radius: 4px;
     padding: 20px;
-/*    box-shadow: solid 0 0 12px 6px rgba(0,0,0,0.6); */
-    border: 1px solid rgba(0,0,0,0.7);
-    background-color: rgba(255,255,255,0.3);
+    border-image: url('tab.png') 16;
     color: black;
 }
 
@@ -1034,7 +1030,7 @@ border-radius: 0px;
     background-gradient-direction: vertical;
     background-gradient-start: #fff;
     background-gradient-end: #fff;
-    border: 1px solid  #2975E9;    
+    border: 1px solid  #2975E9;
     border-radius: 0px;
     width: 60px;
     border-bottom: 0px;
@@ -1050,7 +1046,7 @@ border-radius: 0px;
 }
 
 .switcher-list .item-box:outlined {
-    background-color: #2975E9;    
+    background-color: #2975E9;
     border-radius: 0px;
 }
 
@@ -1189,13 +1185,13 @@ border-radius: 0px;
     width: 18em;
 }
 
-.run-dialog-completion-box { 
+.run-dialog-completion-box {
     padding-left: 15px;
     font-size: 10px;
-} 
+}
 
 .run-dialog {
-    border-radius: 8px;    
+    border-radius: 8px;
     padding: 20px;
     padding-top: 15px;
     color: black;
@@ -1468,7 +1464,7 @@ border-radius: 0px;
     background-gradient-direction: vertical;
       background-gradient-start: #000;
       background-gradient-end: #000;
- 
+
 }
 
 .keyboard-layout {
@@ -1515,10 +1511,10 @@ border-radius: 1px;
 border: 1px #76d2ec;
   border-bottom: 0px;
     border-left: 0px;
-    border-right: 0px; 
+    border-right: 0px;
 border-radius: 1px;
     color: black;
- 
+
 }
 
 .keyboard-key:active {
@@ -1528,10 +1524,10 @@ border-radius: 1px;
 border: 1px #76d2ec;
   border-bottom: 0px;
     border-left: 0px;
-    border-right: 0px; 
+    border-right: 0px;
 border-radius: 1px;
     color: black;
- 
+
 }
 
 .keyboard-subkeys {
@@ -1547,7 +1543,7 @@ border-radius: 1px;
 }
 
 /* ###################################################################
- * Cinnamon Specific Section 
+ * Cinnamon Specific Section
  * ###################################################################*/
 
 /* ===================================================================
@@ -1569,7 +1565,7 @@ border-radius: 1px;
     border-image: url('menu-assets/menu-bg.png') 3;
 }
 
-.menu-favorites-box {  
+.menu-favorites-box {
     margin: auto;
     background-color: transparent;
     border: none;
@@ -1589,10 +1585,10 @@ border-radius: 1px;
     color: black;
 }
 
-.menu-places-box {  
+.menu-places-box {
     margin: auto;
     padding: 8px;
-    border: 0px solid #666;  
+    border: 0px solid #666;
 }
 
 .menu-places-button {
@@ -1653,11 +1649,11 @@ border-radius: 1px;
     border-image: url('menu-assets/hover.png') 5;
 }
 
-.menu-application-button-label:ltr { 
+.menu-application-button-label:ltr {
     padding-left: 5px;
 }
 
-.menu-application-button-label:rtl { 
+.menu-application-button-label:rtl {
     padding-right: 5px;
 }
 
@@ -1677,17 +1673,17 @@ border-radius: 1px;
     border-image: url('menu-assets/hover.png') 5;
 }
 
-.menu-category-button-label:ltr { 
-    padding-left: 5px    
+.menu-category-button-label:ltr {
+    padding-left: 5px
 }
 
-.menu-category-button-label:rtl { 
-    padding-right: 5px    
+.menu-category-button-label:rtl {
+    padding-right: 5px
 }
 
 /* Name and description of the currently hovered item in the menu
  * This appears on the bottom right hand corner of the menu*/
- 
+
 .menu-selected-app-box {
     padding-top: 16px;
     padding-right: 30px;
@@ -1751,61 +1747,12 @@ border-radius: 1px;
     transition-duration: 200;
     color: #FFF;
     max-width: 134px;
-}
-
-.window-list-item-box {
     font-weight: normal;
     font-size: 9pt;
     border-image: url("panel-assets/item-normal.png") 4;
 }
 
-
-.window-list-item-box:hover  {     
-    /*box-shadow: inset 0px 0px 0px 1px rgba(120,120,120,0.5);  */
-        border-image:url("panel-assets/item-active.png") 4;
-
-}
-
-.window-list-item-demands-attention {
-    border-image: url("panel-assets/item-attention.png") 4;
-}
-
-.window-list-item-box:active:hover {
-    border-image: url("panel-assets/item-active-hover.png") 4;
-}
-
-/* 
-.window-list-box {
-    spacing: 3px;
-    padding: 0;
-}
-
-.window-list-item-label {
-    width: 15em;
-    min-width: 5px;
-}
-
-.window-list-item-box {
-    color: #fff;
-    font-weight: bold;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-.window-list-item-box:hover,*/
-.window-list-item-box:active,
-.window-list-item-box:checked,
-.window-list-item-box:focus,
-.window-list-item-box:checked:hover,
-.window-list-item-box:focus:hover,
-/*.window-list-item-box:active:hover,
-.window-list-item-demands-attention,*/
-.window-list-item-demands-attention:hover {
-}
-
-/*--------- overrides ----------*/
-
-.window-list-item-box:hover  {   
+.window-list-item-box:hover  {
     border-image: url("panel-assets/item-hover.png") 4;
 }
 
@@ -1813,13 +1760,12 @@ border-radius: 1px;
 .window-list-item-box:checked,
 .window-list-item-box:focus  {
     border-image: url("panel-assets/item-active.png") 4;
-    
     color: #fff;
 }
 
 .window-list-item-box:checked:hover,
 .window-list-item-box:focus:hover,
-.window-list-item-box:active:hover  {     
+.window-list-item-box:active:hover  {
     border-image: url("panel-assets/item-active-hover.png") 4;
     color: #fff;
 }
@@ -1832,6 +1778,93 @@ border-radius: 1px;
     border-image: url("panel-assets/item-attention-hover.png") 4;
 }
 
+/* experimental support for grouped window list */
+.grouped-window-list-item-box {
+  color: #ffffff;
+  font-weight: normal;
+  border-image: none;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-box:hover {
+  border-image: url("panel-assets/tray-hover.png") 4;
+}
+
+.grouped-window-list-item-box:active,
+.grouped-window-list-item-box:checked {
+  border-image: url("panel-assets/item-normal.png") 4;
+}
+
+.grouped-window-list-item-box:active:hover,
+.grouped-window-list-item-box:checked:hover {
+  border-image: url("panel-assets/item-hover.png") 4;
+}
+
+.grouped-window-list-item-box:focus {
+  border-image: url("panel-assets/item-active.png") 4;
+}
+
+.grouped-window-list-item-box:focus:hover {
+  border-image: url("panel-assets/item-active-hover.png") 4;
+}
+
+.grouped-window-list-item-demands-attention {
+  font-weight: normal;
+  border-image: url("panel-assets/item-attention.png") 4;
+}
+
+.grouped-window-list-item-attention:hover {
+  border-image: url("panel-assets/item-attention-hover.png") 4;
+}
+
+.window-list-item-box .progress,
+.grouped-window-list-item-box .progress {
+  background-color: #4b7843;
+}
+
+.window-list-preview {
+  spacing: 6px;
+  color: #000000;
+  border: none;
+  border-image: url('menu-assets/background.png') 8;
+  border-radius: 0;
+  padding: 6px 12px 12px 12px;
+  font-size: 1em;
+}
+
+.grouped-window-list-thumbnail-menu {
+  spacing: 6px;
+  border-radius: 0;
+  padding: 6px 12px 12px 12px;
+  border-image: url('menu-assets/background.png') 8;
+}
+
+/* disable image overlap */
+.grouped-window-list-thumbnail-menu * {
+  border-image: none;
+}
+
+.grouped-window-list-thumbnail-menu > StBoxLayout {
+  padding: 4px;
+}
+
+.grouped-window-list-thumbnail-menu .item-box {
+  padding: 10px;
+  border-radius: 0;
+  spacing: 4px;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:outlined {
+  padding: 8px;
+  border: 1px solid #3b8bff;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:selected {
+  color: #000000;
+  background-color: #3b8bff;
+  border-image: url('menu-assets/hover.png') 5;
+  border: none;
+}
 /* ===================================================================
  * Sound Applet (status/volume.js)
  * ===================================================================*/
@@ -1849,7 +1882,7 @@ border-radius: 1px;
     width: 26px;
     height: 20px;
     padding: 5px;
-    color: black;    
+    color: black;
     background-color: #000;
 }
 
@@ -1909,7 +1942,7 @@ border-radius: 1px;
     spacing: 2px;
     padding: 2px;
 }
- 
+
 .workspace-button {
     width: 20px;
      height: 10px;
@@ -1939,7 +1972,7 @@ border-radius: 1px;
  * ===================================================================*/
 
 #panel-launchers-box {
-    
+
 }
 
 .panel-launcher {
@@ -2007,12 +2040,12 @@ border-radius: 1px;
     background-image: url("overview.png");
 }
 
-#overview-corner:hover {    
+#overview-corner:hover {
     background-image:  url("overview-hover.png");
 }
 
 /* ===================================================================
- * Applets (applet.js) 
+ * Applets (applet.js)
  * ===================================================================*/
 .applet-separator {
     padding: 5px 4px;
@@ -2036,7 +2069,7 @@ border-radius: 1px;
     background-color: rgba(25,25,25,0.4);
     color:  white;
     transition-duration: 100;
- 
+
 }
 
 .applet-label:not(:first-child) {
@@ -2057,7 +2090,7 @@ border-radius: 1px;
 
 .workspace-osd {
     color: black;
-    font-size: 25pt;    
+    font-size: 25pt;
     text-align: center;
     border: 1px solid #767676;
     border-radius: 3px;
@@ -2077,8 +2110,8 @@ border-radius: 1px;
     selected-color: black;
     caret-color: black;
     caret-size: 1px;
-    height: 16px;    
-    text-align: center;    
+    height: 16px;
+    text-align: center;
 }
 
 .expo-workspaces-name-entry#selected {
@@ -2086,7 +2119,7 @@ border-radius: 1px;
     padding: 5px;
     padding-bottom: 7px;
     border: 1px solid #2975E9;
-    text-align: center;    
+    text-align: center;
     height: 16px;
 }
 
@@ -2095,7 +2128,7 @@ border-radius: 1px;
     padding-bottom: 7px;
     color: black;
     transition-duration: 300;
-    text-align: center;    
+    text-align: center;
 }
 
 /* ===================================================================
@@ -2177,7 +2210,7 @@ border-radius: 1px;
 /* ===================================================================
  * Network Data Usage Monitor applet
  * ===================================================================*/
- 
+
  /* These settings govern the width of the Applet and the space taken by the font.*/
 
 .numa-left {
@@ -2194,7 +2227,7 @@ border-radius: 1px;
     /*font-size: 95%;*/
 }
 
-/* The following are the styles for the Applet backgrounds - names are self explanitory 
+/* The following are the styles for the Applet backgrounds - names are self explanitory
 The colour parameters are red, green, blue, and transparency or a name */
 
 .numa-not-connected {
@@ -2240,7 +2273,7 @@ The colour parameters are red, green, blue, and transparency or a name */
     padding-left: 20px;
     padding-bottom: 20px;
     padding-top: 20px;
-    text-align: center;    
+    text-align: center;
 }
 
 .info-osd {
@@ -2318,7 +2351,7 @@ The colour parameters are red, green, blue, and transparency or a name */
 }
 
 /* ===================================================================
- * CinnXPStarkMenu 
+ * CinnXPStarkMenu
  * (if CinnXPStarkMenu is used, change some stuff, else use default)
  * ===================================================================*/
 .right-buttons-box {
@@ -2336,7 +2369,7 @@ The colour parameters are red, green, blue, and transparency or a name */
 }
 .starkmenu-selected-app-box {
 }
-.starkmenu-favorites-box {  
+.starkmenu-favorites-box {
 }
 .starkmenu-applications-box {
 }

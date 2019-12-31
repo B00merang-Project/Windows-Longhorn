@@ -1,8 +1,8 @@
 /* ###################################################################
  * Section common with Gnome Shell
- * ... contains a few cinnamon specific styles (rare occurences) 
+ * ... contains a few cinnamon specific styles (rare occurences)
  * ###################################################################*/
- 
+
 stage {
     font-family: dejavu sans, Droid Sans, sans-serif;
     font-size: 9pt;
@@ -51,13 +51,13 @@ StScrollBar StButton#vhandle:hover {
     border: 1px solid black;
     color: black;
     font-size: 9pt;
-    font-weight: normal;    
+    font-weight: normal;
     text-align: center;
-}    
+}
 /* ===================================================================
  * Switches (to be used in menus)
  * ===================================================================*/
- 
+
 .toggle-switch {
     width: 70px;
     height: 21px;
@@ -73,7 +73,7 @@ StScrollBar StButton#vhandle:hover {
      border-image: url("on-intl.png") 4;
 }
 /* ===================================================================
- * PopupMenu (popupMenu.js) 
+ * PopupMenu (popupMenu.js)
  * ===================================================================*/
 
 .popup-menu-boxpointer {
@@ -92,6 +92,7 @@ StScrollBar StButton#vhandle:hover {
     border-image: url('outset-shadow.png') 3;
 }
 
+.menu StEntry,
 .popup-menu StEntry {
     background-color: white;
     padding: 4px 12px;
@@ -148,7 +149,7 @@ StScrollBar StButton#vhandle:hover {
 /* The remaining popup-menu sizing is all done in ems, so that if you
  * override .popup-menu.font-size, everything else will scale with it.
  */
- 
+
 .popup-menu-content {
     padding: 1em 0.1em;
 }
@@ -179,7 +180,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .popup-slider-menu-item {
-    border-image: url("trough-horizontal.png") 2 2 10 11 stretch; 
+    border-image: url("trough-horizontal.png") 2 2 10 11 stretch;
     height: 21px;
     min-width: 15em;
     -slider-height: 4px;
@@ -222,15 +223,15 @@ StScrollBar StButton#vhandle:hover {
 }
 
 #panelLeft:dnd {
-    background-color: rgba(255,0,0,1);    
+    background-color: rgba(255,0,0,1);
 }
 
 #panelCenter:dnd {
-    background-color: rgba(0,255,0,1);    
+    background-color: rgba(0,255,0,1);
 }
 
 #panelRight:dnd {
-    background-color: rgba(0,0,255,1);    
+    background-color: rgba(0,0,255,1);
 }
 
 #panelLeft:ltr {
@@ -253,7 +254,7 @@ StScrollBar StButton#vhandle:hover {
 
 .system-status-icon {
     padding-left: 0px;
-    padding-right: 0px;    
+    padding-right: 0px;
     spacing: 0px;
     margin: 0px;
     icon-size: 1.14em;
@@ -274,7 +275,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 /* ===================================================================
- * Scale 
+ * Scale
  * ===================================================================*/
 
 #overview {
@@ -312,7 +313,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 .window-close:hover,
-.workspace-close-button:hover { 
+.workspace-close-button:hover {
     background-image: url("close-hover.png");
 }
 
@@ -371,7 +372,7 @@ StScrollBar StButton#vhandle:hover {
 .expo-workspaces-name-entry {
     padding: 10px 15px;
     border-image: url('entry_shadow_insensitive.png') 6;
-    height: 15px;    
+    height: 15px;
     text-align: center;
     color: #a7a6aa;
     selected-color: #fff;
@@ -391,8 +392,8 @@ StScrollBar StButton#vhandle:hover {
 * Desklets (desklet.js)
 * ===================================================================*/
 
-.desklet {    
-    color: black;   
+.desklet {
+    color: black;
 }
 
 .desklet-with-borders {
@@ -408,7 +409,7 @@ StScrollBar StButton#vhandle:hover {
     padding: 8px;
 }
 
-.desklet-header { 
+.desklet-header {
     border-image: url("bg-1.png") 7;
     font-size: 9pt;
     font-weight: bold;
@@ -434,9 +435,9 @@ StScrollBar StButton#vhandle:hover {
     border-image: url("desklet-borders.png") 4;
 }
 /* ===================================================================
- * Clock Desklet (desklet.js) 
+ * Clock Desklet (desklet.js)
  * ===================================================================*/
- 
+
 .clock-desklet-label {
     color: white;
 }
@@ -455,7 +456,7 @@ StScrollBar StButton#vhandle:hover {
 }
 
 /* ===================================================================
- * Date applet 
+ * Date applet
  * ===================================================================*/
 
 .calendar {
@@ -554,7 +555,7 @@ StScrollBar StButton#vhandle:hover {
     padding: 8px 8px 8px 8px;
     spacing-rows: 10px;
     spacing-columns: 10px;
-    margin-from-right-edge-of-screen: 20px;    
+    margin-from-right-edge-of-screen: 20px;
     width: 34em;
     border: 1px solid black;
     border-radius: 8px;
@@ -656,7 +657,7 @@ StScrollView .notification-icon-button:active {
     caret-color: black;
     caret-size: 1px;
     width: 250px;
-    height: 16px; 
+    height: 16px;
     selected-color: #fff;
     selection-background-color: #335ea8;
 }
@@ -706,7 +707,7 @@ StScrollView .notification-icon-button:active {
 }
 */
 
-.switcher-list .thumbnail {    
+.switcher-list .thumbnail {
     width: 256px;
 }
 
@@ -811,12 +812,12 @@ StScrollView .notification-icon-button:active {
     caret-color: black;
     caret-size: 1px;
     width: 250px;
-    height: 16px; 
+    height: 16px;
     selected-color: #fff;
     selection-background-color: #335ea8;
 }
 
-.run-dialog-completion-box { 
+.run-dialog-completion-box {
     padding-top: 12px;
     font-size: 10px;
 }
@@ -972,7 +973,7 @@ StScrollView .notification-icon-button:active {
     -boxpointer-gap: 2px;
 }
 /* ###################################################################
- * Cinnamon Specific Section 
+ * Cinnamon Specific Section
  * ###################################################################*/
 
 /* ===================================================================
@@ -991,8 +992,7 @@ StScrollView .notification-icon-button:active {
     border-image: url('start-button.png') 6 11 6 6;
     font-family: tahoma;
     padding: 0px;
-    padding-right: 24px;
-    padding-left: 24px;
+    min-width: 68px;
     font-size: 0px;
     text-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }
@@ -1032,10 +1032,10 @@ StScrollView .notification-icon-button:active {
     background-color: #335ea8;
 }
 
-.menu-places-box {  
+.menu-places-box {
     margin: auto;
     padding: 8px;
-    border: 0px solid #666;  
+    border: 0px solid #666;
 }
 
 .menu-places-button {
@@ -1099,11 +1099,11 @@ StScrollView .notification-icon-button:active {
     background-color: #335ea8;
 }
 
-.menu-application-button-label:ltr { 
+.menu-application-button-label:ltr {
     padding-left: 5px;
 }
 
-.menu-application-button-label:rtl { 
+.menu-application-button-label:rtl {
     padding-right: 5px;
 }
 
@@ -1123,17 +1123,17 @@ StScrollView .notification-icon-button:active {
     background-color: #335ea8;
 }
 
-.menu-category-button-label:ltr { 
-    padding-left: 5px     
+.menu-category-button-label:ltr {
+    padding-left: 5px
 }
 
-.menu-category-button-label:rtl { 
-    padding-right: 5px     
+.menu-category-button-label:rtl {
+    padding-right: 5px
 }
 
 /* Name and description of the currently hovered item in the menu
  * This appears on the bottom right hand corner of the menu*/
- 
+
 .menu-selected-app-box {
     padding-top: 16px;
     padding-right: 30px;
@@ -1178,12 +1178,12 @@ StScrollView .notification-icon-button:active {
 }
 
 .window-list-item-box {
-    font-weight: normal; 
+    font-weight: normal;
     color: white;
     border-image: url('applet-button.png') 6 6 13 15;
 }
 
-.window-list-item-box:hover {     
+.window-list-item-box:hover {
      border-image: url('applet-button-hover.png') 6 6 13 15;
 }
 
@@ -1195,7 +1195,7 @@ StScrollView .notification-icon-button:active {
 
 .window-list-item-box:checked:hover,
 .window-list-item-box:focus:hover,
-.window-list-item-box:active:hover  {     
+.window-list-item-box:active:hover  {
      border-image: url('applet-button-active-hover.png') 6 6 13 15;
 }
 
@@ -1203,10 +1203,95 @@ StScrollView .notification-icon-button:active {
     border-image: url('applet-button-demands-attention.png') 6 6 13 15;
 }
 
+/* experimental support for grouped window list */
+.grouped-window-list-item-box {
+  color: #ffffff;
+  font-weight: normal;
+  border-image: none;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-box:hover {
+  border-image: url('applet-button-hover.png') 6 6 13 15;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-box:active,
+.grouped-window-list-item-box:checked {
+  border-image: url('applet-button-open.png') 6 6 13 15;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-box:active:hover,
+.grouped-window-list-item-box:checked:hover {
+  border-image: url('applet-button-hover.png') 6 6 13 15;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-box:focus {
+  border-image: url('applet-button-active.png') 6 6 13 15;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-box:focus:hover {
+  border-image: url('applet-button-active-hover.png') 6 6 13 15;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-demands-attention {
+  font-weight: normal;
+  border-image: url("applet-button-demands-attention.png") 4;
+  transition-duration: 100;
+}
+
+.grouped-window-list-item-attention:hover {
+  border-image: url("applet-button-demands-attention.png") 4;
+}
+
+.window-list-item-box .progress,
+.grouped-window-list-item-box .progress {
+  background-color: #4b7843;
+  transition-duration: 100;
+}
+
+.window-list-preview {
+  spacing: 6px;
+  color: #000000;
+  border-image: url('outset-shadow.png') 8 8 8 8;
+  border-radius: 0;
+  padding: 6px 12px 12px 12px;
+  font-size: 1em;
+}
+
+.grouped-window-list-thumbnail-menu {
+  spacing: 6px;
+  padding: 6px 12px 12px 12px;
+}
+
+.grouped-window-list-thumbnail-menu > StBoxLayout {
+  padding: 4px;
+}
+
+.grouped-window-list-thumbnail-menu .item-box {
+  padding: 10px;
+  border-radius: 0;
+  spacing: 4px;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:outlined {
+  padding: 8px;
+  border: 1px solid #00A7FB;
+}
+
+.grouped-window-list-thumbnail-menu .item-box:selected {
+  color: #ffffff;
+  background-color: #00A7FB;
+  border: none;
+}
 /* ===================================================================
  * Sound Applet (status/volume.js)
  * ===================================================================*/
- 
+
 .sound-player StButton {
     width: 22px;
     height: 13px;
@@ -1280,14 +1365,14 @@ StScrollView .notification-icon-button:active {
 /* ===================================================================
  * Workspace Switcher applet (workspaceSwitcher.js)
  * ===================================================================*/
- 
+
 #workspaceSwitcher {
     spacing: 0px;
 }
 
 .workspace-button {
     width: 20px;
-    height: 6px;   
+    height: 6px;
     padding: 3px;
     padding-top: 5px;
 }
@@ -1344,18 +1429,18 @@ StScrollView .notification-icon-button:active {
 /* ===================================================================
  * Overview corner
  * ===================================================================*/
- 
+
 #overview-corner {
     background-image: url("overview.png");
 }
 
-#overview-corner:hover {    
+#overview-corner:hover {
     background-image:  url("overview-hover.png");
 }
 /* ===================================================================
- * Applets (applet.js) 
+ * Applets (applet.js)
  * ===================================================================*/
- 
+
 .applet-separator {
     background: url('separator-left.png') no-repeat center center;
     padding: 0px 6px;
@@ -1396,7 +1481,7 @@ StScrollView .notification-icon-button:active {
     padding: 9px 15px;
     color: black;
     font-weight: bold;
-    font-size: 26pt;    
+    font-size: 26pt;
 }
 
 /* ===================================================================
@@ -1498,8 +1583,8 @@ StScrollView .notification-icon-button:active {
 /* ===================================================================
  * User Applet
  * ===================================================================*/
- 
-.user-icon {  
+
+.user-icon {
     background-color: rgb(236,236,236);
     border: 1px solid #aaa;
     border-radius: 2px;
@@ -1590,7 +1675,7 @@ StScrollView .notification-icon-button:active {
 }
 
 /* ===================================================================
- * CinnXPStarkMenu 
+ * CinnXPStarkMenu
  * (if CinnXPStarkMenu is used, change some stuff, else use default)
  * ===================================================================*/
 .right-buttons-box {
@@ -1606,7 +1691,7 @@ StScrollView .notification-icon-button:active {
 .starkmenu-selected-app-box {
     color: white; /* Information, which is shown, if you select apps*/
 }
-.starkmenu-favorites-box {  
+.starkmenu-favorites-box {
     background-color: white;
     border: 0px solid white;
 }

@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=Windows Longhorn Aero
-Comment=Windows Longhorn Aero theme for Linux OSes; based on the MTAC architecture
-Comment=Author : Christian Medel (Elbullazul)
-Version=rolling
+Comment=Windows Longhorn Aero UI for Linux OSes
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Windows Longhorn Aero
 MetacityTheme=Windows Longhorn Aero
-ButtonLayout=:minimize,maximize,close
+IconTheme=Windows Longhorn
+CursorTheme=DMZ-White
+ButtonLayout=menu:minimize,maximize,close

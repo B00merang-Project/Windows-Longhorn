@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=Windows Longhorn Jade
-Comment=Windows Longhorn Jade theme for Linux OSes; based on the MTAC architecture
-Comment=Author : Christian Medel (Elbullazul)
-Version=rolling
+Comment=Windows Longhorn Jade UI for Linux OSes
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Windows Longhorn Jade
 MetacityTheme=Windows Longhorn Jade
-ButtonLayout=:minimize,maximize,close
+IconTheme=Windows Longhorn
+CursorTheme=DMZ-White
+ButtonLayout=menu:minimize,maximize,close

@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=Windows Longhorn Plex
-Comment=Windows Longhorn Plex theme for Linux OSes; based on the MTAC architecture
-Comment=Author : Christian Medel (Elbullazul)
-Version=rolling
+Comment=Windows Longhorn Plex UI for Linux OSes
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=Windows Longhorn Plex
 MetacityTheme=Windows Longhorn Plex
-ButtonLayout=:minimize,maximize,close
+IconTheme=Windows XP
+CursorTheme=DMZ-White
+ButtonLayout=menu:minimize,maximize,close

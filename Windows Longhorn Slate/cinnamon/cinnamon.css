@@ -988,7 +988,7 @@ StScrollView .notification-icon-button:active {
  */
 
 #panelLeft .applet-box:first-child {
-    border-image: url('start-button.png') 6 11 6 6;
+    border-image: url('menu-box.png') 6 11 6 6;
     font-family: tahoma;
     padding: 0px;
     padding-right: 0px;
@@ -999,12 +999,12 @@ StScrollView .notification-icon-button:active {
 }
 
 #panelLeft .applet-box:first-child:hover {
-    border-image: url('start-button-hover.png') 6 11 6 6;
+    border-image: url('menu-hover.png') 6 11 6 6;
     color: transparent;
 }
 
 #panelLeft .applet-box:first-child:active {
-    border-image: url('start-button-active.png') 6 11 6 6;
+    border-image: url('menu-active.png') 6 11 6 6;
     color: transparent;
 }
 

@@ -17,7 +17,7 @@ dnd {
 image:disabled {
   -gtk-icon-filter: opacity(0.5); }
 
-image, image:disabled, label, label:disabled, box, box:disabled {
+image, label, box {
   background-color: transparent; }
 
 .view {
@@ -712,21 +712,17 @@ headerbar, headerbar:not(.titlebar) {
     padding-right: 12px;
     color: alpha(currentColor, 0.7); }
   headerbar button, headerbar:not(.titlebar) button {
-    padding: 3px;
-    border-style: solid;
-    border-width: 1px;
+    border-color: transparent;
     border-radius: 3px;
     color: #000000;
-    border-color: #8c9cc2;
-    background-color: #E8ECF6;
-    background-image: linear-gradient(to bottom, white, #e1e6f3 21%, #d1d9ec 51%, #bec8e2 60%, #afbbd9 70%, #c7d0e7 90%); }
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none; }
     headerbar button:hover, headerbar:not(.titlebar) button:hover {
       color: #000000;
       border-color: #5fa7e3;
       background-color: #d5ecff;
-      background-image: linear-gradient(to bottom, white, #CCE8FF 60%, #b7ddfd 70%); }
-    headerbar button:focus, headerbar:not(.titlebar) button:focus {
-      background-image: linear-gradient(to bottom, white, #f4f4fa 21%, #e4e4f1 51%, #d1d1e6 60%, #c1c1dc 70%, #dadaeb 90%); }
+      background-image: linear-gradient(to bottom, white, #ebebeb 21%, #dfdfdf 51%, #d1d1d1 60%, #c5c5c5 70%, #d8d8d8 90%); }
     headerbar button:active, headerbar button:checked, headerbar:not(.titlebar) button:active, headerbar:not(.titlebar) button:checked {
       color: #000000;
       border-color: #4391d0;
@@ -742,16 +738,30 @@ headerbar, headerbar:not(.titlebar) {
         headerbar button:active:disabled:backdrop, headerbar button:checked:disabled:backdrop, headerbar:not(.titlebar) button:active:disabled:backdrop, headerbar:not(.titlebar) button:checked:disabled:backdrop {
           color: #aeb1b9; }
     headerbar button:disabled, headerbar:not(.titlebar) button:disabled {
-      color: #111212; }
+      border-color: transparent;
+      color: rgba(0, 0, 0, 0.8);
+      background-color: transparent;
+      background-image: none; }
       headerbar button:disabled:backdrop, headerbar:not(.titlebar) button:disabled:backdrop {
-        color: #aeb1b9; }
+        border-color: transparent;
+        color: rgba(0, 0, 0, 0.7);
+        background-color: transparent;
+        background-image: none; }
     headerbar button:backdrop, headerbar:not(.titlebar) button:backdrop {
-      color: #000000; }
-  headerbar entry, headerbar:not(.titlebar) entry {
-    padding: 4px 8px; }
+      border-color: transparent;
+      background-color: transparent;
+      color: #000000;
+      background-image: none; }
   headerbar.titlebar, .titlebar headerbar, headerbar.titlebar:not(.titlebar), .titlebar headerbar:not(.titlebar) {
     border-radius: 3px 3px 0px 0px; }
-  headerbar .titlebutton.close, headerbar .titlebutton.maximize, headerbar .titlebutton.minimize, headerbar .titlebutton:not(separator), headerbar:not(.titlebar) .titlebutton.close, headerbar:not(.titlebar) .titlebutton.maximize, headerbar:not(.titlebar) .titlebutton.minimize, headerbar:not(.titlebar) .titlebutton:not(separator) {
+
+windowcontrols {
+  border-spacing: 6px; }
+  windowcontrols.start:not(.empty):dir(ltr), windowcontrols.end:not(.empty):dir(rtl) {
+    margin-right: 7px; }
+  windowcontrols.start:not(.empty):dir(rtl), windowcontrols.end:not(.empty):dir(ltr) {
+    margin-left: 7px; }
+  windowcontrols button.close, windowcontrols button.maximize, windowcontrols button.minimize {
     padding: 0 0;
     min-height: 19px;
     min-width: 19px;
@@ -763,53 +773,53 @@ headerbar, headerbar:not(.titlebar) {
     box-shadow: none;
     background-position: center;
     background-repeat: no-repeat; }
-  headerbar .titlebutton.close, headerbar:not(.titlebar) .titlebutton.close {
+  windowcontrols button.close {
     background: url("assets/close-normal.png") 100% 100%; }
-    headerbar .titlebutton.close:hover, headerbar:not(.titlebar) .titlebutton.close:hover {
+    windowcontrols button.close:hover {
       background: url("assets/close-hover.png") 100% 100%; }
-    headerbar .titlebutton.close:active, headerbar:not(.titlebar) .titlebutton.close:active {
+    windowcontrols button.close:active {
       background: url("assets/close-active.png") 100% 100%; }
-    headerbar .titlebutton.close:backdrop, headerbar:not(.titlebar) .titlebutton.close:backdrop {
+    windowcontrols button.close:backdrop {
       background: url("assets/close-backdrop.png") 100% 100%; }
-      headerbar .titlebutton.close:backdrop:hover, headerbar:not(.titlebar) .titlebutton.close:backdrop:hover {
+      windowcontrols button.close:backdrop:hover {
         background: url("assets/close-hover.png") 100% 100%; }
-      headerbar .titlebutton.close:backdrop:active, headerbar:not(.titlebar) .titlebutton.close:backdrop:active {
+      windowcontrols button.close:backdrop:active {
         background: url("assets/close-active.png") 100% 100%; }
-  headerbar .titlebutton.minimize, headerbar:not(.titlebar) .titlebutton.minimize {
+  windowcontrols button.minimize {
     background: url("assets/minimize-normal.png") 100% 100%; }
-    headerbar .titlebutton.minimize:hover, headerbar:not(.titlebar) .titlebutton.minimize:hover {
+    windowcontrols button.minimize:hover {
       background: url("assets/minimize-hover.png") 100% 100%; }
-    headerbar .titlebutton.minimize:active, headerbar:not(.titlebar) .titlebutton.minimize:active {
+    windowcontrols button.minimize:active {
       background: url("assets/minimize-active.png") 100% 100%; }
-    headerbar .titlebutton.minimize:backdrop, headerbar:not(.titlebar) .titlebutton.minimize:backdrop {
+    windowcontrols button.minimize:backdrop {
       background: url("assets/minimize-backdrop.png") 100% 100%; }
-      headerbar .titlebutton.minimize:backdrop:hover, headerbar:not(.titlebar) .titlebutton.minimize:backdrop:hover {
+      windowcontrols button.minimize:backdrop:hover {
         background: url("assets/minimize-hover.png") 100% 100%; }
-      headerbar .titlebutton.minimize:backdrop:active, headerbar:not(.titlebar) .titlebutton.minimize:backdrop:active {
+      windowcontrols button.minimize:backdrop:active {
         background: url("assets/minimize-active.png") 100% 100%; }
-  headerbar .titlebutton.maximize, headerbar:not(.titlebar) .titlebutton.maximize {
+  windowcontrols button.maximize {
     background: url("assets/maximize-normal.png") 100% 100%; }
-    headerbar .titlebutton.maximize:hover, headerbar:not(.titlebar) .titlebutton.maximize:hover {
+    windowcontrols button.maximize:hover {
       background: url("assets/maximize-hover.png") 100% 100%; }
-    headerbar .titlebutton.maximize:active, headerbar:not(.titlebar) .titlebutton.maximize:active {
+    windowcontrols button.maximize:active {
       background: url("assets/maximize-active.png") 100% 100%; }
-    headerbar .titlebutton.maximize:backdrop, headerbar:not(.titlebar) .titlebutton.maximize:backdrop {
+    windowcontrols button.maximize:backdrop {
       background: url("assets/maximize-backdrop.png") 100% 100%; }
-      headerbar .titlebutton.maximize:backdrop:hover, headerbar:not(.titlebar) .titlebutton.maximize:backdrop:hover {
+      windowcontrols button.maximize:backdrop:hover {
         background: url("assets/maximize-hover.png") 100% 100%; }
-      headerbar .titlebutton.maximize:backdrop:active, headerbar:not(.titlebar) .titlebutton.maximize:backdrop:active {
+      windowcontrols button.maximize:backdrop:active {
         background: url("assets/maximize-active.png") 100% 100%; }
-  .maximized headerbar .titlebutton.maximize, .maximized headerbar:not(.titlebar) .titlebutton.maximize {
+  .maximized windowcontrols button.maximize {
     background: url("assets/restore-normal.png") 100% 100%; }
-    .maximized headerbar .titlebutton.maximize:hover, .maximized headerbar:not(.titlebar) .titlebutton.maximize:hover {
+    .maximized windowcontrols button.maximize:hover {
       background: url("assets/restore-hover.png") 100% 100%; }
-    .maximized headerbar .titlebutton.maximize:active, .maximized headerbar:not(.titlebar) .titlebutton.maximize:active {
+    .maximized windowcontrols button.maximize:active {
       background: url("assets/restore-active.png") 100% 100%; }
-    .maximized headerbar .titlebutton.maximize:backdrop, .maximized headerbar:not(.titlebar) .titlebutton.maximize:backdrop {
+    .maximized windowcontrols button.maximize:backdrop {
       background: url("assets/restore-backdrop.png") 100% 100%; }
-      .maximized headerbar .titlebutton.maximize:backdrop:hover, .maximized headerbar:not(.titlebar) .titlebutton.maximize:backdrop:hover {
+      .maximized windowcontrols button.maximize:backdrop:hover {
         background: url("assets/restore-hover.png") 100% 100%; }
-      .maximized headerbar .titlebutton.maximize:backdrop:active, .maximized headerbar:not(.titlebar) .titlebutton.maximize:backdrop:active {
+      .maximized windowcontrols button.maximize:backdrop:active {
         background: url("assets/restore-active.png") 100% 100%; }
 
 pathbar > button.text-button, pathbar > button.image-button, pathbar > button {
@@ -1667,7 +1677,7 @@ actionbar {
     padding: 0 12px; }
 
 scrolledwindow > overshoot.top {
-  background-image: radial-gradient(farthest-side at top, black, transparent);
+  background-image: radial-gradient(farthest-side at top, rgba(0, 0, 0, 0.5), transparent);
   background-size: 100% 50%;
   background-repeat: no-repeat;
   background-position: top;
@@ -1676,7 +1686,7 @@ scrolledwindow > overshoot.top {
   box-shadow: none; }
 
 scrolledwindow > overshoot.bottom {
-  background-image: radial-gradient(farthest-side at bottom, black, transparent);
+  background-image: radial-gradient(farthest-side at bottom, rgba(0, 0, 0, 0.5), transparent);
   background-size: 100% 50%;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -1685,7 +1695,7 @@ scrolledwindow > overshoot.bottom {
   box-shadow: none; }
 
 scrolledwindow > overshoot.left {
-  background-image: radial-gradient(farthest-side at left, black, transparent);
+  background-image: radial-gradient(farthest-side at left, rgba(0, 0, 0, 0.5), transparent);
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: left;
@@ -1694,7 +1704,7 @@ scrolledwindow > overshoot.left {
   box-shadow: none; }
 
 scrolledwindow > overshoot.right {
-  background-image: radial-gradient(farthest-side at right, black, transparent);
+  background-image: radial-gradient(farthest-side at right, rgba(0, 0, 0, 0.5), transparent);
   background-size: 50% 100%;
   background-repeat: no-repeat;
   background-position: right;
@@ -2345,10 +2355,7 @@ popover.entry-completion > contents {
   padding: 0; }
 
 statusbar {
-  padding: 4px;
-  color: #000000; }
-  statusbar frame > border {
-    border: none; }
+  padding: 4px; }
 
 menubutton > button > box {
   border-spacing: 6px; }

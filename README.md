@@ -24,7 +24,7 @@ Jade
 ### Bonus material
 - [Longhorn 4074 Icon Set by feren](https://github.com/B00merang-Artwork/Windows-Longhorn)
 
-**Maintainers** : [feren](https://github.com/feren), [Elbullazul](https://github.com/Elbullazul), Cinnamoner (inactive)
+**Maintainers** : [feren](https://github.com/feren), [Elbullazul](https://github.com/Elbullazul), Cinnamoner
 
 ## Credits from Other Projects ##
 Start Menu in Jade and Aero: Dejco, http://dejco.deviantart.com/art/Hillel-Start-Background-527435193
@@ -32,6 +32,7 @@ Start Menu in Jade and Aero: Dejco, http://dejco.deviantart.com/art/Hillel-Start
 ### Supported platforms
 - Any GTK-based desktop
 - Cinnamon
+- MATE
 
 ### Manual installation
 Go to releases, download the latest `.zip` file and extract it to the themes directory i.e. `/home/USERNAME/.themes`

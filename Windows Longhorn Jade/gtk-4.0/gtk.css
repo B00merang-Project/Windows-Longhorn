@@ -451,13 +451,12 @@ editablelabel > stack > text > selection {
 
 button {
   padding: 3px;
-  border-style: solid;
-  border-width: 1px;
   border-radius: 3px;
+  border: 1px solid #787878;
   color: #000000;
-  border-color: #787878;
   background-color: #F0F0F0;
-  background-image: linear-gradient(to bottom, white, #ebebeb 21%, #dfdfdf 51%, #d1d1d1 60%, #c5c5c5 70%, #d8d8d8 90%); }
+  background-image: linear-gradient(to bottom, white, #ebebeb 21%, #dfdfdf 51%, #d1d1d1 60%, #c5c5c5 70%, #d8d8d8 90%);
+  box-shadow: none; }
   button:hover {
     color: #000000;
     border-color: #5fa7e3;
@@ -528,16 +527,16 @@ button {
       background-image: none; }
 
 button.suggested-action {
-  box-shadow: inset 0 0 1px 1px #CC0000;
   border-color: #eb0000;
-  background-image: linear-gradient(to bottom, #f7d9d9, #f2d5d7, #e4c9d1 50%, #cdb6c7 51%); }
+  background-image: linear-gradient(to bottom, #f7d9d9, #f2d5d7, #e4c9d1 50%, #cdb6c7 51%);
+  box-shadow: inset 0 0 1px 1px #CC0000; }
   button.suggested-action:hover {
     background-image: linear-gradient(to bottom, #f7d9d9, #f7d9d9, #e4c9d1 50%, #d6bdcb 51%); }
 
 button.suggested-action {
-  box-shadow: inset 0 0 1px 1px #FBFBFD;
   border-color: #3399FF;
-  background-image: linear-gradient(to bottom, #fefeff, #f9fafd, #ebeef7 50%, #d5dbed 51%); }
+  background-image: linear-gradient(to bottom, #fefeff, #f9fafd, #ebeef7 50%, #d5dbed 51%);
+  box-shadow: inset 0 0 1px 1px #FBFBFD; }
   button.suggested-action:hover {
     background-image: linear-gradient(to bottom, #fefeff, #fefeff, #ebeef7 50%, #dde2f1 51%); }
 

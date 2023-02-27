@@ -525,16 +525,16 @@ button {
       background-image: none; }
 
 button.destructive-action {
-  box-shadow: inset 0 0 1px 1px #CCE8FF;
   border-color: #3399FF;
-  background-image: linear-gradient(to bottom, #e00000, #c70202 50%, #bd0505 51%, #ba0606); }
+  background-image: linear-gradient(to bottom, #e00000, #c70202 50%, #bd0505 51%, #ba0606);
+  box-shadow: inset 0 0 1px 1px #CCE8FF; }
   button.destructive-action:hover {
     background-image: linear-gradient(to bottom, #e40000, #CC0000 50%, #bd0505 51%); }
 
 button.suggested-action {
-  box-shadow: inset 0 0 1px 1px #CCE8FF;
   border-color: #3399FF;
-  background-image: linear-gradient(to bottom, #f7fcff, #f2f7fd, #e4ebf7 50%, #cdd9ed 51%); }
+  background-image: linear-gradient(to bottom, #f7fcff, #f2f7fd, #e4ebf7 50%, #cdd9ed 51%);
+  box-shadow: inset 0 0 1px 1px #CCE8FF; }
   button.suggested-action:hover {
     background-image: linear-gradient(to bottom, #f7fcff, #f7fcff, #e4ebf7 50%, #d6e0f1 51%); }
 

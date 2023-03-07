@@ -1224,29 +1224,27 @@ treeview ~ scrollbar.vertical {
   margin-top: -1px; }
 
 switch {
-  font-size: 0;
-  color: transparent;
-  outline-offset: -4px;
   margin: 4px;
-  border: 1px solid #4b5b73;
+  font-size: 0;
   border-radius: 3px;
+  border: 1px solid #4b5b73;
+  color: transparent;
   background-color: #c9d5f0; }
   switch:checked {
     background-color: #86B2E3; }
   switch:disabled {
     border-color: #c8cdd6;
     background-color: #e2e6ee; }
-  switch slider {
-    min-width: 20px;
-    min-height: 20px;
+  switch > slider {
     margin: -1px;
-    border-style: solid;
-    border-width: 1px;
+    min-width: 28px;
+    min-height: 22px;
     border-radius: 2px;
-    border-color: #4b5b73;
+    border: 1px solid #4b5b73;
     background-color: #EEF2FB;
-    background-image: linear-gradient(to bottom, #f4f7fc 20%, #D7E4FB 35%); }
-  switch:disabled slider {
+    background-image: linear-gradient(to bottom, #f4f7fc 20%, #D7E4FB 35%);
+    box-shadow: none; }
+  switch:disabled > slider {
     border-color: #c8cdd6;
     background-color: #f1f3f7; }
 

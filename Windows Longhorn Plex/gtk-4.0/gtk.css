@@ -520,39 +520,6 @@ button.destructive-action {
 button.suggested-action {
   box-shadow: inset 0 0 2px 1px #95b4e8; }
 
-modelbutton {
-  min-height: 20px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border: none;
-  border-radius: 0px;
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none; }
-  modelbutton:hover {
-    color: #FFFFFF;
-    background-color: #86B2E3; }
-  modelbutton:selected {
-    color: #FFFFFF;
-    background-color: #86B2E3; }
-  modelbutton:disabled {
-    color: #77797e; }
-  modelbutton > image {
-    padding-right: 4px; }
-  modelbutton arrow {
-    background: none;
-    min-width: 16px;
-    min-height: 16px;
-    opacity: 0.3; }
-    modelbutton arrow:hover {
-      background: none; }
-    modelbutton arrow:disabled {
-      opacity: 0.15; }
-    modelbutton arrow.left {
-      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
-    modelbutton arrow.right {
-      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
-
 button.link,
 link {
   color: #1D72E9;
@@ -987,7 +954,7 @@ columnview.view > header > button, treeview.view > header > button, columnview.v
   columnview.view > header > button:last-child, treeview.view > header > button:last-child {
     border-right-style: none; }
 
-popover.background {
+popover.background, popover.background:backdrop {
   font: initial;
   background-color: transparent; }
 
@@ -995,12 +962,11 @@ popover > arrow,
 popover > contents {
   border: 1px solid #c9d5f0;
   color: #000000;
-  background-color: #EEF2FB;
+  background-color: #FFFFFF;
   background-clip: padding-box;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); }
+  box-shadow: none; }
 
 popover > contents {
-  padding: 8px;
   border-radius: 0px; }
   popover > contents > list,
   popover > contents > .view,
@@ -1017,19 +983,52 @@ magnifier {
 
 popover.menu > contents {
   min-width: 120px;
-  border-radius: 0px;
-  border: 1px solid #c9d5f0;
-  color: #000000;
-  background-color: #FFFFFF; }
+  padding: 4px; }
 
 popover.menu box.inline-buttons {
   padding: 0px 4px; }
+
+popover.menu modelbutton {
+  min-height: 20px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: none;
+  border-radius: 0px;
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none; }
+  popover.menu modelbutton:hover, popover.menu modelbutton:selected {
+    color: #FFFFFF;
+    background-color: #86B2E3; }
+  popover.menu modelbutton:disabled {
+    color: #77797e; }
+  popover.menu modelbutton > image {
+    padding-right: 4px; }
+  popover.menu modelbutton arrow {
+    background: none;
+    min-width: 16px;
+    min-height: 16px;
+    opacity: 0.3; }
+    popover.menu modelbutton arrow:hover {
+      background: none; }
+    popover.menu modelbutton arrow:disabled {
+      opacity: 0.15; }
+    popover.menu modelbutton arrow.left {
+      -gtk-icon-source: -gtk-icontheme("go-previous-symbolic"); }
+    popover.menu modelbutton arrow.right {
+      -gtk-icon-source: -gtk-icontheme("go-next-symbolic"); }
 
 popover.menu separator {
   margin: 6px 0; }
 
 popover.menu list separator {
   margin: 0; }
+
+popover.menu popover.menu {
+  padding: 0 0 4px 0; }
+  popover.menu popover.menu > contents {
+    margin: 0;
+    border-radius: 0px; }
 
 popover.menu accelerator {
   color: alpha(currentColor, 0.55); }
@@ -1747,13 +1746,12 @@ listview row:backdrop {
   color: #000000; }
 
 listview row:selected {
-  border: none;
   color: #FFFFFF;
   background-color: #86B2E3; }
   listview row:selected:hover {
     background-color: #93bbe8; }
   listview row:selected:active {
-    background-color: #7aa9dd; }
+    background-color: #6ea0d6; }
   listview row:selected:disabled {
     color: rgba(255, 255, 255, 0.7);
     background-color: #86B2E3; }
@@ -1891,7 +1889,6 @@ window.dialog.message.csd.background {
   border-bottom-right-radius: 6px; }
 
 window.dialog.message.csd .dialog-action-area button {
-  margin: 0;
   padding: 10px 14px;
   border-radius: 0px;
   border-left-style: solid;

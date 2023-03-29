@@ -969,11 +969,12 @@ popover.background, popover.background:backdrop {
 
 popover > arrow,
 popover > contents {
-  border: 1px solid #d4d0d7;
+  border: 1px solid #948d9b;
+  border-top-color: #f4f3f5;
+  border-left-color: #f4f3f5;
   color: #000000;
   background-color: #FFFFFF;
-  background-clip: padding-box;
-  box-shadow: none; }
+  box-shadow: inset 0px 0px 0px 3px #EBE9ED, inset -1px 0 #99929f, inset 0 -1px #99929f, inset 1px 0 #f9f8fa, inset 0 1px #f9f8fa; }
 
 popover > contents {
   border-radius: 0px; }
@@ -992,7 +993,7 @@ magnifier {
 
 popover.menu > contents {
   min-width: 120px;
-  padding: 4px; }
+  padding: 3px; }
 
 popover.menu box.inline-buttons {
   padding: 0px 4px; }
@@ -1001,8 +1002,8 @@ popover.menu modelbutton {
   min-height: 20px;
   padding-left: 4px;
   padding-right: 4px;
-  border: none;
   border-radius: 0px;
+  border: none;
   background-color: transparent;
   background-image: none;
   box-shadow: none; }
@@ -1034,7 +1035,7 @@ popover.menu list separator {
   margin: 0; }
 
 popover.menu popover.menu {
-  padding: 0 0 4px 0; }
+  padding: 0 0 3px 0; }
   popover.menu popover.menu > contents {
     margin: 0;
     border-radius: 0px; }
@@ -1063,7 +1064,8 @@ menubar {
     min-height: 12px;
     border: none;
     color: #000000;
-    background-color: transparent; }
+    background-color: transparent;
+    box-shadow: none; }
     menubar > item:selected {
       color: #262626;
       background-color: #EDB081; }

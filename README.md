@@ -1,4 +1,4 @@
-[![built-with-azurra-framework](https://github.com/B00merang-Project/Azurra_framework/raw/assets/azurra_framework_smaller.png)](https://github.com/B00merang-Project/Azurra_framework)
+[![built-with-azurra-framework](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/badges/azurra/badge_smaller.png)](https://github.com/B00merang-Project/Azurra_framework)
 
 A group project to make ports of most of the Longhorn builds' themes work in Linux. The target is to create theme sets for most Longhorn builds to emulate the look of them as much as possible in Cinnamon and Gnome.
 

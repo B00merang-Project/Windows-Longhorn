@@ -485,7 +485,9 @@ editablelabel > stack > text > selection {
 
 
 button {
-  padding: 3px;
+  padding: 4px 6px;
+  min-width: 14px;
+  min-height: 18px;
   border-radius: 3px;
   border: 1px solid #787878;
   color: #000000;
@@ -502,7 +504,7 @@ button {
     border-color: #5fa7e3;
     color: #000000;
     background-color: #d5ecff;
-    background-image: linear-gradient(to bottom, white, #CCE8FF 60%, #b7ddfd 70%); }
+    background-image: linear-gradient(white, #c3e4fe 21%, #afd9fc 51%, #98ccf8 60%, #85c2f3 70%, #a3d3fa 90%); }
   
   button:active {
     border-color: #4391d0;
@@ -560,7 +562,7 @@ button.flat {
     border-color: #5fa7e3;
     color: #000000;
     background-color: #d5ecff;
-    background-image: linear-gradient(to bottom, white, #CCE8FF 60%, #b7ddfd 70%); }
+    background-image: linear-gradient(white, #c3e4fe 21%, #afd9fc 51%, #98ccf8 60%, #85c2f3 70%, #a3d3fa 90%); }
   headerbar button:active,
   button.flat:active {
     border-color: #4391d0;
@@ -587,8 +589,6 @@ button.flat {
     color: #b4b4b4; }
 
 button.destructive-action {
-  padding: 3px;
-  border-radius: 3px;
   border: 1px solid #4d1a1a;
   color: #000000;
   background-color: #CC0000;
@@ -602,7 +602,7 @@ button.destructive-action {
     border-color: #5fa7e3;
     color: #000000;
     background-color: #d5ecff;
-    background-image: linear-gradient(to bottom, white, #CCE8FF 60%, #b7ddfd 70%); }
+    background-image: linear-gradient(white, #c3e4fe 21%, #afd9fc 51%, #98ccf8 60%, #85c2f3 70%, #a3d3fa 90%); }
   button.destructive-action:active {
     border-color: #4391d0;
     color: #000000;
@@ -617,8 +617,6 @@ button.destructive-action {
     color: #000000; }
 
 button.suggested-action {
-  padding: 3px;
-  border-radius: 3px;
   border: 1px solid #3978ac;
   color: #000000;
   background-color: #CCE8FF;
@@ -632,7 +630,7 @@ button.suggested-action {
     border-color: #5fa7e3;
     color: #000000;
     background-color: #d5ecff;
-    background-image: linear-gradient(to bottom, white, #CCE8FF 60%, #b7ddfd 70%); }
+    background-image: linear-gradient(white, #c3e4fe 21%, #afd9fc 51%, #98ccf8 60%, #85c2f3 70%, #a3d3fa 90%); }
   button.suggested-action:active {
     border-color: #4391d0;
     color: #000000;

@@ -476,7 +476,9 @@ editablelabel > stack > text > selection {
 
 
 button {
-  padding: 2px 6px;
+  padding: 4px 6px;
+  min-width: 14px;
+  min-height: 18px;
   border-radius: 4px;
   border: 1px solid #4f84bf;
   color: #000000;
@@ -560,8 +562,6 @@ button.flat {
     background-color: #c6cddc; }
 
 button.destructive-action {
-  padding: 2px 6px;
-  border-radius: 4px;
   border: 1px solid #4f84bf;
   color: #FFFFFF;
   background-color: #CC0000;
@@ -584,8 +584,6 @@ button.destructive-action {
     background-image: linear-gradient(to bottom, #621818, #791515, #861313); }
 
 button.suggested-action {
-  padding: 2px 6px;
-  border-radius: 4px;
   border: 1px solid #4f84bf;
   color: #FFFFFF;
   background-color: #86B2E3;
@@ -1501,8 +1499,6 @@ switch {
     border-color: #c8cdd6;
     background-color: #e2e6ee; }
   switch > slider {
-    padding: 2px 6px;
-    border-radius: 4px;
     border: 1px solid #4f84bf;
     color: #000000;
     background-color: #EEF2FB;

@@ -480,7 +480,7 @@ button {
   min-width: 14px;
   min-height: 18px;
   border-radius: 3px;
-  border: 1px solid #d48a51;
+  border: 1px solid #6a656f;
   color: #000000;
   background-color: #EBE9ED;
   background-image: linear-gradient(to bottom, white, #f5f4f6 25%, #edebee 50%, #dfdce2 75%, #d4d0d7 95%);
@@ -490,18 +490,18 @@ button {
   
   button:hover,
   button:hover:focus {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-image: linear-gradient(to bottom, white, #f5f4f6 25%, #edebee 50%, #dfdce2 75%, #d4d0d7 95%);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #FF9900; }
   
   button:active {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none; }
   
   button:checked {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none; }
@@ -541,20 +541,20 @@ button.flat {
   .toolbar button:hover,
   button.flat:hover,
   button.flat:hover:focus {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-image: linear-gradient(to bottom, white, #f5f4f6 25%, #edebee 50%, #dfdce2 75%, #d4d0d7 95%);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #FF9900; }
   headerbar button:active, toolbar button:active,
   .toolbar button:active,
   button.flat:active {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none; }
   headerbar button:checked, toolbar button:checked,
   .toolbar button:checked,
   button.flat:checked {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none; }
@@ -566,7 +566,7 @@ button.flat {
     background-color: #c9c6cc; }
 
 button.destructive-action {
-  border: 1px solid #d48a51;
+  border: 1px solid #6a656f;
   color: #000000;
   background-color: #EBE9ED;
   background-image: linear-gradient(to bottom, white, #f5f4f6 25%, #edebee 50%, #dfdce2 75%, #d4d0d7 95%);
@@ -574,22 +574,22 @@ button.destructive-action {
   box-shadow: inset 0 0 3px 0px rgba(0, 0, 0, 0.15), inset 0px 1px 0px 1px rgba(255, 255, 255, 0.6);
   -gtk-icon-shadow: none; }
   button.destructive-action:hover, button.destructive-action:hover:focus {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-image: linear-gradient(to bottom, white, #f5f4f6 25%, #edebee 50%, #dfdce2 75%, #d4d0d7 95%);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #FF9900; }
   button.destructive-action:active {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none; }
   button.destructive-action:checked {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none; }
 
 button.suggested-action {
-  border: 1px solid #d48a51;
+  border: 1px solid #6a656f;
   color: #000000;
   background-color: #EBE9ED;
   background-image: linear-gradient(to bottom, white, #f5f4f6 25%, #edebee 50%, #dfdce2 75%, #d4d0d7 95%);
@@ -600,17 +600,17 @@ button.suggested-action {
   button.suggested-action:hover {
     box-shadow: inset 0 0 0 2px rgba(127, 169, 236, 0.85); }
     button.suggested-action:hover, button.suggested-action:hover:focus {
-      border-color: #d48a51;
+      border-color: #6a656f;
       background-image: linear-gradient(to bottom, white, #f5f4f6 25%, #edebee 50%, #dfdce2 75%, #d4d0d7 95%);
       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6), inset 0 0 0 2px #FF9900; }
   button.suggested-action:active {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none;
     box-shadow: inset 0 0 0 2px rgba(127, 169, 236, 0.85); }
   button.suggested-action:checked {
-    border-color: #d48a51;
+    border-color: #6a656f;
     background-color: #dfdce2;
     background-image: linear-gradient(to bottom, #bcb7c1, #d4d0d7, #dfdce2);
     box-shadow: none;

@@ -496,7 +496,7 @@ button {
   -gtk-icon-shadow: none; }
   
   button:focus {
-    background-image: linear-gradient(to bottom, white, #f4f4fa 21%, #e4e4f1 51%, #d1d1e6 60%, #c1c1dc 70%, #dadaeb 90%); }
+    background-image: linear-gradient(to bottom, white, #c3e4fe 21%, #afd9fc 51%, #98ccf8 60%, #85c2f3 70%, #a3d3fa 90%); }
   
   button:hover {
     border-color: #5fa7e3;
@@ -597,7 +597,7 @@ button.destructive-action {
   box-shadow: none;
   -gtk-icon-shadow: none; }
   button.destructive-action:focus {
-    background-image: linear-gradient(to bottom, white, #f4f4fa 21%, #e4e4f1 51%, #d1d1e6 60%, #c1c1dc 70%, #dadaeb 90%); }
+    background-image: linear-gradient(to bottom, white, #c3e4fe 21%, #afd9fc 51%, #98ccf8 60%, #85c2f3 70%, #a3d3fa 90%); }
   button.destructive-action:hover {
     border-color: #5fa7e3;
     color: #000000;
@@ -627,7 +627,7 @@ button.suggested-action {
   box-shadow: none;
   -gtk-icon-shadow: none; }
   button.suggested-action:focus {
-    background-image: linear-gradient(to bottom, white, #f4f4fa 21%, #e4e4f1 51%, #d1d1e6 60%, #c1c1dc 70%, #dadaeb 90%); }
+    background-image: linear-gradient(to bottom, white, #c3e4fe 21%, #afd9fc 51%, #98ccf8 60%, #85c2f3 70%, #a3d3fa 90%); }
   button.suggested-action:hover {
     border-color: #5fa7e3;
     color: #000000;

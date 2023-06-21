@@ -491,7 +491,7 @@ button {
     border-color: #cb8147;
     color: #000000;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, white 3px, #f7f7f8 7px, #f5f4f6 50%, #f2f1f4);
-    box-shadow: inset 0 0 0 2px #ffc73c; }
+    box-shadow: inset 0 0 0 2px #FF9900; }
   
   button:active {
     border-color: #cb8147;
@@ -543,7 +543,7 @@ button.flat {
     border-color: #cb8147;
     color: #000000;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, white 3px, #f7f7f8 7px, #f5f4f6 50%, #f2f1f4);
-    box-shadow: inset 0 0 0 2px #ffc73c; }
+    box-shadow: inset 0 0 0 2px #FF9900; }
   headerbar button:active, toolbar button:active,
   .toolbar button:active,
   button.flat:active {
@@ -579,7 +579,7 @@ button.destructive-action {
     border-color: #cb8147;
     color: #000000;
     background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, #f7f6f8, #EBE9ED 3px, #e4e1e7 7px, #e2dfe4 50%, #dfdce2);
-    box-shadow: inset 0 0 0 2px #ffc73c; }
+    box-shadow: inset 0 0 0 2px #FF9900; }
   button.destructive-action:active {
     border-color: #cb8147;
     color: #000000;
@@ -608,7 +608,7 @@ button.suggested-action {
       border-color: #cb8147;
       color: #000000;
       background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, #f7f6f8, #EBE9ED 3px, #e4e1e7 7px, #e2dfe4 50%, #dfdce2);
-      box-shadow: inset 0 0 0 2px #ffc73c; }
+      box-shadow: inset 0 0 0 2px #FF9900; }
   button.suggested-action:active {
     border-color: #cb8147;
     color: #000000;
@@ -762,20 +762,20 @@ infobar > revealer > box {
   box-shadow: none; }
 
 infobar.info > revealer > box {
-  border: 1px solid #0055FF;
+  border: 1px solid #7fa9ec;
   color: #262626;
   background-image: none;
-  background-color: #0055FF; }
+  background-color: #7fa9ec; }
   infobar.info > revealer > box button:not(.close) {
     border-color: transparent;
     color: #262626;
     background-image: none;
-    background-color: #1463ff;
+    background-color: #95b9f3;
     box-shadow: none; }
     infobar.info > revealer > box button:not(.close):hover {
-      background-color: #1a66ff; }
+      background-color: #9bbdf5; }
     infobar.info > revealer > box button:not(.close):active {
-      background-color: #0653ec; }
+      background-color: #729fe7; }
 
 infobar.warning > revealer > box {
   border: 1px solid #FF9900;
@@ -1268,14 +1268,14 @@ notebook > header {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px; }
     notebook > header.top > tabs > tab:hover {
-      box-shadow: inset 0 2px #ffc73c; }
+      box-shadow: inset 0 2px #FF9900; }
     notebook > header.top > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-top: -1px;
       margin-bottom: -2px;
-      box-shadow: inset 0 2px #ffc73c; }
+      box-shadow: inset 0 2px #FF9900; }
   notebook > header.bottom > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
@@ -1289,14 +1289,14 @@ notebook > header {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px; }
     notebook > header.bottom > tabs > tab:hover {
-      box-shadow: inset 0 -2px #ffc73c; }
+      box-shadow: inset 0 -2px #FF9900; }
     notebook > header.bottom > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-bottom: -1px;
       margin-top: -2px;
-      box-shadow: inset 0 -2px #ffc73c; }
+      box-shadow: inset 0 -2px #FF9900; }
   notebook > header.left > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
@@ -1310,14 +1310,14 @@ notebook > header {
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px; }
     notebook > header.left > tabs > tab:hover {
-      box-shadow: inset 2px 0 #ffc73c; }
+      box-shadow: inset 2px 0 #FF9900; }
     notebook > header.left > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-left: -1px;
       margin-right: -2px;
-      box-shadow: inset 2px 0 #ffc73c; }
+      box-shadow: inset 2px 0 #FF9900; }
   notebook > header.right > tabs > tab {
     margin: 1px;
     padding: 6px 20px;
@@ -1331,14 +1331,14 @@ notebook > header {
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px; }
     notebook > header.right > tabs > tab:hover {
-      box-shadow: inset -2px 0 #ffc73c; }
+      box-shadow: inset -2px 0 #FF9900; }
     notebook > header.right > tabs > tab:checked {
       margin: 0;
       background-image: none;
       background-color: #FFFFFF;
       margin-right: -1px;
       margin-left: -2px;
-      box-shadow: inset -2px 0 #ffc73c; }
+      box-shadow: inset -2px 0 #FF9900; }
   notebook > header.bottom > tabs > arrow, notebook > header.top > tabs > arrow {
     margin-left: -5px;
     margin-right: -5px;
@@ -1404,14 +1404,14 @@ tabbar tab {
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.045) 1px, rgba(0, 0, 0, 0.006) 2px, transparent 2px), linear-gradient(to top, rgba(0, 0, 0, 0.13), transparent 3px), linear-gradient(to bottom, white, #fcfcfa 3px, #f6f6f3 7px, #f4f4f0 50%, #f0f0ea);
   margin-bottom: -1px; }
   tabbar tab:hover {
-    box-shadow: inset 0 2px #ffc73c; }
+    box-shadow: inset 0 2px #FF9900; }
   tabbar tab:selected {
     margin: 0;
     background-image: none;
     background-color: #FFFFFF;
     margin-top: -1px;
     margin-bottom: -2px;
-    box-shadow: inset 0 2px #ffc73c; }
+    box-shadow: inset 0 2px #FF9900; }
 
 tabbar tabbox.single-tab tab, tabbar tabbox.single-tab tab:hover, tabbar tabbox.single-tab tab:active {
   background: none; }

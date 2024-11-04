@@ -4,16 +4,16 @@ A group project to make ports of most of the Longhorn builds' themes work in Lin
 
 ### Previews
 Plex
-![plex](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-plex_1_orig.png)
+![plex](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/screenshots/windows-longhorn-plex/plex_1.png)
 
 Slate
-![slate](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-slate_1_orig.png)
+![slate](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/screenshots/windows-longhorn-slate/slate_1.png)
 
 Aero
-![aero](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-aero_1_orig.png)
+![aero](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/screenshots/windows-longhorn-aero/aero_1.png)
 
 Jade
-![jade](https://b00merang.weebly.com/uploads/1/6/8/1/16813022/windows-longhorn-jade_1_orig.png)
+![jade](https://github.com/B00merang-Project/B00merang-Project.github.io/blob/master/resources/screenshots/windows-longhorn-jade/jade_1.png)
 
 ### Available themes:
 - Longhorn 4039 Plex III by Feren and Elbullazul
